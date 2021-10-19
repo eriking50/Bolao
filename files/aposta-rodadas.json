@@ -1,0 +1,484 @@
+[
+  {
+    "numeroRodada": 1,
+    "usuario": {
+      "nome": "Paulo Coleta",
+      "email": "coleta@rarolabs.com.br",
+      "senha": "69cf2ca04408a449374e392e64cfc4f8f2fb5c3c5b619e48bc3ddf81099e151e"
+    },
+    "apostasJogos": [
+      {
+        "usuario": {
+          "nome": "Paulo Coleta",
+          "email": "coleta@rarolabs.com.br",
+          "senha": "69cf2ca04408a449374e392e64cfc4f8f2fb5c3c5b619e48bc3ddf81099e151e"
+        },
+        "jogo": {
+          "timeMandante": {
+            "nome": "Fluminense",
+            "estado": "RJ",
+            "id": 11
+          },
+          "timeVisitante": {
+            "nome": "America",
+            "estado": "MG",
+            "id": 1
+          },
+          "horarioJogo": "2021-05-23T19:00:00.000Z",
+          "id": 1
+        },
+        "golsMandante": 2,
+        "golsVisitante": 1
+      },
+      {
+        "usuario": {
+          "nome": "Paulo Coleta",
+          "email": "coleta@rarolabs.com.br",
+          "senha": "69cf2ca04408a449374e392e64cfc4f8f2fb5c3c5b619e48bc3ddf81099e151e"
+        },
+        "jogo": {
+          "timeMandante": {
+            "nome": "Fortaleza",
+            "estado": "CE",
+            "id": 12
+          },
+          "timeVisitante": {
+            "nome": "Athletico Paranaense",
+            "estado": "PR",
+            "id": 2
+          },
+          "horarioJogo": "2021-05-23T19:00:00.000Z",
+          "id": 2
+        },
+        "golsMandante": 2,
+        "golsVisitante": 1
+      },
+      {
+        "usuario": {
+          "nome": "Paulo Coleta",
+          "email": "coleta@rarolabs.com.br",
+          "senha": "69cf2ca04408a449374e392e64cfc4f8f2fb5c3c5b619e48bc3ddf81099e151e"
+        },
+        "jogo": {
+          "timeMandante": {
+            "nome": "Grêmio",
+            "estado": "RS",
+            "id": 13
+          },
+          "timeVisitante": {
+            "nome": "Atlético Mineiro",
+            "estado": "MG",
+            "id": 3
+          },
+          "horarioJogo": "2021-05-23T19:00:00.000Z",
+          "id": 3
+        },
+        "golsMandante": 2,
+        "golsVisitante": 1
+      },
+      {
+        "usuario": {
+          "nome": "Paulo Coleta",
+          "email": "coleta@rarolabs.com.br",
+          "senha": "69cf2ca04408a449374e392e64cfc4f8f2fb5c3c5b619e48bc3ddf81099e151e"
+        },
+        "jogo": {
+          "timeMandante": {
+            "nome": "Internacional",
+            "estado": "RS",
+            "id": 14
+          },
+          "timeVisitante": {
+            "nome": "Atlético",
+            "estado": "GO",
+            "id": 4
+          },
+          "horarioJogo": "2021-05-23T19:00:00.000Z",
+          "id": 4
+        },
+        "golsMandante": 2,
+        "golsVisitante": 1
+      },
+      {
+        "usuario": {
+          "nome": "Paulo Coleta",
+          "email": "coleta@rarolabs.com.br",
+          "senha": "69cf2ca04408a449374e392e64cfc4f8f2fb5c3c5b619e48bc3ddf81099e151e"
+        },
+        "jogo": {
+          "timeMandante": {
+            "nome": "Juventude",
+            "estado": "RS",
+            "id": 15
+          },
+          "timeVisitante": {
+            "nome": "Bahia",
+            "estado": "BA",
+            "id": 5
+          },
+          "horarioJogo": "2021-05-23T19:00:00.000Z",
+          "id": 5
+        },
+        "golsMandante": 2,
+        "golsVisitante": 1
+      },
+      {
+        "usuario": {
+          "nome": "Paulo Coleta",
+          "email": "coleta@rarolabs.com.br",
+          "senha": "69cf2ca04408a449374e392e64cfc4f8f2fb5c3c5b619e48bc3ddf81099e151e"
+        },
+        "jogo": {
+          "timeMandante": {
+            "nome": "Palmeiras",
+            "estado": "SP",
+            "id": 16
+          },
+          "timeVisitante": {
+            "nome": "Ceará",
+            "estado": "CE",
+            "id": 6
+          },
+          "horarioJogo": "2021-05-23T19:00:00.000Z",
+          "id": 6
+        },
+        "golsMandante": 2,
+        "golsVisitante": 1
+      },
+      {
+        "usuario": {
+          "nome": "Paulo Coleta",
+          "email": "coleta@rarolabs.com.br",
+          "senha": "69cf2ca04408a449374e392e64cfc4f8f2fb5c3c5b619e48bc3ddf81099e151e"
+        },
+        "jogo": {
+          "timeMandante": {
+            "nome": "Red Bull Bragantino",
+            "estado": "SP",
+            "id": 17
+          },
+          "timeVisitante": {
+            "nome": "Chapecoense",
+            "estado": "SC",
+            "id": 7
+          },
+          "horarioJogo": "2021-05-23T19:00:00.000Z",
+          "id": 7
+        },
+        "golsMandante": 2,
+        "golsVisitante": 1
+      },
+      {
+        "usuario": {
+          "nome": "Paulo Coleta",
+          "email": "coleta@rarolabs.com.br",
+          "senha": "69cf2ca04408a449374e392e64cfc4f8f2fb5c3c5b619e48bc3ddf81099e151e"
+        },
+        "jogo": {
+          "timeMandante": {
+            "nome": "Santos",
+            "estado": "SP",
+            "id": 18
+          },
+          "timeVisitante": {
+            "nome": "Corinthians",
+            "estado": "SP",
+            "id": 8
+          },
+          "horarioJogo": "2021-05-23T19:00:00.000Z",
+          "id": 8
+        },
+        "golsMandante": 2,
+        "golsVisitante": 1
+      },
+      {
+        "usuario": {
+          "nome": "Paulo Coleta",
+          "email": "coleta@rarolabs.com.br",
+          "senha": "69cf2ca04408a449374e392e64cfc4f8f2fb5c3c5b619e48bc3ddf81099e151e"
+        },
+        "jogo": {
+          "timeMandante": {
+            "nome": "Sport",
+            "estado": "PE",
+            "id": 19
+          },
+          "timeVisitante": {
+            "nome": "Cuiabá",
+            "estado": "MT",
+            "id": 9
+          },
+          "horarioJogo": "2021-05-23T19:00:00.000Z",
+          "id": 9
+        },
+        "golsMandante": 2,
+        "golsVisitante": 1
+      },
+      {
+        "usuario": {
+          "nome": "Paulo Coleta",
+          "email": "coleta@rarolabs.com.br",
+          "senha": "69cf2ca04408a449374e392e64cfc4f8f2fb5c3c5b619e48bc3ddf81099e151e"
+        },
+        "jogo": {
+          "timeMandante": {
+            "nome": "São Paulo",
+            "estado": "SP",
+            "id": 20
+          },
+          "timeVisitante": {
+            "nome": "Flamengo",
+            "estado": "RJ",
+            "id": 10
+          },
+          "horarioJogo": "2021-05-23T19:00:00.000Z",
+          "id": 10
+        },
+        "golsMandante": 2,
+        "golsVisitante": 1
+      }
+    ],
+    "pontuacaoRodada": 0
+  },
+  {
+    "numeroRodada": 1,
+    "usuario": {
+      "nome": "Erik Bergkamp",
+      "email": "erik@email.com",
+      "senha": "69cf2ca04408a449374e392e64cfc4f8f2fb5c3c5b619e48bc3ddf81099e151e"
+    },
+    "apostasJogos": [
+      {
+        "usuario": {
+          "nome": "Erik Bergkamp",
+          "email": "erik@email.com",
+          "senha": "69cf2ca04408a449374e392e64cfc4f8f2fb5c3c5b619e48bc3ddf81099e151e"
+        },
+        "jogo": {
+          "timeMandante": {
+            "nome": "Fluminense",
+            "estado": "RJ",
+            "id": 11
+          },
+          "timeVisitante": {
+            "nome": "America",
+            "estado": "MG",
+            "id": 1
+          },
+          "horarioJogo": "2021-05-23T19:00:00.000Z",
+          "id": 1
+        },
+        "golsMandante": 3,
+        "golsVisitante": 0
+      },
+      {
+        "usuario": {
+          "nome": "Erik Bergkamp",
+          "email": "erik@email.com",
+          "senha": "69cf2ca04408a449374e392e64cfc4f8f2fb5c3c5b619e48bc3ddf81099e151e"
+        },
+        "jogo": {
+          "timeMandante": {
+            "nome": "Fortaleza",
+            "estado": "CE",
+            "id": 12
+          },
+          "timeVisitante": {
+            "nome": "Athletico Paranaense",
+            "estado": "PR",
+            "id": 2
+          },
+          "horarioJogo": "2021-05-23T19:00:00.000Z",
+          "id": 2
+        },
+        "golsMandante": 3,
+        "golsVisitante": 0
+      },
+      {
+        "usuario": {
+          "nome": "Erik Bergkamp",
+          "email": "erik@email.com",
+          "senha": "69cf2ca04408a449374e392e64cfc4f8f2fb5c3c5b619e48bc3ddf81099e151e"
+        },
+        "jogo": {
+          "timeMandante": {
+            "nome": "Grêmio",
+            "estado": "RS",
+            "id": 13
+          },
+          "timeVisitante": {
+            "nome": "Atlético Mineiro",
+            "estado": "MG",
+            "id": 3
+          },
+          "horarioJogo": "2021-05-23T19:00:00.000Z",
+          "id": 3
+        },
+        "golsMandante": 3,
+        "golsVisitante": 0
+      },
+      {
+        "usuario": {
+          "nome": "Erik Bergkamp",
+          "email": "erik@email.com",
+          "senha": "69cf2ca04408a449374e392e64cfc4f8f2fb5c3c5b619e48bc3ddf81099e151e"
+        },
+        "jogo": {
+          "timeMandante": {
+            "nome": "Internacional",
+            "estado": "RS",
+            "id": 14
+          },
+          "timeVisitante": {
+            "nome": "Atlético",
+            "estado": "GO",
+            "id": 4
+          },
+          "horarioJogo": "2021-05-23T19:00:00.000Z",
+          "id": 4
+        },
+        "golsMandante": 3,
+        "golsVisitante": 0
+      },
+      {
+        "usuario": {
+          "nome": "Erik Bergkamp",
+          "email": "erik@email.com",
+          "senha": "69cf2ca04408a449374e392e64cfc4f8f2fb5c3c5b619e48bc3ddf81099e151e"
+        },
+        "jogo": {
+          "timeMandante": {
+            "nome": "Juventude",
+            "estado": "RS",
+            "id": 15
+          },
+          "timeVisitante": {
+            "nome": "Bahia",
+            "estado": "BA",
+            "id": 5
+          },
+          "horarioJogo": "2021-05-23T19:00:00.000Z",
+          "id": 5
+        },
+        "golsMandante": 3,
+        "golsVisitante": 0
+      },
+      {
+        "usuario": {
+          "nome": "Erik Bergkamp",
+          "email": "erik@email.com",
+          "senha": "69cf2ca04408a449374e392e64cfc4f8f2fb5c3c5b619e48bc3ddf81099e151e"
+        },
+        "jogo": {
+          "timeMandante": {
+            "nome": "Palmeiras",
+            "estado": "SP",
+            "id": 16
+          },
+          "timeVisitante": {
+            "nome": "Ceará",
+            "estado": "CE",
+            "id": 6
+          },
+          "horarioJogo": "2021-05-23T19:00:00.000Z",
+          "id": 6
+        },
+        "golsMandante": 3,
+        "golsVisitante": 0
+      },
+      {
+        "usuario": {
+          "nome": "Erik Bergkamp",
+          "email": "erik@email.com",
+          "senha": "69cf2ca04408a449374e392e64cfc4f8f2fb5c3c5b619e48bc3ddf81099e151e"
+        },
+        "jogo": {
+          "timeMandante": {
+            "nome": "Red Bull Bragantino",
+            "estado": "SP",
+            "id": 17
+          },
+          "timeVisitante": {
+            "nome": "Chapecoense",
+            "estado": "SC",
+            "id": 7
+          },
+          "horarioJogo": "2021-05-23T19:00:00.000Z",
+          "id": 7
+        },
+        "golsMandante": 3,
+        "golsVisitante": 0
+      },
+      {
+        "usuario": {
+          "nome": "Erik Bergkamp",
+          "email": "erik@email.com",
+          "senha": "69cf2ca04408a449374e392e64cfc4f8f2fb5c3c5b619e48bc3ddf81099e151e"
+        },
+        "jogo": {
+          "timeMandante": {
+            "nome": "Santos",
+            "estado": "SP",
+            "id": 18
+          },
+          "timeVisitante": {
+            "nome": "Corinthians",
+            "estado": "SP",
+            "id": 8
+          },
+          "horarioJogo": "2021-05-23T19:00:00.000Z",
+          "id": 8
+        },
+        "golsMandante": 3,
+        "golsVisitante": 0
+      },
+      {
+        "usuario": {
+          "nome": "Erik Bergkamp",
+          "email": "erik@email.com",
+          "senha": "69cf2ca04408a449374e392e64cfc4f8f2fb5c3c5b619e48bc3ddf81099e151e"
+        },
+        "jogo": {
+          "timeMandante": {
+            "nome": "Sport",
+            "estado": "PE",
+            "id": 19
+          },
+          "timeVisitante": {
+            "nome": "Cuiabá",
+            "estado": "MT",
+            "id": 9
+          },
+          "horarioJogo": "2021-05-23T19:00:00.000Z",
+          "id": 9
+        },
+        "golsMandante": 3,
+        "golsVisitante": 0
+      },
+      {
+        "usuario": {
+          "nome": "Erik Bergkamp",
+          "email": "erik@email.com",
+          "senha": "69cf2ca04408a449374e392e64cfc4f8f2fb5c3c5b619e48bc3ddf81099e151e"
+        },
+        "jogo": {
+          "timeMandante": {
+            "nome": "São Paulo",
+            "estado": "SP",
+            "id": 20
+          },
+          "timeVisitante": {
+            "nome": "Flamengo",
+            "estado": "RJ",
+            "id": 10
+          },
+          "horarioJogo": "2021-05-23T19:00:00.000Z",
+          "id": 10
+        },
+        "golsMandante": 3,
+        "golsVisitante": 0
+      }
+    ],
+    "pontuacaoRodada": 0
+  }
+]

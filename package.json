@@ -1,0 +1,33 @@
+{
+  "name": "semana2",
+  "version": "1.0.0",
+  "description": "Geometric Figures",
+  "main": "build/index.js",
+  "scripts": {
+    "compile": "npx tsc",
+    "dev": "npx ts-node index.ts",
+    "lint": "npx eslint -c .eslintrc.js src/**/*.ts",
+    "lint-fix": "npx eslint -c .eslintrc.js src/**/*.ts --fix",
+    "start": "node build/index.js",
+    "test": "npx jest --coverage"
+  },
+  "author": "coleta@rarolabs.com.br",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/node": "^16.11.1",
+    "@typescript-eslint/eslint-plugin": "^4.31.1",
+    "@typescript-eslint/parser": "^4.31.1",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "jest": "^27.2.0",
+    "nodemon": "^2.0.12",
+    "prettier": "^2.4.1",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.3"
+  },
+  "dependencies": {
+    "axios": "^0.23.0"
+  }
+}

@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "nome": "America",
+    "estado": "MG"
+  },
+  {
+    "id": 2,
+    "nome": "Athletico Paranaense",
+    "estado": "PR"
+  },
+  {
+    "id": 3,
+    "nome": "Atlético Mineiro",
+    "estado": "MG"
+  },
+  {
+    "id": 4,
+    "nome": "Atlético",
+    "estado": "GO"
+  },
+  {
+    "id": 5,
+    "nome": "Bahia",
+    "estado": "BA"
+  },
+  {
+    "id": 6,
+    "nome": "Ceará",
+    "estado": "CE"
+  },
+  {
+    "id": 7,
+    "nome": "Chapecoense",
+    "estado": "SC"
+  },
+  {
+    "id": 8,
+    "nome": "Corinthians",
+    "estado": "SP"
+  },
+  {
+    "id": 9,
+    "nome": "Cuiabá",
+    "estado": "MT"
+  },
+  {
+    "id": 10,
+    "nome": "Flamengo",
+    "estado": "RJ"
+  },
+  {
+    "id": 11,
+    "nome": "Fluminense",
+    "estado": "RJ"
+  },
+  {
+    "id": 12,
+    "nome": "Fortaleza",
+    "estado": "CE"
+  },
+  {
+    "id": 13,
+    "nome": "Grêmio",
+    "estado": "RS"
+  },
+  {
+    "id": 14,
+    "nome": "Internacional",
+    "estado": "RS"
+  },
+  {
+    "id": 15,
+    "nome": "Juventude",
+    "estado": "RS"
+  },
+  {
+    "id": 16,
+    "nome": "Palmeiras",
+    "estado": "SP"
+  },
+  {
+    "id": 17,
+    "nome": "Red Bull Bragantino",
+    "estado": "SP"
+  },
+  {
+    "id": 18,
+    "nome": "Santos",
+    "estado": "SP"
+  },
+  {
+    "id": 19,
+    "nome": "Sport",
+    "estado": "PE"
+  },
+  {
+    "id": 20,
+    "nome": "São Paulo",
+    "estado": "SP"
+  }
+]
