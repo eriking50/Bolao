@@ -11,12 +11,19 @@
     - Arquivo que contém os testes do model Usuário.
 - /__tests __/Time.spec.ts
     - Arquivo que contém os testes do model Time.
+- coverage/*
+    - Arquivos relativos a documentação dos testes.
 
 ### Modificados
 - index.ts
-    -Removido função que cria o hash de senha.
-- /models/Usuário.ts
-    -As funções getSenha e setSenha usam a função hash do arquivo /src/models/HashSenha.ts
+    - Removido função que cria o hash de senha.
+- /src/models/Usuário.ts
+    - As funções getSenha e setSenha usam a função hash do arquivo /src/models/HashSenha.ts
+- /src/models/Rodada.ts
+    - Aumentando data para evitar erros.
+    - Alterado função getById para usar .find() ao invés de .forEach()
+    - Alterado para private função que atualiza horário limite
+    - Alterado data inicial pra ser menos hardcoded
 
 ## SEMANA 5 - [5.0.0] - [2021-10-22]
 

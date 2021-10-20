@@ -9,7 +9,7 @@ export default class Rodada {
     this.numeroRodada = numeroRodada;
     this.jogos = [];
     //Inicio a rodada com uma data que sempre será maior do que o horario dos jogos
-    this.horarioLimite = new Date(2021, 12, 31);
+    this.horarioLimite = new Date(new Date().getFullYear() + 1, 11, 31);
   }
 
   public addJogo(jogo: Jogo): void {
@@ -21,7 +21,7 @@ export default class Rodada {
     return this.jogos;
   }
 
-  public atualizarHorarioLimite(novoJogo: Jogo): void {
+  private atualizarHorarioLimite(novoJogo: Jogo): void {
     if (this.horarioLimite > novoJogo.getHorarioJogo()) {
       this.horarioLimite = novoJogo.getHorarioJogo();
     }
@@ -32,17 +32,17 @@ export default class Rodada {
   }
 
   public getJogoById(jogoId: number): Jogo {
-    this.jogos.forEach((jogo) => {
-      if (jogo.getId() === jogoId) {
-        return jogo;
-      }
-    });
+    const jogo = this.jogos.find(jogo => {
+      return jogo.getId() === jogoId;
+    })
+
+    if (jogo) {
+      return jogo;
+    }
+
     throw new Error("Jogo Não Encontrado");
   }
 
-  /**
-   * O horário de limite aposta de uma rodada é determinado pelo horário do jogo que ocorrer mais cedo.
-   */
   public getHorarioLimiteAposta(): Date {
     return this.horarioLimite;
   }
