@@ -4,6 +4,18 @@
 
 ## SEMANA 6 - [6.0.0] - [2021-10-29]
 
+### Adcionados
+- /src/models/HashSenha.ts
+    - Classe abstrata que contém uma função estática que gera o hash de senha.
+- /__tests __/Usuario.spec.ts
+    - Arquivo que contém os testes do model Usuário.
+
+### Modificados
+- index.ts
+    -Removido função que cria o hash de senha.
+- /models/Usuário.ts
+    -As funções getSenha e setSenha usam a função hash do arquivo /src/models/HashSenha.ts
+
 ## SEMANA 5 - [5.0.0] - [2021-10-22]
 
 ### Adcionados

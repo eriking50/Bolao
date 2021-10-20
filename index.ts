@@ -2,8 +2,6 @@
 // log será uma lista de cada aposta no formato abaixo
 // NOME_TIME_MANDANTE GOLS_MANDANTE x GOLS_VISITANTE NOME_TIME_VISITANTE
 
-import crypto from "crypto";
-
 import Usuario from "./src/models/Usuario";
 import Rodada from "./src/models/Rodada";
 import ApostaRodada from "./src/models/ApostaRodada";
@@ -13,6 +11,7 @@ import JSONApostaRodadasRepository from "./src/repositories/JSONApostaRodadasRep
 import JSONRodadasRepository from "./src/repositories/JSONRodadasRepository";
 import JSONTimesRepository from "./src/repositories/JSONTimesRepository";
 import JSONUsuariosRepository from "./src/repositories/JSONUsuariosRepository";
+import { HashSenha } from "./src/models/HashSenha";
 
 const usuariosRepository = new JSONUsuariosRepository();
 const timesRepository = new JSONTimesRepository();
@@ -27,10 +26,6 @@ for (let i = 0; i < 10; i++) {
         jogoId: i + 1,
     });
 } 
-function hash(senha: string): string {
-  const secret = "secret_bem_incomum_da_galera_montar_tabelas";
-  return crypto.createHmac("sha256", secret).update(senha).digest("hex");
-}
 
 type Login = {
   email: string;
@@ -71,7 +66,7 @@ async function teste(login: Login, numeroRodada: number, palpites: Palpite[]) {
   // login
   const usuario = await usuariosRepository.findByEmail(login.email);
 
-  if(usuario.getSenha() !== hash(login.senha)) {
+  if(usuario.getSenha() !== HashSenha.hash(login.senha)) {
     throw "Login invalido";
   }
 
