@@ -2,8 +2,6 @@
 
 ## UNRELEASED
 
-## SEMANA 6 - [6.0.0] - [2021-10-29]
-
 ### Adcionados
 - /src/models/HashSenha.ts
     - Classe abstrata que contém uma função estática que gera o hash de senha.
@@ -26,6 +24,8 @@
     - Alterado função getById para usar .find() ao invés de .forEach()
     - Alterado para private função que atualiza horário limite
     - Alterado data inicial pra ser menos hardcoded
+
+## SEMANA 6 - [6.0.0] - [2021-10-29]
 
 ## SEMANA 5 - [5.0.0] - [2021-10-22]
 
