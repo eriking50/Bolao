@@ -9,6 +9,8 @@
     - Classe abstrata que contém uma função estática que gera o hash de senha.
 - /__tests __/Usuario.spec.ts
     - Arquivo que contém os testes do model Usuário.
+- /__tests __/Time.spec.ts
+    - Arquivo que contém os testes do model Time.
 
 ### Modificados
 - index.ts
