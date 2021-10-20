@@ -11,6 +11,8 @@
     - Arquivo que contém os testes do model Usuário.
 - /__tests __/Time.spec.ts
     - Arquivo que contém os testes do model Time.
+- /__tests __/Rodada.spec.ts
+    - Arquivo que contém os testes do model Rodada.
 - coverage/*
     - Arquivos relativos a documentação dos testes.
 
