@@ -64,6 +64,16 @@ type RodadaResponse = {
     _link: string
 }
 
+type CampeonatoResponse = {
+    nome: string,
+    slug: string,
+    rodada: number,
+    status: string,
+    anterior: DadosRodada,
+    proxima_rodada: DadosRodada,
+    _link: string
+}
+
 class BrasileiraoClient {
 
     async getTabelaAPI(): Promise<TabelaResponse[]> {
@@ -73,14 +83,19 @@ class BrasileiraoClient {
             });
             return tabela.data;
         } catch (error) {
-            throw new Error(`Falha ao buscar times na API. Motivo: ${error.message}.`);
+            throw new Error(`Falha ao buscar times na API.`);
         }
     }
 
     async getRodadasAPI(): Promise<RodadaResponse[]> {
         try {
+            const campeonatoResponse = await axios.get<CampeonatoResponse[]>(`${URL_BRASILEIRAO}/rodadas/`, {
+                headers: {Authorization: 'bearer d44db0cc0676316ee1248780ec04da734e0f06a77c30aaf9a2dcbb1899093361'},
+            });
+            const ultimaRodada = campeonatoResponse.data[campeonatoResponse.data.length-1].rodada;  
+
             const rodadasResponse: RodadaResponse[] = [];
-            for (let i = 1; i < 39; i++) {
+            for (let i = 1; i < ultimaRodada + 1; i++) {
                 const rodadaResponse = await axios.get<RodadaResponse>(`${URL_BRASILEIRAO}/rodadas/${i}`, {
                     headers: {Authorization: 'bearer d44db0cc0676316ee1248780ec04da734e0f06a77c30aaf9a2dcbb1899093361'},
                 });
@@ -88,7 +103,7 @@ class BrasileiraoClient {
             }
             return rodadasResponse;
         } catch (error) {
-            throw new Error(`Falha ao buscar rodadas na API. Motivo: ${error.message}.`);
+            throw new Error(`Falha ao buscar rodadas na API.`);
         }
     }
 }
