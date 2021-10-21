@@ -44,7 +44,9 @@
     - Removido estados nas criação das classes na leitura do arquivo local.
 - /CHANGELOG.md
     -Adcionado caminhos para os arquivos especificados pelo changelog
-
+- /src/models/Rodada.ts
+    - Adcionado testes pra conferir se a data passada para o horario limite é diferente de uma data criada a partir de um valor nulo.
+    
 ## SEMANA 4 - [4.0.0] - [2021-10-16]
 
 ### Adcionados

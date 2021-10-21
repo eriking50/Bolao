@@ -22,7 +22,7 @@ export default class Rodada {
   }
 
   private atualizarHorarioLimite(novoJogo: Jogo): void {
-    if (this.horarioLimite > novoJogo.getHorarioJogo()) {
+    if (this.horarioLimite > novoJogo.getHorarioJogo() && novoJogo.getHorarioJogo().getTime() !== new Date("1970-01-01T00:00:00.000Z").getTime()) {
       this.horarioLimite = novoJogo.getHorarioJogo();
     }
   }
