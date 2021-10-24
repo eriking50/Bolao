@@ -29,13 +29,14 @@ export default class UsuarioService {
         try {
             if (this.isUnico(usuario.getEmail())) {
                 this.usuarios.push(usuario);
+                return;
             }
         } catch (error) {
             throw new Error(`Não foi possível cadastrar o usuário. Motivo: ${error.message}`);
         }
     }
 
-    public getUsuarios() {
+    public getUsuarios(): Usuario[] {
         return this.usuarios;
     }
 
@@ -59,11 +60,11 @@ export default class UsuarioService {
     }
 
     public alterarCadastro(dados: AlterarCadastroDTO): void {
-        if (this.usuarioLogado !== dados.email) {
-            throw new Error("Você não pode alterar uma conta que não seja a sua.");
-        }
         if (!this.usuarioLogado) {
             throw new Error("Você precisa estar logado para poder fazer essas alterações.");
+        }
+        if (this.usuarioLogado !== dados.email) {
+            throw new Error("Você não pode alterar uma conta que não seja a sua.");
         }
         if (!dados.nome && !dados.senha) {
             throw new Error("Não há dados para serem alterados");
@@ -83,16 +84,14 @@ export default class UsuarioService {
                 return;
             }
         }
-        
-        throw new Error("O usuário não existe.");
     }
     
     public alterarStatusUsuario(dados: AlterarStatus): void {
-        if (this.usuarioLogado !== dados.email) {
-            throw new Error("Você não pode alterar uma conta que não seja a sua.");
-        }
         if (!this.usuarioLogado) {
             throw new Error("Você precisa estar logado para poder fazer essas alterações.");
+        }
+        if (this.usuarioLogado !== dados.email) {
+            throw new Error("Você não pode alterar uma conta que não seja a sua.");
         }
         this.usuarios.find((usuario, i) => {
             if (usuario.getEmail() === dados.email) {

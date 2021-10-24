@@ -95,19 +95,6 @@ describe("Testes da classe service: UsuarioService", () => {
             
             expect(wrapper).toThrow(Error);
         })
-        it("Deve retornar erro caso o email informado não esteja no sistema", () => {
-            jest.spyOn(HashHelper, "hash").mockReturnValue("algum_hash");
-            jest.spyOn(EmailHelper, "validarEmail").mockReturnValue(true);
-            const usuario = new Usuario("Erik", "erik@email.com", "123456");
-            const usuarioService = new UsuarioService();
-            usuarioService.adcionarUsuario(usuario);
-            usuarioService.realizarLogin({email: "erik@email.com", senha: "123456"});
-            const wrapper = () => {
-                usuarioService.alterarCadastro({email: "erik@trabalho.com", nome: "Bergkamp"});
-            }
-            
-            expect(wrapper).toThrow(Error);
-        })
         it("Deve retornar erro caso o usuário não esteja com status ativo", () => {
             jest.spyOn(HashHelper, "hash").mockReturnValue("algum_hash");
             jest.spyOn(EmailHelper, "validarEmail").mockReturnValue(true);
@@ -118,6 +105,31 @@ describe("Testes da classe service: UsuarioService", () => {
             usuarioService.realizarLogin({email: "erik@email.com", senha: "123456"});
             const wrapper = () => {
                 usuarioService.alterarCadastro({email: "erik@email.com", nome: "Bergkamp"});
+            }
+            
+            expect(wrapper).toThrow(Error);
+        })
+        it("Deve retornar erro caso o usuário não esteja logado", () => {
+            jest.spyOn(HashHelper, "hash").mockReturnValue("algum_hash");
+            jest.spyOn(EmailHelper, "validarEmail").mockReturnValue(true);
+            const usuario = new Usuario("Erik", "erik@email.com", "123456");
+            const usuarioService = new UsuarioService();
+            usuarioService.adcionarUsuario(usuario);
+            const wrapper = () => {
+                usuarioService.alterarCadastro({email: "erik@email.com", nome: "Bergkamp"});
+            }
+            
+            expect(wrapper).toThrow(Error);
+        })
+        it("Deve retornar erro caso o usuário não tenha mandados dados além do email", () => {
+            jest.spyOn(HashHelper, "hash").mockReturnValue("algum_hash");
+            jest.spyOn(EmailHelper, "validarEmail").mockReturnValue(true);
+            const usuario = new Usuario("Erik", "erik@email.com", "123456");
+            const usuarioService = new UsuarioService();
+            usuarioService.adcionarUsuario(usuario);
+            usuarioService.realizarLogin({email: "erik@email.com", senha: "123456"});
+            const wrapper = () => {
+                usuarioService.alterarCadastro({email: "erik@email.com"});
             }
             
             expect(wrapper).toThrow(Error);
@@ -194,6 +206,70 @@ describe("Testes da classe service: UsuarioService", () => {
             usuarioService.deslogar();
             
             expect(usuarioService.getUsuarioLogado()).toBeFalsy();
+        })
+    })
+    describe("Testa a função que retorna usuários do sistema", () => {
+        beforeEach(() => {
+            jest.clearAllMocks();
+        })
+        it("Deve retornar corretamente os usuários do sistema", () => {
+            jest.spyOn(HashHelper, "hash").mockReturnValueOnce("algum_hash");
+            jest.spyOn(EmailHelper, "validarEmail").mockReturnValue(true);
+            const usuario = new Usuario("Erik", "erik@email.com", "123456");
+            const usuarioService = new UsuarioService();
+            usuarioService.adcionarUsuario(usuario);
+
+            expect(usuarioService.getUsuarios()).toEqual([usuario]);
+        })
+    })
+    describe("Testa a função que retorna o usuário logado no sistema", () => {
+        beforeEach(() => {
+            jest.clearAllMocks();
+        })
+        it("Deve retornar corretamente o usuário logado", () => {
+            jest.spyOn(HashHelper, "hash").mockReturnValueOnce("algum_hash");
+            jest.spyOn(EmailHelper, "validarEmail").mockReturnValue(true);
+            const usuario = new Usuario("Erik", "erik@email.com", "123456");
+            const usuarioService = new UsuarioService();
+            usuarioService.adcionarUsuario(usuario);
+            usuarioService.realizarLogin({email: "erik@email.com", senha: "123456"});
+
+            expect(usuarioService.getUsuarioLogado()).toBe("erik@email.com");
+        })
+        it("Deve retornar '' caso não tenha usuário logado ", () => {
+            jest.spyOn(HashHelper, "hash").mockReturnValueOnce("algum_hash");
+            jest.spyOn(EmailHelper, "validarEmail").mockReturnValue(true);
+            const usuario = new Usuario("Erik", "erik@email.com", "123456");
+            const usuarioService = new UsuarioService();
+            usuarioService.adcionarUsuario(usuario);
+
+            expect(usuarioService.getUsuarioLogado()).toBe("");
+        })
+    })
+    describe("Testa a função que retorna se o email é único no sistema", () => {
+        beforeEach(() => {
+            jest.clearAllMocks();
+        })
+        it("Deve retornar erro caso o email já esteja no sistema", () => {
+            jest.spyOn(HashHelper, "hash").mockReturnValueOnce("algum_hash");
+            jest.spyOn(EmailHelper, "validarEmail").mockReturnValue(true);
+            const usuario = new Usuario("Erik", "erik@email.com", "123456");
+            const usuarioService = new UsuarioService();
+            usuarioService.adcionarUsuario(usuario);
+            const wrapper = () => {
+                usuarioService.isUnico("erik@email.com");
+            }
+
+            expect(wrapper).toThrow();
+        })
+        it("Deve retornar erro caso o email já esteja no sistema", () => {
+            jest.spyOn(HashHelper, "hash").mockReturnValueOnce("algum_hash");
+            jest.spyOn(EmailHelper, "validarEmail").mockReturnValue(true);
+            const usuario = new Usuario("Erik", "erik@email.com", "123456");
+            const usuarioService = new UsuarioService();
+            usuarioService.adcionarUsuario(usuario);
+
+            expect(usuarioService.isUnico("erik@trabalho.com")).toBe(true);
         })
     })
 })
