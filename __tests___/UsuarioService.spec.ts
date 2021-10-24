@@ -19,11 +19,9 @@ describe("Testes da classe service: UsuarioService", () => {
             const usuario = new Usuario("Erik", "erik@email.com", "123456");
             const usuario2 = new Usuario("Erik", "erik@email.com", "123456");
             const usuarioService = new UsuarioService();
-            jest.spyOn(EmailHelper, "isUnico").mockReturnValueOnce(true);
             usuarioService.adcionarUsuario(usuario);
             const wrapper = () => {
                 usuarioService.adcionarUsuario(usuario2);
-                jest.spyOn(EmailHelper, "isUnico").mockReturnValueOnce(false);
             }
 
             expect(wrapper).toThrow(Error);
@@ -33,7 +31,6 @@ describe("Testes da classe service: UsuarioService", () => {
             jest.spyOn(EmailHelper, "validarEmail").mockReturnValue(true);
             const usuario = new Usuario("Erik", "erik@email.com", "123456");
             const usuarioService = new UsuarioService();
-            jest.spyOn(EmailHelper, "isUnico").mockReturnValueOnce(true);
             usuarioService.adcionarUsuario(usuario);
 
             expect(usuarioService.getUsuarios().length).toBeGreaterThan(0);

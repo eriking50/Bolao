@@ -2,15 +2,25 @@
 
 ## UNRELEASED
 
+## SEMANA 6 - [6.0.0] - [2021-10-29]
+
 ### Adcionados
-- /src/models/HashSenha.ts
+- /src/models/helpers/HashHelper.ts
     - Classe abstrata que contém uma função estática que gera o hash de senha.
+- /src/models/helpers/EmailHelper.ts
+    - Classe abstrata que contém uma função estática que valida o email
 - /__tests __/Usuario.spec.ts
     - Arquivo que contém os testes do model Usuario.
-- /__tests __/UsuarioService.ts
+- /__tests __/UsuarioService.spec.ts
     - Arquivo que contém os testes do service de Usuario
 - /src/services/UsuarioService.ts
     - Arquivo que contém os testes do service de Usuario
+- /__tests __/BrasileiraoService.spec.ts
+    - Arquivo que contém os testes de BrasileiraoService
+- /src/services/RodadaService.ts
+    - Arquivo que contém os testes do service de Rodada
+- /__tests __/RodadaService.spec.ts
+    - Arquivo que contém os testes do service de Rodada
 
 ### Modificados
 - index.ts
@@ -33,8 +43,6 @@
     - Renomeado de brasileirao.ts para BrasileirãoClient.ts
     - Alterado pra exportar de forma default a classe
     - Alterado types Response para serem exportados
-
-## SEMANA 6 - [6.0.0] - [2021-10-29]
 
 ## SEMANA 5 - [5.0.1] - [2021-10-22]
 

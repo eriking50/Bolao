@@ -48,7 +48,6 @@ export default class UsuarioService {
         if (usuarioBD) {
             if (usuarioBD.getSenha() === HashHelper.hash(login.senha)) {
                 this.usuarioLogado = usuarioBD.getEmail();
-                console.log("Login efetuado com sucesso.");
                 return;
             }
         }
@@ -98,7 +97,6 @@ export default class UsuarioService {
         this.usuarios.find((usuario, i) => {
             if (usuario.getEmail() === dados.email) {
                 this.usuarios[i].setStatus(dados.status);
-                console.log("Status alterado com sucesso");
                 return;
             }
         })
