@@ -125,7 +125,7 @@ describe("Testa a classe service: BrasileiraoService", () => {
         })
         it("Deve retornar um erro caso não consiga recuperar os times do banco de dados", async () => {
             jest.spyOn(BrasileiraoClient.prototype, "getRodadasAPI").mockResolvedValueOnce([rodada]);
-            jest.spyOn(BrasileiraoClient.prototype, "getRodadasAPI").mockRejectedValueOnce(new Error("Erro ao recuperar dados"));
+            jest.spyOn(JSONTimesRepository.prototype, "findAll").mockRejectedValueOnce(new Error("Erro ao recuperar dados"));
 
             const brasileiraoService = new BrasileiraoService(10);
 
