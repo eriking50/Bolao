@@ -2,12 +2,15 @@ import ApostaRodada from "../models/ApostaRodada";
 import ApostaRodadasRepository from "./ApostaRodadasRepository";
 import * as fs from "fs"; 
 import { UsuarioFile } from "./JSONUsuariosRepository";
-import { JogoFile } from "./JSONRodadasRepository";
+import { JogoFile, RodadaFile } from "./JSONRodadasRepository";
 import { Palpite } from "../models/ApostaJogo";
 import UsuarioRepository from "./UsuariosRepository";
 import JSONUsuariosRepository from "./JSONUsuariosRepository";
 import RodadasRepository from "./RodadasRepository";
 import JSONRodadasRepository from "./JSONRodadasRepository";
+import Usuario from "../models/Usuario";
+import Rodada from "../models/Rodada";
+import Jogo from "../models/Jogo";
 const { readFile, writeFile } = fs.promises;
 
 const APOSTA_RODADAS_FILE_PATH = "./files/aposta-rodadas.json";
@@ -22,7 +25,7 @@ type ApostaJogoFile = {
 
 type ApostaRodadaFile = {
   numeroRodada: number,
-  usuario: UsuarioFile,
+  usuario: UsuarioFile
   apostasJogos: ApostaJogoFile[],
   pontuacaoRodada: number
 };
@@ -37,40 +40,39 @@ export default class JSONApostaRodadasRepository implements ApostaRodadasReposit
   }
 
   // ---- Recupera todas as apostas rodadas
-  public findAll(): Promise<ApostaRodada[]> {
-    return Promise.all([this.usuariosRepository.findAll(), this.rodadasRepository.findAll(), readFile(APOSTA_RODADAS_FILE_PATH)])
-      .then(([usuarios, rodadas, apostaRodadasContent]) => {
-        const apostasRodadas: ApostaRodada[] = [];
-        const apostasRodadaFile = JSON.parse(apostaRodadasContent.toString()) as ApostaRodadaFile[];
-        //Para cada aposta rodada no meu arquivo eu faço instruções
-        for (const apostaRodadaFile of apostasRodadaFile) {
-          //Procura o usuario atual no banco de dados de usuarios
-          const usuarioAposta = usuarios.find(usuario => usuario.getEmail() === apostaRodadaFile.usuario.email);
-          const apostaRodada = new ApostaRodada(usuarioAposta, apostaRodadaFile.pontuacaoRodada, apostaRodadaFile.numeroRodada);
-          //Pega os jogos do banco de dados de rodadas
-          const jogos = rodadas[apostaRodadaFile.numeroRodada - 1].getJogos();
-          // Itera sobre os Jogos compara o Id das Apostas de jogos do banco de dados e gera um palpite jogo
-          for (const jogo of jogos) {
-            for (const apostaJogo of apostaRodadaFile.apostasJogos) {
-              if (jogo.getId() === apostaJogo.jogo.id) {
-                const palpiteJogo: Palpite = {
-                  jogoId: apostaJogo.jogo.id,
-                  golsMandante: apostaJogo.golsMandante,
-                  golsVisitante: apostaJogo.golsVisitante
-                }
-                //Caso o jogo ja tenha pontos eu já adiciono no ApostaJogo, caso não, eu ignoro e adiciono apenas o palpite com o jogo e usuário
-                if (apostaJogo.pontos) {
-                  apostaRodada.addApostaJogo(palpiteJogo, jogo, usuarioAposta, apostaJogo.pontos);
-                } else {
-                  apostaRodada.addApostaJogo(palpiteJogo, jogo, usuarioAposta);
-                }
-              }
-            }
-          } 
-          apostasRodadas.push(apostaRodada);
+  public async findAll(): Promise<ApostaRodada[]> {
+    const [usuarios, rodadas, apostaRodadasContent] = await Promise.all([this.usuariosRepository.findAll(), this.rodadasRepository.findAll(), readFile(APOSTA_RODADAS_FILE_PATH)]);
+    const apostasRodadaFile = JSON.parse(apostaRodadasContent.toString()) as ApostaRodadaFile[];
+    return this.gerarApostasRodada(apostasRodadaFile, usuarios, rodadas);
+  }
+
+  private gerarApostasRodada(apostasRodadaFile: ApostaRodadaFile[], usuarios: Usuario[], rodadas: Rodada[] ) {
+    return apostasRodadaFile.map(apostaRodadaFile => {
+      const usuarioAposta = usuarios.find(usuario => usuario.getEmail() === apostaRodadaFile.usuario.email);
+      const jogos = rodadas[apostaRodadaFile.numeroRodada - 1].getJogos();
+      return this.gerarApostasJogosDaRodada(jogos, apostaRodadaFile.apostasJogos, usuarioAposta, apostaRodadaFile.pontuacaoRodada, apostaRodadaFile.numeroRodada);
+    })
+  }
+
+  private gerarApostasJogosDaRodada(jogos: Jogo[], apostasJogos: ApostaJogoFile[], usuario: Usuario, pontuacaoRodada: number, numeroRodada: number): ApostaRodada {
+    const apostaRodada = new ApostaRodada(usuario, pontuacaoRodada, numeroRodada);
+    jogos.map((jogo) => {
+      apostasJogos.map((apostaJogo) => {
+        if (jogo.getId() === apostaJogo.jogo.id) {
+          const palpiteJogo: Palpite = {
+            jogoId: apostaJogo.jogo.id,
+            golsMandante: apostaJogo.golsMandante,
+            golsVisitante: apostaJogo.golsVisitante
+          }
+          if (apostaJogo.pontos) {
+            apostaRodada.addApostaJogo(palpiteJogo, jogo, usuario, apostaJogo.pontos);
+          } else {
+            apostaRodada.addApostaJogo(palpiteJogo, jogo, usuario);
+          }
         }
-        return apostasRodadas;
-      })
+      });
+    });
+    return apostaRodada;
   }
 
   // ---- Recupera uma aposta rodada pelo seu numero e usuario
@@ -130,4 +132,5 @@ export default class JSONApostaRodadasRepository implements ApostaRodadasReposit
       throw "Houve um erro ao salvar as apostas da rodada";
     }
   }
+
 }

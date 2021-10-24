@@ -1,82 +1,82 @@
 [
   {
-    "nome": "Atlético-MG",
-    "id": 30
-  },
-  {
-    "nome": "Flamengo",
-    "id": 18
-  },
-  {
-    "nome": "Fortaleza",
-    "id": 131
-  },
-  {
-    "nome": "Bragantino",
-    "id": 64
-  },
-  {
-    "nome": "Palmeiras",
-    "id": 56
-  },
-  {
-    "nome": "Corinthians",
-    "id": 65
-  },
-  {
-    "nome": "Internacional",
-    "id": 44
+    "nome": "América-MG",
+    "id": 33
   },
   {
     "nome": "Athletico-PR",
     "id": 185
   },
   {
-    "nome": "Cuiabá",
-    "id": 204
-  },
-  {
-    "nome": "Fluminense",
-    "id": 26
-  },
-  {
     "nome": "Atlético-GO",
     "id": 98
   },
   {
-    "nome": "América-MG",
-    "id": 33
-  },
-  {
-    "nome": "São Paulo",
-    "id": 57
-  },
-  {
-    "nome": "Ceará",
-    "id": 105
-  },
-  {
-    "nome": "Juventude",
-    "id": 43
-  },
-  {
-    "nome": "Santos",
-    "id": 63
+    "nome": "Atlético-MG",
+    "id": 30
   },
   {
     "nome": "Bahia",
     "id": 68
   },
   {
-    "nome": "Sport",
-    "id": 79
+    "nome": "Bragantino",
+    "id": 64
+  },
+  {
+    "nome": "Ceará",
+    "id": 105
+  },
+  {
+    "nome": "Chapecoense",
+    "id": 5
+  },
+  {
+    "nome": "Corinthians",
+    "id": 65
+  },
+  {
+    "nome": "Cuiabá",
+    "id": 204
+  },
+  {
+    "nome": "Flamengo",
+    "id": 18
+  },
+  {
+    "nome": "Fluminense",
+    "id": 26
+  },
+  {
+    "nome": "Fortaleza",
+    "id": 131
   },
   {
     "nome": "Grêmio",
     "id": 45
   },
   {
-    "nome": "Chapecoense",
-    "id": 5
+    "nome": "Internacional",
+    "id": 44
+  },
+  {
+    "nome": "Juventude",
+    "id": 43
+  },
+  {
+    "nome": "Palmeiras",
+    "id": 56
+  },
+  {
+    "nome": "Santos",
+    "id": 63
+  },
+  {
+    "nome": "São Paulo",
+    "id": 57
+  },
+  {
+    "nome": "Sport",
+    "id": 79
   }
 ]

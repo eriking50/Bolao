@@ -9,12 +9,6 @@ export default class ApostaRodada {
   protected readonly apostasJogos: ApostaJogo[];
   protected pontuacaoRodada: number;
 
-  /**
-   * @todo
-   * contructor
-   * getters
-   */
-
   public constructor(usuario: Usuario, pontuacaoRodada?: number, numeroRodada?: number) {
     if (numeroRodada) {
       this.numeroRodada = numeroRodada;
@@ -48,11 +42,6 @@ export default class ApostaRodada {
     return this.apostasJogos;
   }
 
-  /**
-   * Atualiza a pontução de cada jogo na Rodada e retorna a pontuacão total do usuario.
-   *
-   * @return a pontuação do usuário na rodada
-   */
   public atualizaPontuacao(): number {
     let pontos = 0;
     this.apostasJogos.forEach((apostaJogo) => {

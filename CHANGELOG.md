@@ -6,26 +6,47 @@
 - /src/models/HashSenha.ts
     - Classe abstrata que contém uma função estática que gera o hash de senha.
 - /__tests __/Usuario.spec.ts
-    - Arquivo que contém os testes do model Usuário.
-- /__tests __/Time.spec.ts
-    - Arquivo que contém os testes do model Time.
-- /__tests __/Rodada.spec.ts
-    - Arquivo que contém os testes do model Rodada.
-- coverage/*
-    - Arquivos relativos a documentação dos testes.
+    - Arquivo que contém os testes do model Usuario.
+- /__tests __/UsuarioService.ts
+    - Arquivo que contém os testes do service de Usuario
+- /src/services/UsuarioService.ts
+    - Arquivo que contém os testes do service de Usuario
 
 ### Modificados
 - index.ts
     - Removido função que cria o hash de senha.
 - /src/models/Usuário.ts
     - As funções getSenha e setSenha usam a função hash do arquivo /src/models/HashSenha.ts
+    - Adcionado uma variável que indica o status do usuário.
 - /src/models/Rodada.ts
     - Aumentando data para evitar erros.
     - Alterado função getById para usar .find() ao invés de .forEach()
     - Alterado para private função que atualiza horário limite
     - Alterado data inicial pra ser menos hardcoded
+- /helpers/HashHelper
+    - Alterado nome de HashSenha para HashHelper
+- /src/services/BrasileiraoService.ts
+    - Renomeado de brasileirao.ts para BrasileirãoService.ts
+    - Alterado retornos das funções getRodadas e getTabela
+    - Adicionado pra exportar de forma default a classe
+- /src/client/BrasileiraoClient.ts
+    - Renomeado de brasileirao.ts para BrasileirãoClient.ts
+    - Alterado pra exportar de forma default a classe
+    - Alterado types Response para serem exportados
 
 ## SEMANA 6 - [6.0.0] - [2021-10-29]
+
+## SEMANA 5 - [5.0.1] - [2021-10-22]
+
+### Modificados
+- Alteração geral
+    - Alterado o uso de alguns "For" pelo código, adotando uso de .map
+- /src/clients/brasileirao.ts
+    - Adicionado um array de promises e depois feito Promise.all para resolver todas rodadas de uma vez
+    - Alteração na url on o idCampeonato agora é passado via parâmetro no construtor
+- /src/services/brasileirao.ts
+    - Adicionado um Promise.all
+    - Removido linhas desnecessárias
 
 ## SEMANA 5 - [5.0.0] - [2021-10-22]
 
@@ -46,6 +67,22 @@
     -Adcionado caminhos para os arquivos especificados pelo changelog
 - /src/models/Rodada.ts
     - Adcionado testes pra conferir se a data passada para o horario limite é diferente de uma data criada a partir de um valor nulo.
+
+## SEMANA 4 - [4.0.1] - [2021-10-20]
+
+### Modificado
+- JSONTimesRepository.ts
+    - Alterados funções "For" que busca, por .find
+    - Alterado findAll para usar async await
+- JSONUsuariosRepository.ts
+    - Alterado findAll para usar async await
+- JSONRodadasRepository.ts
+    - Retirando grande parte da lógica direto do findAll e criando função auxiliar
+    - Alterado função "For" que busca, por .find
+    - Alterado funçaão "For" usada para montar array, por .map
+- JSONApostaRodadasRepository.ts
+    - Retirando grande parte da lógica direto do findAll e criando de 2 funções auxiliares para diminuir a lógica no findAll
+    - Alterado funçaão "For" usada para montar array, por .map
     
 ## SEMANA 4 - [4.0.0] - [2021-10-16]
 

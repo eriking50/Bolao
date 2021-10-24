@@ -4,6 +4,7 @@ import RodadasRepository from "./RodadasRepository";
 import TimesRepository from "./TimesRepository";
 import JSONTimesRepository from "./JSONTimesRepository";
 import Jogo from "../models/Jogo";
+import Time from "../models/Time";
 import * as fs from "fs"; 
 const { readFile, writeFile } = fs.promises;
 
@@ -32,45 +33,31 @@ export default class JSONRodadasRepository implements RodadasRepository {
   }
 
   // ---- Recupera todas as rodadas
-  public findAll(): Promise<Rodada[]> {
-    const rodadas: Rodada[] = [];
-    return Promise.all([this.timesRepository.findAll(), readFile(RODADAS_FILE_PATH)])
-      .then(([times, rodadaFile]) => {
-        const rodadasFile = JSON.parse(rodadaFile.toString()) as RodadaFile[];
-        for (const rodadaFile of rodadasFile) {
-          const rodada = new Rodada(rodadaFile.numeroRodada);
-          for (const jogo of rodadaFile.jogos) {
-            const mandante = times.find(
-              (time) => time.getId() === jogo.timeMandante.id
-            );
-            const visitante = times.find(
-              (time) => time.getId() === jogo.timeVisitante.id
-            );
-            if (jogo.golsMandante && jogo.golsVisitante) {
-              rodada.addJogo(new Jogo(mandante, visitante, jogo.horarioJogo, jogo.id, jogo.golsMandante, jogo.golsVisitante));
-            } else {
-              rodada.addJogo(new Jogo(mandante, visitante, jogo.horarioJogo, jogo.id));
-            }
-          }
-          rodadas.push(rodada);
-        }
-        return rodadas;
-      })
+  public async findAll(): Promise<Rodada[]> {
+    const [times, rodadaFile] = await Promise.all([this.timesRepository.findAll(), readFile(RODADAS_FILE_PATH)]);
+    const rodadasFile = JSON.parse(rodadaFile.toString()) as RodadaFile[];
+    return this.gerarRodada(rodadasFile, times);
   }
 
   // ---- Recupera uma rodada pelo seu numero
   public async findByNumeroRodada(numeroRodada: number): Promise<Rodada> {
     try {
       const rodadas = await this.findAll();
-      for (const rodada of rodadas) {
+      const rodada = rodadas.find(rodada => {
         if (rodada.getNumeroRodada() === numeroRodada) {
-          return rodada;
+          return true;
         }
+      })
+      
+      if (rodada) {
+        return rodada;
       }
+
       throw new Error("Essa Rodada Não Existe.");
     } catch (error) {
       throw new Error(`Falha ao encontrar as Rodadas. Motivo: ${error.message}.`);
     }
+    
   }
 
   // ---- Salva uma lista de rodadas
@@ -81,4 +68,21 @@ export default class JSONRodadasRepository implements RodadasRepository {
       throw new Error(`Falha ao salvar as Rodadas. Motivo: ${erro.message}.`);
     }
   }
+
+  private gerarRodada(rodadasFile: RodadaFile[], times: Time[]): Rodada[] {
+    return rodadasFile.map(rodadaFile => {
+      const rodada = new Rodada(rodadaFile.numeroRodada);
+      rodadaFile.jogos.map(jogo => {
+        const mandante = times.find((time) => time.getId() === jogo.timeMandante.id);
+        const visitante = times.find((time) => time.getId() === jogo.timeVisitante.id);
+        if (jogo.golsMandante && jogo.golsVisitante) {
+          rodada.addJogo(new Jogo(mandante, visitante, jogo.horarioJogo, jogo.id, jogo.golsMandante, jogo.golsVisitante));
+        } else {
+          rodada.addJogo(new Jogo(mandante, visitante, jogo.horarioJogo, jogo.id));
+        }
+      })
+      return rodada;
+    })
+  }
+
 }

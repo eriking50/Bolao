@@ -3903,7 +3903,7 @@
         "id": 310
       }
     ],
-    "horarioLimite": "2022-12-31T03:00:00.000Z"
+    "horarioLimite": "2022-01-31T03:00:00.000Z"
   },
   {
     "numeroRodada": 32,
@@ -4029,7 +4029,7 @@
         "id": 320
       }
     ],
-    "horarioLimite": "2022-12-31T03:00:00.000Z"
+    "horarioLimite": "2022-01-31T03:00:00.000Z"
   },
   {
     "numeroRodada": 33,
@@ -4155,7 +4155,7 @@
         "id": 330
       }
     ],
-    "horarioLimite": "2022-12-31T03:00:00.000Z"
+    "horarioLimite": "2022-01-31T03:00:00.000Z"
   },
   {
     "numeroRodada": 34,
@@ -4281,7 +4281,7 @@
         "id": 340
       }
     ],
-    "horarioLimite": "2022-12-31T03:00:00.000Z"
+    "horarioLimite": "2022-01-31T03:00:00.000Z"
   },
   {
     "numeroRodada": 35,
@@ -4407,7 +4407,7 @@
         "id": 350
       }
     ],
-    "horarioLimite": "2022-12-31T03:00:00.000Z"
+    "horarioLimite": "2022-01-31T03:00:00.000Z"
   },
   {
     "numeroRodada": 36,
@@ -4533,7 +4533,7 @@
         "id": 360
       }
     ],
-    "horarioLimite": "2022-12-31T03:00:00.000Z"
+    "horarioLimite": "2022-01-31T03:00:00.000Z"
   },
   {
     "numeroRodada": 37,
@@ -4659,7 +4659,7 @@
         "id": 370
       }
     ],
-    "horarioLimite": "2022-12-31T03:00:00.000Z"
+    "horarioLimite": "2022-01-31T03:00:00.000Z"
   },
   {
     "numeroRodada": 38,
@@ -4785,6 +4785,6 @@
         "id": 380
       }
     ],
-    "horarioLimite": "2022-12-31T03:00:00.000Z"
+    "horarioLimite": "2022-01-31T03:00:00.000Z"
   }
 ]

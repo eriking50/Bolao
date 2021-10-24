@@ -15,12 +15,6 @@ export default class ApostaJogo {
   protected readonly golsVisitante: number;
   protected pontos?: number;
 
-  /**
-   * @todo
-   * contructor
-   * getters
-   */
-
   public constructor(golsMandante: number, golsVisitante: number, jogo: Jogo, usuario: Usuario, pontos?: number) {
     this.usuario = usuario;
     this.jogo = jogo;

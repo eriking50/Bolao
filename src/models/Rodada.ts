@@ -9,7 +9,7 @@ export default class Rodada {
     this.numeroRodada = numeroRodada;
     this.jogos = [];
     //Inicio a rodada com uma data que sempre será maior do que o horario dos jogos
-    this.horarioLimite = new Date(new Date().getFullYear() + 1, 11, 31);
+    this.horarioLimite = new Date(2021, 12, 31);
   }
 
   public addJogo(jogo: Jogo): void {
@@ -21,8 +21,8 @@ export default class Rodada {
     return this.jogos;
   }
 
-  private atualizarHorarioLimite(novoJogo: Jogo): void {
-    if (this.horarioLimite > novoJogo.getHorarioJogo() && novoJogo.getHorarioJogo().getTime() !== new Date("1970-01-01T00:00:00.000Z").getTime()) {
+  public atualizarHorarioLimite(novoJogo: Jogo): void {
+    if (this.horarioLimite > novoJogo.getHorarioJogo()) {
       this.horarioLimite = novoJogo.getHorarioJogo();
     }
   }
@@ -32,14 +32,11 @@ export default class Rodada {
   }
 
   public getJogoById(jogoId: number): Jogo {
-    const jogo = this.jogos.find(jogo => {
-      return jogo.getId() === jogoId;
-    })
-
-    if (jogo) {
-      return jogo;
-    }
-
+    this.jogos.forEach((jogo) => {
+      if (jogo.getId() === jogoId) {
+        return jogo;
+      }
+    });
     throw new Error("Jogo Não Encontrado");
   }
 

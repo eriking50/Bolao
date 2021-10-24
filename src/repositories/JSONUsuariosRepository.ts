@@ -20,14 +20,12 @@ export default class JSONUsuariosRepository implements UsuariosRepository {
   }
 
   // --- Recupera todos
-  public findAll(): Promise<Usuario[]> {
-    return readFile(this.usuariosFilePath)
-      .then( (usuariosContent) => {
-        const usuariosFile = JSON.parse(usuariosContent.toString()) as UsuarioFile[];
-        return usuariosFile.map(
-          ({ nome, email, senha }) => new Usuario( nome, email, senha)
-        );
-      })
+  public async findAll(): Promise<Usuario[]> {
+    const usuariosContent = await readFile(this.usuariosFilePath);
+    const usuariosFile = JSON.parse(usuariosContent.toString()) as UsuarioFile[];
+    return usuariosFile.map(
+      ({ nome, email, senha }) => new Usuario(nome, email, senha)
+    );
   }
 
   // --- Encontra um usuario pelo seu email

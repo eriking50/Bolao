@@ -11,7 +11,7 @@ import JSONApostaRodadasRepository from "./src/repositories/JSONApostaRodadasRep
 import JSONRodadasRepository from "./src/repositories/JSONRodadasRepository";
 import JSONTimesRepository from "./src/repositories/JSONTimesRepository";
 import JSONUsuariosRepository from "./src/repositories/JSONUsuariosRepository";
-import { HashSenha } from "./src/models/HashSenha";
+import { HashHelper } from "./src/models/helpers/HashHelper";
 
 const usuariosRepository = new JSONUsuariosRepository();
 const timesRepository = new JSONTimesRepository();
@@ -66,7 +66,7 @@ async function teste(login: Login, numeroRodada: number, palpites: Palpite[]) {
   // login
   const usuario = await usuariosRepository.findByEmail(login.email);
 
-  if(usuario.getSenha() !== HashSenha.hash(login.senha)) {
+  if(usuario.getSenha() !== HashHelper.hash(login.senha)) {
     throw "Login invalido";
   }
 

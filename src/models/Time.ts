@@ -2,7 +2,6 @@ export default class Time {
   private static idTimeAtual = 1;
   protected id: number;
   protected nome: string;
-  protected estado: string;
 
   public constructor(nome: string, id?: number) {
     this.nome = nome;
@@ -24,5 +23,4 @@ export default class Time {
   public getId(): number {
     return this.id;
   }
-
 }
