@@ -2,6 +2,8 @@
 
 ## UNRELEASED
 
+## SEMANA 7 - [7.0.0] - [2021-11-05]
+
 ## SEMANA 6 - [6.0.0] - [2021-10-29]
 
 ### Adcionados
