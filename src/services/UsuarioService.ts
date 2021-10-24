@@ -1,5 +1,4 @@
 import { HashHelper } from "../models/helpers/HashHelper";
-import { EmailHelper } from "../models/helpers/EmailHelper";
 import Usuario from "../models/Usuario";
 
 export type LoginDTO = {
@@ -26,9 +25,9 @@ export default class UsuarioService {
         this.usuarios = [];
     }
 
-    public adcionarUsuario(usuario: Usuario) {
+    public adcionarUsuario(usuario: Usuario): void {
         try {
-            if (EmailHelper.isUnico(usuario.getEmail(), this.usuarios)) {
+            if (this.isUnico(usuario.getEmail())) {
                 this.usuarios.push(usuario);
             }
         } catch (error) {
@@ -60,7 +59,7 @@ export default class UsuarioService {
         this.usuarioLogado = "";
     }
 
-    public alterarCadastro(dados: AlterarCadastroDTO) {
+    public alterarCadastro(dados: AlterarCadastroDTO): void {
         if (this.usuarioLogado !== dados.email) {
             throw new Error("Você não pode alterar uma conta que não seja a sua.");
         }
@@ -89,7 +88,7 @@ export default class UsuarioService {
         throw new Error("O usuário não existe.");
     }
     
-    public alterarStatusUsuario(dados: AlterarStatus) {
+    public alterarStatusUsuario(dados: AlterarStatus): void {
         if (this.usuarioLogado !== dados.email) {
             throw new Error("Você não pode alterar uma conta que não seja a sua.");
         }
@@ -107,5 +106,14 @@ export default class UsuarioService {
 
     public getUsuarioLogado(): string {
         return this.usuarioLogado;
+    }
+
+    public isUnico(email: string): boolean {
+        for (const usuario of this.usuarios) {
+            if (usuario.getEmail() === email) {
+                throw new Error("Este email já está cadastrado no sistema.");
+            }
+        }
+        return true;
     }
 }
