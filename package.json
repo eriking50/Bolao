@@ -1,6 +1,6 @@
 {
-  "name": "semana2",
-  "version": "1.0.0",
+  "name": "bolao",
+  "version": "6.0.0",
   "description": "Geometric Figures",
   "main": "build/index.js",
   "scripts": {

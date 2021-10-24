@@ -28,13 +28,12 @@ fazem sentido.
  [x] Como usuário, eu gostaria de ter a possibilidade de inativar meu cadastro
   ** [x] a inativação deve ser lógica, ou seja, devo somente inativar o usuário, e não deleta-lo.
 
-# Brasileirao ---------------------------------------------------------------------------------------------------------------------------------
+# Rodada ---------------------------------------------------------------------------------------------------------------------------------
 
 #### User Story 5:
- [] Como usuário, eu gostaria que o placar dos jogos fosse atualizado de acordo com a API do Brasileirão utilizada
+ [x] Como usuário, eu gostaria que o placar dos jogos fosse atualizado de acordo com a API do Brasileirão utilizada
  na semana 5
-  ** [] Cuidado com os jogos que ainda não foram realizados e estão sem placar
-
+  ** [x] Cuidado com os jogos que ainda não foram realizados e estão sem placar
 
 #### User story 6:
- [] Como usuário, eu gostaria de visualizar uma rodada e seus jogos
+ [x] Como usuário, eu gostaria de visualizar uma rodada e seus jogos

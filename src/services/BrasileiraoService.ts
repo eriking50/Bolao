@@ -40,7 +40,7 @@ export default class BrasileiraoService {
                 rodada.partidas.map(partida => {
                     const mandante = times.find(time => time.getId() === partida.time_mandante.time_id);
                     const visitante = times.find(time => time.getId() === partida.time_visitante.time_id);
-                    newRodada.addJogo(new Jogo(mandante, visitante, partida.data_realizacao_iso));
+                    newRodada.addJogo(new Jogo(mandante, visitante, partida.data_realizacao_iso, partida.partida_id));
                 })
                 return newRodada;
             })

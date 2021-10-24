@@ -2,6 +2,7 @@ import BrasileiraoService from "../src/services/BrasileiraoService";
 import JSONTimesRepository from "../src/repositories/JSONTimesRepository";
 import JSONRodadasRepository from "../src/repositories/JSONRodadasRepository";
 import BrasileiraoClient, { TabelaResponse, RodadaResponse } from "../src/clients/BrasileiraoClient";
+import Time from "../src/models/Time";
 
 const tabela: TabelaResponse = {
     "posicao": 9,
@@ -77,6 +78,9 @@ const rodada: RodadaResponse = {
         "_link": "/v1/campeonatos/10/rodadas/1"
 }
 
+const time1 = new Time("Cuiabá", 204)
+const time2 = new Time("Juventude", 43)
+
 describe("Testa a classe service: BrasileiraoService", () => {
     describe("Testa criação da classe BrasileiraoService", () => {
         it("Deve criar uma nova instância da classe BrasileiraoService", () => {
@@ -131,16 +135,18 @@ describe("Testa a classe service: BrasileiraoService", () => {
 
             expect(brasileiraoService.getRodadas()).rejects.toThrow();
         })
-        it.skip("Deve retornar um erro caso não consiga salvar as rodadas no banco de dados", async () => {
+        it("Deve retornar um erro caso não consiga salvar as rodadas no banco de dados", async () => {
             jest.spyOn(BrasileiraoClient.prototype, "getRodadasAPI").mockResolvedValueOnce([rodada]);
+            jest.spyOn(JSONTimesRepository.prototype, "findAll").mockResolvedValueOnce([time1, time2]);
             jest.spyOn(JSONRodadasRepository.prototype, "save").mockRejectedValueOnce(new Error("Erro ao salvar"));
             
             const brasileiraoService = new BrasileiraoService(10);
             
             expect(brasileiraoService.getRodadas()).rejects.toThrow();
         })
-        it.skip("Deve salvar as rodadas no banco de dados com sucesso", () => {
+        it("Deve salvar as rodadas no banco de dados com sucesso", () => {
             jest.spyOn(BrasileiraoClient.prototype, "getRodadasAPI").mockResolvedValueOnce([rodada]);
+            jest.spyOn(JSONTimesRepository.prototype, "findAll").mockResolvedValueOnce([time1, time2]);
             jest.spyOn(JSONRodadasRepository.prototype, "save").mockResolvedValueOnce();
             const brasileiraoService = new BrasileiraoService(10);
             
