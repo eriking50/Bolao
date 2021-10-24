@@ -105,7 +105,7 @@ describe("Testa a classe service: RodadaService", () => {
             expect(rodadaService.updateResultados()).resolves.not.toBeDefined();
         })
     })
-    describe("Testa a função que atualiza ", () => {
+    describe("Testa a função que retorna uma rodada para o usuário", () => {
         beforeEach(() => {
             jest.clearAllMocks();
         })
