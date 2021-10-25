@@ -1,5 +1,4 @@
 import { HashHelper } from "./helpers/HashHelper";
-import { EmailHelper } from "./helpers/EmailHelper";
 
 /** O usuário do sistema que fará as apostas */
 export default class Usuario {
@@ -10,9 +9,6 @@ export default class Usuario {
 
   public constructor(nome: string, email: string, senha: string) {
     this.nome = nome;
-    if (!EmailHelper.validarEmail(email)) {
-      throw new Error("Email inválido, tente outro.");
-    }
     this.email = email;
     this.senha = HashHelper.hash(senha);
     this.status = true;

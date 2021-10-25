@@ -1,3 +1,4 @@
+import { EmailHelper } from "../models/helpers/EmailHelper";
 import { HashHelper } from "../models/helpers/HashHelper";
 import Usuario from "../models/Usuario";
 
@@ -27,6 +28,9 @@ export default class UsuarioService {
 
     public adcionarUsuario(usuario: Usuario): void {
         try {
+            if (!EmailHelper.validarEmail(usuario.getEmail())) {
+                throw new Error(`Email inválido, tente outro.`);
+            }
             if (this.isUnico(usuario.getEmail())) {
                 this.usuarios.push(usuario);
                 return;

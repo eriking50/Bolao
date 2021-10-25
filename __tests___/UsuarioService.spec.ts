@@ -13,7 +13,7 @@ describe("Testes da classe service: UsuarioService", () => {
         beforeEach(() => {
             jest.clearAllMocks();
         })
-        it("Deve retornar erro caso não seja possível criar o usuário", () => {
+        it("Deve retornar erro caso caso o email já esteja registrado no banco de dados", () => {
             jest.spyOn(HashHelper, "hash").mockReturnValue("algum_hash");
             jest.spyOn(EmailHelper, "validarEmail").mockReturnValue(true);
             const usuario = new Usuario("Erik", "erik@email.com", "123456");
@@ -22,6 +22,17 @@ describe("Testes da classe service: UsuarioService", () => {
             usuarioService.adcionarUsuario(usuario);
             const wrapper = () => {
                 usuarioService.adcionarUsuario(usuario2);
+            }
+
+            expect(wrapper).toThrow(Error);
+        })
+        it("Deve retornar erro caso o email seja inválido", () => {
+            jest.spyOn(HashHelper, "hash").mockReturnValue("algum_hash");
+            jest.spyOn(EmailHelper, "validarEmail").mockReturnValue(false);
+            const usuario = new Usuario("Erik", "erik", "123456");
+            const usuarioService = new UsuarioService();
+            const wrapper = () => {
+                usuarioService.adcionarUsuario(usuario);
             }
 
             expect(wrapper).toThrow(Error);
@@ -42,8 +53,8 @@ describe("Testes da classe service: UsuarioService", () => {
         })
         it("Deve retornar erro caso não seja possível fazer o login", () => {
             jest.spyOn(HashHelper, "hash").mockReturnValueOnce("algum_hash");
-            jest.spyOn(EmailHelper, "validarEmail").mockReturnValue(true);
             const usuario = new Usuario("Erik", "erik@email.com", "123456");
+            jest.spyOn(EmailHelper, "validarEmail").mockReturnValue(true);
             const usuarioService = new UsuarioService();
             usuarioService.adcionarUsuario(usuario);
             const wrapper = () => {
