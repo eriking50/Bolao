@@ -1,6 +1,6 @@
 import axios from "axios"
 
-const URL_BRASILEIRAO = "https://us-central1-small-talk-3972f.cloudfunctions.net/v1/v1/campeonatos/10";
+const URL_BRASILEIRAO = "https://us-central1-small-talk-3972f.cloudfunctions.net/v1/v1/campeonatos/";
 
 type TimeTabela = {
     time_id: number,
@@ -91,7 +91,7 @@ export default class BrasileiraoClient {
     public async getTabelaAPI(): Promise<TabelaResponse[]> {
         try {
             const tabela = await axios.get<TabelaResponse[]>(`${URL_BRASILEIRAO}/${this.idCampeonato}/tabela`, {
-                headers: {Authorization: `bearer ${process.env.TOKEN}`},
+                headers: {Authorization: `bearer d44db0cc0676316ee1248780ec04da734e0f06a77c30aaf9a2dcbb1899093361`},
             });
             return tabela.data;
         } catch (error) {
@@ -102,9 +102,8 @@ export default class BrasileiraoClient {
     public async getRodadasAPI(numeroRodada: number): Promise<RodadaResponse> {
         try {
             const response = await axios.get<RodadaResponse>(`${URL_BRASILEIRAO}/${this.idCampeonato}/rodadas/${numeroRodada}`, {
-                headers: {Authorization: `bearer ${process.env.TOKEN}`},
+                headers: {Authorization: `bearer d44db0cc0676316ee1248780ec04da734e0f06a77c30aaf9a2dcbb1899093361`},
             });
-    
             return response.data;
         } catch (error) {
             throw new Error("Falha ao buscar detalhes da rodada na API.");
@@ -114,11 +113,12 @@ export default class BrasileiraoClient {
     public async getDadosCampeonatoAPI(): Promise<CampeonatoResponse[]> {
         try {
             const campeonatoResponse = await axios.get<CampeonatoResponse[]>(`${URL_BRASILEIRAO}/${this.idCampeonato}/rodadas/`, {
-                headers:{Authorization: `bearer ${process.env.TOKEN}`}
+                headers:{Authorization: `bearer d44db0cc0676316ee1248780ec04da734e0f06a77c30aaf9a2dcbb1899093361`}
             });
+            
             return campeonatoResponse.data;
         } catch (error) {
-            throw new Error(`Falha ao buscar dados sobre o campeonato na API.`);
+            throw new Error(`Falha ao buscar dados sobre o campeonato na API. Motivo ${error.message}`);
         }
     }
 }

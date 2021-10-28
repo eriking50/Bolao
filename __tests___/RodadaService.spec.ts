@@ -86,10 +86,10 @@ describe("Testa a classe service: RodadaService", () => {
             jest.clearAllMocks();
         })
         it("Deve salvar as rodadas atualizadas do banco de dados", () => {
-            jest.spyOn(BrasileiraoClient.prototype, "getDadosCampeonatoAPI").mockResolvedValueOnce([campeonato]);
-            jest.spyOn(BrasileiraoClient.prototype, "getRodadasAPI").mockResolvedValueOnce(rodada);
-            jest.spyOn(JSONRodadasRepository.prototype, "findAll").mockResolvedValueOnce([rodadaClasse]);
-            jest.spyOn(JSONRodadasRepository.prototype, "save").mockResolvedValueOnce();
+            jest.spyOn(BrasileiraoClient.prototype, "getDadosCampeonatoAPI").mockResolvedValue([campeonato]);
+            jest.spyOn(BrasileiraoClient.prototype, "getRodadasAPI").mockResolvedValue(rodada);
+            jest.spyOn(JSONRodadasRepository.prototype, "findAll").mockResolvedValue([rodadaClasse]);
+            jest.spyOn(JSONRodadasRepository.prototype, "save").mockResolvedValue();
 
             const rodadaService = new RodadaService(10);
 
@@ -103,7 +103,7 @@ describe("Testa a classe service: RodadaService", () => {
             expect(rodadaService.updateResultados()).rejects.toThrow();
         })
         it("Deve retornar um erro caso não consiga recuperar as rodadas da API", async () => {
-            jest.spyOn(BrasileiraoClient.prototype, "getDadosCampeonatoAPI").mockResolvedValueOnce([campeonato]);
+            jest.spyOn(BrasileiraoClient.prototype, "getDadosCampeonatoAPI").mockResolvedValue([campeonato]);
             jest.spyOn(BrasileiraoClient.prototype, "getRodadasAPI").mockRejectedValueOnce(new Error("Erro ao recuperar detalhes da rodada"));
 
             const rodadaService = new RodadaService(10);
@@ -111,8 +111,8 @@ describe("Testa a classe service: RodadaService", () => {
             expect(rodadaService.updateResultados()).rejects.toThrow();
         })
         it("Deve retornar um erro caso não consiga recuperar as rodadas do banco de dados", async () => {
-            jest.spyOn(BrasileiraoClient.prototype, "getDadosCampeonatoAPI").mockResolvedValueOnce([campeonato]);
-            jest.spyOn(BrasileiraoClient.prototype, "getRodadasAPI").mockResolvedValueOnce(rodada);
+            jest.spyOn(BrasileiraoClient.prototype, "getDadosCampeonatoAPI").mockResolvedValue([campeonato]);
+            jest.spyOn(BrasileiraoClient.prototype, "getRodadasAPI").mockResolvedValue(rodada);
             jest.spyOn(JSONRodadasRepository.prototype, "findAll").mockRejectedValueOnce(new Error("Erro ao ler dados do banco de dados"));
 
             const rodadaService = new RodadaService(10);
@@ -120,9 +120,9 @@ describe("Testa a classe service: RodadaService", () => {
             expect(rodadaService.updateResultados()).rejects.toThrow();
         })
         it("Deve retornar um erro caso não consiga salvar as rodadas atualizadas do banco de dados", async () => {
-            jest.spyOn(BrasileiraoClient.prototype, "getDadosCampeonatoAPI").mockResolvedValueOnce([campeonato]);
-            jest.spyOn(BrasileiraoClient.prototype, "getRodadasAPI").mockResolvedValueOnce(rodada);
-            jest.spyOn(JSONRodadasRepository.prototype, "findAll").mockResolvedValueOnce([rodadaClasse]);
+            jest.spyOn(BrasileiraoClient.prototype, "getDadosCampeonatoAPI").mockResolvedValue([campeonato]);
+            jest.spyOn(BrasileiraoClient.prototype, "getRodadasAPI").mockResolvedValue(rodada);
+            jest.spyOn(JSONRodadasRepository.prototype, "findAll").mockResolvedValue([rodadaClasse]);
             jest.spyOn(JSONRodadasRepository.prototype, "save").mockRejectedValueOnce(new Error("Erro ao salvar dados"));
 
             const rodadaService = new RodadaService(10);
@@ -142,14 +142,14 @@ describe("Testa a classe service: RodadaService", () => {
             expect(rodadaService.getJogosByRodada(1)).rejects.toThrow();
         })
         it("Deve retornar um erro caso a rodada buscada não exista no banco de dados", async () => {
-            jest.spyOn(JSONRodadasRepository.prototype, "findAll").mockResolvedValueOnce([rodadaClasse]);
+            jest.spyOn(JSONRodadasRepository.prototype, "findAll").mockResolvedValue([rodadaClasse]);
 
             const rodadaService = new RodadaService(10);
 
             expect(rodadaService.getJogosByRodada(2)).rejects.toThrow();
         })
         it("Deve retornar a rodada corretamente", async () => {
-            jest.spyOn(JSONRodadasRepository.prototype, "findAll").mockResolvedValueOnce([rodadaClasse]);
+            jest.spyOn(JSONRodadasRepository.prototype, "findAll").mockResolvedValue([rodadaClasse]);
 
             const rodadaService = new RodadaService(10);
 

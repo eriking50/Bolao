@@ -38,6 +38,7 @@ export default class BrasileiraoService {
             const promises = dadosCampeonato.map(dadosRodada => this.brasileiraoClient.getRodadasAPI(dadosRodada.rodada));
 
             const rodadasResponse = await Promise.all(promises);
+            
             const rodadas = rodadasResponse.map(rodada => {
                 const newRodada = new Rodada(rodada.rodada);
                 rodada.partidas.map(partida => {
@@ -53,5 +54,3 @@ export default class BrasileiraoService {
         }
     }
 }
-
-export { BrasileiraoService }
