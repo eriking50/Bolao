@@ -76,7 +76,7 @@ export type CampeonatoResponse = {
     slug: string,
     rodada: number,
     status: string,
-    anterior: DadosRodada,
+    rodada_anterior: DadosRodada,
     proxima_rodada: DadosRodada,
     _link: string
 }
@@ -91,35 +91,34 @@ export default class BrasileiraoClient {
     public async getTabelaAPI(): Promise<TabelaResponse[]> {
         try {
             const tabela = await axios.get<TabelaResponse[]>(`${URL_BRASILEIRAO}/${this.idCampeonato}/tabela`, {
-                headers: {Authorization: 'bearer d44db0cc0676316ee1248780ec04da734e0f06a77c30aaf9a2dcbb1899093361'},
+                headers: {Authorization: `bearer ${process.env.TOKEN}`},
             });
-            return tabela.data.sort((timeA, timeB) => timeA.time.nome_popular.localeCompare(timeB.time.nome_popular));
+            return tabela.data;
         } catch (error) {
             throw new Error(`Falha ao buscar times na API.`);
         }
     }
 
-    public async getRodadasAPI(): Promise<RodadaResponse[]> {
+    public async getRodadasAPI(numeroRodada: number): Promise<RodadaResponse> {
+        try {
+            const response = await axios.get<RodadaResponse>(`${URL_BRASILEIRAO}/${this.idCampeonato}/rodadas/${numeroRodada}`, {
+                headers: {Authorization: `bearer ${process.env.TOKEN}`},
+            });
+    
+            return response.data;
+        } catch (error) {
+            throw new Error("Falha ao buscar detalhes da rodada na API.");
+        }
+    }
+
+    public async getDadosCampeonatoAPI(): Promise<CampeonatoResponse[]> {
         try {
             const campeonatoResponse = await axios.get<CampeonatoResponse[]>(`${URL_BRASILEIRAO}/${this.idCampeonato}/rodadas/`, {
-                headers: {Authorization: 'bearer d44db0cc0676316ee1248780ec04da734e0f06a77c30aaf9a2dcbb1899093361'},
+                headers:{Authorization: `bearer ${process.env.TOKEN}`}
             });
-            const ultimaRodada = campeonatoResponse.data[campeonatoResponse.data.length-1].rodada;  
-
-            const promises = [];
-            for (let i = 1; i < ultimaRodada + 1; i++) {
-                promises.push(axios.get<RodadaResponse>(`${URL_BRASILEIRAO}/${this.idCampeonato}/rodadas/${i}`, {
-                    headers: {Authorization: 'bearer d44db0cc0676316ee1248780ec04da734e0f06a77c30aaf9a2dcbb1899093361'},
-                }));
-            }
-
-            const responseRodada = await Promise.all(promises);            
-            return responseRodada.map(rodada => {
-                return rodada.data
-            });
-
+            return campeonatoResponse.data;
         } catch (error) {
-            throw new Error(`Falha ao buscar rodadas na API.`);
+            throw new Error(`Falha ao buscar dados sobre o campeonato na API.`);
         }
     }
 }

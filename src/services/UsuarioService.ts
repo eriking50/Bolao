@@ -1,3 +1,5 @@
+import JSONUsuariosRepository from "../repositories/JSONUsuariosRepository";
+import UsuarioRepository from "../repositories/UsuariosRepository";
 import { EmailHelper } from "../models/helpers/EmailHelper";
 import { HashHelper } from "../models/helpers/HashHelper";
 import Usuario from "../models/Usuario";
@@ -19,100 +21,115 @@ export type AlterarStatus = {
 }
 
 export default class UsuarioService {
-    protected usuarios: Usuario[];
-    protected usuarioLogado: string = "";
+    protected usuariosRepository: UsuarioRepository;
+    protected usuarioLogado: string;
 
     constructor() {
-        this.usuarios = [];
+        this.usuariosRepository = new JSONUsuariosRepository();
+        this.usuarioLogado = "";
     }
 
-    public adcionarUsuario(usuario: Usuario): void {
+    public async adcionarUsuario(usuario: Usuario): Promise<void> {
         try {
             if (!EmailHelper.validarEmail(usuario.getEmail())) {
                 throw new Error(`Email inválido, tente outro.`);
             }
-            if (this.isUnico(usuario.getEmail())) {
-                this.usuarios.push(usuario);
-                return;
+            const usuarios = await this.usuariosRepository.findAll();
+            if (!this.isUnico(usuario.getEmail(), usuarios)) {
+                throw new Error("Email já cadastrado no sistema, tente outro");
             }
+            usuarios.push(usuario);
+            return await this.usuariosRepository.save(usuarios);
         } catch (error) {
-            throw new Error(`Não foi possível cadastrar o usuário. Motivo: ${error.message}`);
+            throw new Error(`Não foi possível adicionar usuário. motivo: ${error.message}`);
         }
     }
 
-    public getUsuarios(): Usuario[] {
-        return this.usuarios;
+    public async getUsuarios(): Promise<Usuario[]> {
+        const usuarios = await this.usuariosRepository.findAll();
+        return usuarios;
     }
 
-    public realizarLogin(login: LoginDTO): Usuario {
-        const usuarioBD = this.usuarios.find(usuarioFind => {
-            if (usuarioFind.getEmail() === login.email) {
-                return true;
+    public async realizarLogin(login: LoginDTO): Promise<void> {
+        try {
+            const usuarios = await this.usuariosRepository.findAll();
+            const usuarioBD = usuarios.find(usuarioFind => {
+                return usuarioFind.getEmail() === login.email;
+            })
+            if (usuarioBD) {
+                if (usuarioBD.getSenha() === HashHelper.hash(login.senha)) {
+                    this.usuarioLogado = usuarioBD.getEmail();
+                    return;
+                }
             }
-        })
-        if (usuarioBD) {
-            if (usuarioBD.getSenha() === HashHelper.hash(login.senha)) {
-                this.usuarioLogado = usuarioBD.getEmail();
-                return;
-            }
+            throw new Error("O usuário não existe ou os dados estão incorretos");
+        } catch (error) {
+            throw new Error(`Não foi possível fazer login. motivo: ${error.message}`);
         }
-        throw new Error("O usuário não existe ou os dados estão incorretos");
     }
 
     public deslogar() {
         this.usuarioLogado = "";
     }
 
-    public alterarCadastro(dados: AlterarCadastroDTO): void {
-        if (!this.usuarioLogado) {
-            throw new Error("Você precisa estar logado para poder fazer essas alterações.");
-        }
-        if (this.usuarioLogado !== dados.email) {
-            throw new Error("Você não pode alterar uma conta que não seja a sua.");
-        }
-        if (!dados.nome && !dados.senha) {
-            throw new Error("Não há dados para serem alterados");
-        }
-        
-        for (let i = 0; i < this.usuarios.length; i++) {
-            if (this.usuarios[i].getEmail() === dados.email) {
-                if (!this.usuarios[i].getStatus()) {
-                    throw new Error("O usuário não está ativo, ative para poder alterar os dados.");
-                }
-                if (dados.nome && dados.nome.length > 0) {
-                    this.usuarios[i].setNome(dados.nome);
-                }
-                if (dados.senha && dados.senha.length > 0) {
-                    this.usuarios[i].setSenha(dados.senha);
-                }
-                return;
+    public async alterarCadastro(dados: AlterarCadastroDTO): Promise<void> {
+        try {
+            const usuarios = await this.usuariosRepository.findAll();
+            if (!this.usuarioLogado) {
+                throw new Error("Você precisa estar logado para poder fazer essas alterações.");
             }
+            if (this.usuarioLogado !== dados.email) {
+                throw new Error("Você não pode alterar uma conta que não seja a sua.");
+            }
+            if (!dados.nome && !dados.senha) {
+                throw new Error("Não há dados para serem alterados");
+            }
+            const usuarioBD = usuarios.find((usuario)=> {
+                return usuario.getEmail() === dados.email;
+            })
+            if (!usuarioBD.getStatus()) {
+                throw new Error("O usuário não está ativo, ative para poder alterar os dados.");
+            }
+            if(dados.nome) usuarioBD.setNome(dados.nome);
+            if(dados.senha) usuarioBD.setNome(dados.senha);
+            
+            return await this.usuariosRepository.update(usuarioBD);
+        } catch (error) {
+            throw new Error(`Não foi possível alterar os dados do usuario. motivo: ${error.message}`);
         }
     }
     
-    public alterarStatusUsuario(dados: AlterarStatus): void {
-        if (!this.usuarioLogado) {
-            throw new Error("Você precisa estar logado para poder fazer essas alterações.");
-        }
-        if (this.usuarioLogado !== dados.email) {
-            throw new Error("Você não pode alterar uma conta que não seja a sua.");
-        }
-        this.usuarios.find((usuario, i) => {
-            if (usuario.getEmail() === dados.email) {
-                this.usuarios[i].setStatus(dados.status);
-                return;
+    public async alterarStatusUsuario(dados: AlterarStatus): Promise<void> {
+        try {
+            const usuarios = await this.usuariosRepository.findAll();
+            if (!this.usuarioLogado) {
+                throw new Error("Você precisa estar logado para poder fazer essas alterações.");
             }
-        })
+            if (this.usuarioLogado !== dados.email) {
+                throw new Error("Você não pode alterar uma conta que não seja a sua.");
+            }
+            const usuarioBD = usuarios.find((usuario)=> {
+                return usuario.getEmail() === dados.email;
+            })
+            usuarioBD.setStatus(dados.status);
+            
+            return await this.usuariosRepository.update(usuarioBD);
+        } catch (error) {
+            throw new Error(`Não foi possível alterar status do usuário. motivo: ${error.message}`);
+        }
     }
 
     public getUsuarioLogado(): string {
         return this.usuarioLogado;
     }
 
-    public isUnico(email: string): boolean {
-        for (const usuario of this.usuarios) {
+    public isUnico(email: string, usuarios: Usuario[]): boolean {
+        if (!usuarios.length) {
+            return true;
+        }
+        for (const usuario of usuarios) {
             if (usuario.getEmail() === email) {
-                throw new Error("Este email já está cadastrado no sistema.");
+                return false;
             }
         }
         return true;

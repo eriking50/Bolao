@@ -14,8 +14,12 @@ export default class RodadaService {
 
     public async updateResultados(): Promise<void> {
         try {
-            const [rodadas, rodadasResponse] = await Promise.all([this.rodadasRepository.findAll(), this.brasileiraoClient.getRodadasAPI()]);
-            const rodadasAtualizada = rodadas.map(rodada => {
+            const [rodadasAtual, dadosCampeonato] = await Promise.all([this.rodadasRepository.findAll(), this.brasileiraoClient.getDadosCampeonatoAPI()]);
+            const promises = dadosCampeonato.map(dadosRodada => this.brasileiraoClient.getRodadasAPI(dadosRodada.rodada));
+            
+            const rodadasResponse = await Promise.all(promises);
+
+            const rodadasAtualizada = rodadasAtual.map(rodada => {
                 rodadasResponse.map(rodadaResponse => {
                     rodada.getJogos().map(jogo => {
                         rodadaResponse.partidas.map(partida => {
@@ -27,8 +31,7 @@ export default class RodadaService {
                 })
                 return rodada;
             })
-
-            await this.rodadasRepository.save(rodadasAtualizada);
+            return await this.rodadasRepository.save(rodadasAtualizada);
         } catch (error) {
             throw new Error(`Falha ao atualizar os jogos no banco de dados. Motivo: ${error.message}.`);
         }

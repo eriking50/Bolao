@@ -21,8 +21,9 @@ export default class BrasileiraoService {
     public async getTimes(): Promise<void> {
         try {     
             const tabelaResponse = await this.brasileiraoClient.getTabelaAPI();
+            const tabelaResponseOrdenada = tabelaResponse.sort((timeA, timeB) => timeA.time.nome_popular.localeCompare(timeB.time.nome_popular));
 
-            const times = tabelaResponse.map(({time}) => {
+            const times = tabelaResponseOrdenada.map(({time}) => {
                 return new Time(time.nome_popular, time.time_id);
             })
             await this.timesRepository.save(times);
@@ -33,8 +34,10 @@ export default class BrasileiraoService {
 
     public async getRodadas(): Promise<void> {
         try {
-            const [times, rodadasResponse] = await Promise.all([this.timesRepository.findAll(), this.brasileiraoClient.getRodadasAPI()]);
-            
+            const [times, dadosCampeonato] = await Promise.all([this.timesRepository.findAll(), this.brasileiraoClient.getDadosCampeonatoAPI()]);
+            const promises = dadosCampeonato.map(dadosRodada => this.brasileiraoClient.getRodadasAPI(dadosRodada.rodada));
+
+            const rodadasResponse = await Promise.all(promises);
             const rodadas = rodadasResponse.map(rodada => {
                 const newRodada = new Rodada(rodada.rodada);
                 rodada.partidas.map(partida => {
@@ -44,8 +47,7 @@ export default class BrasileiraoService {
                 })
                 return newRodada;
             })
-
-            await this.rodadasRepository.save(rodadas);
+            return await this.rodadasRepository.save(rodadas);
         } catch (error) {
             throw new Error(`Falha ao buscar/salvar rodadas na API. Motivo: ${error.message}.`);
         }
