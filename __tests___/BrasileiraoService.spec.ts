@@ -115,7 +115,7 @@ describe("Testa a classe service: BrasileiraoService", () => {
             expect(brasileiraoService.getTimes()).rejects.toThrow();
         })
         it("Deve retornar um erro caso não consiga salvar os times no banco de dados", () => {
-            jest.spyOn(BrasileiraoClient.prototype, "getTabelaAPI").mockResolvedValue([tabela]);
+            jest.spyOn(BrasileiraoClient.prototype, "getTabelaAPI").mockResolvedValueOnce([tabela]);
             jest.spyOn(JSONTimesRepository.prototype, "save").mockRejectedValueOnce(new Error("Erro ao salvar"));
 
             const brasileiraoService = new BrasileiraoService(10);
@@ -123,8 +123,8 @@ describe("Testa a classe service: BrasileiraoService", () => {
             expect(brasileiraoService.getTimes()).rejects.toThrow();
         })
         it("Deve salvar os times no banco de dados com sucesso", () => {
-            jest.spyOn(BrasileiraoClient.prototype, "getTabelaAPI").mockResolvedValue([tabela]);
-            jest.spyOn(JSONTimesRepository.prototype, "save").mockResolvedValue();
+            jest.spyOn(BrasileiraoClient.prototype, "getTabelaAPI").mockResolvedValueOnce([tabela]);
+            jest.spyOn(JSONTimesRepository.prototype, "save").mockResolvedValueOnce();
             const brasileiraoService = new BrasileiraoService(10);
 
             expect(brasileiraoService.getTimes()).resolves.not.toBeDefined();
@@ -135,10 +135,10 @@ describe("Testa a classe service: BrasileiraoService", () => {
             jest.clearAllMocks();
         })
         it("Deve salvar as rodadas no banco de dados com sucesso", () => {
-            jest.spyOn(BrasileiraoClient.prototype, "getDadosCampeonatoAPI").mockResolvedValue([campeonato]);
-            jest.spyOn(JSONTimesRepository.prototype, "findAll").mockResolvedValue([time1, time2]);
-            jest.spyOn(BrasileiraoClient.prototype, "getRodadasAPI").mockResolvedValue(rodada);
-            jest.spyOn(JSONRodadasRepository.prototype, "save").mockResolvedValue();
+            jest.spyOn(BrasileiraoClient.prototype, "getDadosCampeonatoAPI").mockResolvedValueOnce([campeonato]);
+            jest.spyOn(JSONTimesRepository.prototype, "findAll").mockResolvedValueOnce([time1, time2]);
+            jest.spyOn(BrasileiraoClient.prototype, "getRodadasAPI").mockResolvedValueOnce(rodada);
+            jest.spyOn(JSONRodadasRepository.prototype, "save").mockResolvedValueOnce();
             const brasileiraoService = new BrasileiraoService(10);
             
             expect(brasileiraoService.getRodadas()).resolves.not.toBeDefined();
@@ -150,15 +150,16 @@ describe("Testa a classe service: BrasileiraoService", () => {
             expect(brasileiraoService.getRodadas()).rejects.toThrow();
         })
         it("Deve retornar um erro caso não consiga recuperar as rodadas da API", () => {
-            jest.spyOn(BrasileiraoClient.prototype, "getDadosCampeonatoAPI").mockResolvedValue([campeonato]);
-            jest.spyOn(BrasileiraoClient.prototype, "getRodadasAPI").mockRejectedValueOnce(new Error("Erro ao recuperar dados"));
+            jest.spyOn(BrasileiraoClient.prototype, "getDadosCampeonatoAPI").mockResolvedValueOnce([campeonato]);
+            jest.spyOn(JSONTimesRepository.prototype, "findAll").mockResolvedValueOnce([time1, time2]);
+            jest.spyOn(BrasileiraoClient.prototype, "getRodadasAPI").mockRejectedValue(new Error("Erro ao recuperar dados"));
             const brasileiraoService = new BrasileiraoService(10);
 
             expect(brasileiraoService.getRodadas()).rejects.toThrow();
         })
         it("Deve retornar um erro caso não consiga recuperar os times do banco de dados", () => {
-            jest.spyOn(BrasileiraoClient.prototype, "getDadosCampeonatoAPI").mockResolvedValue([campeonato]);
-            jest.spyOn(BrasileiraoClient.prototype, "getRodadasAPI").mockResolvedValue(rodada);
+            jest.spyOn(BrasileiraoClient.prototype, "getDadosCampeonatoAPI").mockResolvedValueOnce([campeonato]);
+            jest.spyOn(BrasileiraoClient.prototype, "getRodadasAPI").mockResolvedValueOnce(rodada);
             jest.spyOn(JSONTimesRepository.prototype, "findAll").mockRejectedValueOnce(new Error("Erro ao recuperar dados"));
 
             const brasileiraoService = new BrasileiraoService(10);
@@ -166,9 +167,9 @@ describe("Testa a classe service: BrasileiraoService", () => {
             expect(brasileiraoService.getRodadas()).rejects.toThrow();
         })
         it("Deve retornar um erro caso não consiga salvar as rodadas no banco de dados", () => {
-            jest.spyOn(BrasileiraoClient.prototype, "getDadosCampeonatoAPI").mockResolvedValue([campeonato]);
-            jest.spyOn(BrasileiraoClient.prototype, "getRodadasAPI").mockResolvedValue(rodada);
-            jest.spyOn(JSONTimesRepository.prototype, "findAll").mockResolvedValue([time1, time2]);
+            jest.spyOn(BrasileiraoClient.prototype, "getDadosCampeonatoAPI").mockResolvedValueOnce([campeonato]);
+            jest.spyOn(BrasileiraoClient.prototype, "getRodadasAPI").mockResolvedValueOnce(rodada);
+            jest.spyOn(JSONTimesRepository.prototype, "findAll").mockResolvedValueOnce([time1, time2]);
             jest.spyOn(JSONRodadasRepository.prototype, "save").mockRejectedValueOnce(new Error("Erro ao salvar"));
             
             const brasileiraoService = new BrasileiraoService(10);

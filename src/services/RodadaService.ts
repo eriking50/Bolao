@@ -31,7 +31,8 @@ export default class RodadaService {
                 })
                 return rodada;
             })
-            return await this.rodadasRepository.save(rodadasAtualizada);
+            await this.rodadasRepository.save(rodadasAtualizada);
+            return;
         } catch (error) {
             throw new Error(`Falha ao atualizar os jogos no banco de dados. Motivo: ${error.message}.`);
         }

@@ -48,7 +48,8 @@ export default class BrasileiraoService {
                 })
                 return newRodada;
             })
-            return await this.rodadasRepository.save(rodadas);
+            await this.rodadasRepository.save(rodadas);
+            return;
         } catch (error) {
             throw new Error(`Falha ao buscar/salvar rodadas na API. Motivo: ${error.message}.`);
         }
