@@ -1,0 +1,4790 @@
+[
+    {
+      "numeroRodada": 1,
+      "jogos": [
+        {
+          "timeMandante": {
+            "nome": "Cuiabá",
+            "id": 204
+          },
+          "timeVisitante": {
+            "nome": "Juventude",
+            "id": 43
+          },
+          "horarioJogo": "2021-05-29T22:00:00.000Z",
+          "id": 1
+        },
+        {
+          "timeMandante": {
+            "nome": "Bahia",
+            "id": 68
+          },
+          "timeVisitante": {
+            "nome": "Santos",
+            "id": 63
+          },
+          "horarioJogo": "2021-05-29T23:00:00.000Z",
+          "id": 2
+        },
+        {
+          "timeMandante": {
+            "nome": "São Paulo",
+            "id": 57
+          },
+          "timeVisitante": {
+            "nome": "Fluminense",
+            "id": 26
+          },
+          "horarioJogo": "2021-05-30T00:00:00.000Z",
+          "id": 3
+        },
+        {
+          "timeMandante": {
+            "nome": "Atlético-MG",
+            "id": 30
+          },
+          "timeVisitante": {
+            "nome": "Fortaleza",
+            "id": 131
+          },
+          "horarioJogo": "2021-05-30T14:00:00.000Z",
+          "id": 4
+        },
+        {
+          "timeMandante": {
+            "nome": "Flamengo",
+            "id": 18
+          },
+          "timeVisitante": {
+            "nome": "Palmeiras",
+            "id": 56
+          },
+          "horarioJogo": "2021-05-30T19:00:00.000Z",
+          "id": 5
+        },
+        {
+          "timeMandante": {
+            "nome": "Ceará",
+            "id": 105
+          },
+          "timeVisitante": {
+            "nome": "Grêmio",
+            "id": 45
+          },
+          "horarioJogo": "2021-05-30T19:00:00.000Z",
+          "id": 6
+        },
+        {
+          "timeMandante": {
+            "nome": "Corinthians",
+            "id": 65
+          },
+          "timeVisitante": {
+            "nome": "Atlético-GO",
+            "id": 98
+          },
+          "horarioJogo": "2021-05-30T21:15:00.000Z",
+          "id": 7
+        },
+        {
+          "timeMandante": {
+            "nome": "Chapecoense",
+            "id": 5
+          },
+          "timeVisitante": {
+            "nome": "Bragantino",
+            "id": 64
+          },
+          "horarioJogo": "2021-05-30T21:15:00.000Z",
+          "id": 8
+        },
+        {
+          "timeMandante": {
+            "nome": "Athletico-PR",
+            "id": 185
+          },
+          "timeVisitante": {
+            "nome": "América-MG",
+            "id": 33
+          },
+          "horarioJogo": "2021-05-30T21:15:00.000Z",
+          "id": 9
+        },
+        {
+          "timeMandante": {
+            "nome": "Internacional",
+            "id": 44
+          },
+          "timeVisitante": {
+            "nome": "Sport",
+            "id": 79
+          },
+          "horarioJogo": "2021-05-30T23:30:00.000Z",
+          "id": 10
+        }
+      ],
+      "horarioLimite": "2021-05-29T22:00:00.000Z"
+    },
+    {
+      "numeroRodada": 2,
+      "jogos": [
+        {
+          "timeMandante": {
+            "nome": "Grêmio",
+            "id": 45
+          },
+          "timeVisitante": {
+            "nome": "Flamengo",
+            "id": 18
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 11
+        },
+        {
+          "timeMandante": {
+            "nome": "Atlético-GO",
+            "id": 98
+          },
+          "timeVisitante": {
+            "nome": "São Paulo",
+            "id": 57
+          },
+          "horarioJogo": "2021-06-05T22:00:00.000Z",
+          "id": 12
+        },
+        {
+          "timeMandante": {
+            "nome": "Santos",
+            "id": 63
+          },
+          "timeVisitante": {
+            "nome": "Ceará",
+            "id": 105
+          },
+          "horarioJogo": "2021-06-06T00:00:00.000Z",
+          "id": 13
+        },
+        {
+          "timeMandante": {
+            "nome": "Bragantino",
+            "id": 64
+          },
+          "timeVisitante": {
+            "nome": "Bahia",
+            "id": 68
+          },
+          "horarioJogo": "2021-06-06T00:00:00.000Z",
+          "id": 14
+        },
+        {
+          "timeMandante": {
+            "nome": "Fluminense",
+            "id": 26
+          },
+          "timeVisitante": {
+            "nome": "Cuiabá",
+            "id": 204
+          },
+          "horarioJogo": "2021-06-06T14:00:00.000Z",
+          "id": 15
+        },
+        {
+          "timeMandante": {
+            "nome": "América-MG",
+            "id": 33
+          },
+          "timeVisitante": {
+            "nome": "Corinthians",
+            "id": 65
+          },
+          "horarioJogo": "2021-06-06T19:00:00.000Z",
+          "id": 16
+        },
+        {
+          "timeMandante": {
+            "nome": "Fortaleza",
+            "id": 131
+          },
+          "timeVisitante": {
+            "nome": "Internacional",
+            "id": 44
+          },
+          "horarioJogo": "2021-06-06T19:00:00.000Z",
+          "id": 17
+        },
+        {
+          "timeMandante": {
+            "nome": "Palmeiras",
+            "id": 56
+          },
+          "timeVisitante": {
+            "nome": "Chapecoense",
+            "id": 5
+          },
+          "horarioJogo": "2021-06-06T21:15:00.000Z",
+          "id": 18
+        },
+        {
+          "timeMandante": {
+            "nome": "Juventude",
+            "id": 43
+          },
+          "timeVisitante": {
+            "nome": "Athletico-PR",
+            "id": 185
+          },
+          "horarioJogo": "2021-06-06T21:15:00.000Z",
+          "id": 19
+        },
+        {
+          "timeMandante": {
+            "nome": "Sport",
+            "id": 79
+          },
+          "timeVisitante": {
+            "nome": "Atlético-MG",
+            "id": 30
+          },
+          "horarioJogo": "2021-06-06T23:30:00.000Z",
+          "id": 20
+        }
+      ],
+      "horarioLimite": "2021-06-05T22:00:00.000Z"
+    },
+    {
+      "numeroRodada": 3,
+      "jogos": [
+        {
+          "timeMandante": {
+            "nome": "Palmeiras",
+            "id": 56
+          },
+          "timeVisitante": {
+            "nome": "Corinthians",
+            "id": 65
+          },
+          "horarioJogo": "2021-06-12T22:00:00.000Z",
+          "id": 21
+        },
+        {
+          "timeMandante": {
+            "nome": "Santos",
+            "id": 63
+          },
+          "timeVisitante": {
+            "nome": "Juventude",
+            "id": 43
+          },
+          "horarioJogo": "2021-06-12T22:00:00.000Z",
+          "id": 22
+        },
+        {
+          "timeMandante": {
+            "nome": "Flamengo",
+            "id": 18
+          },
+          "timeVisitante": {
+            "nome": "América-MG",
+            "id": 33
+          },
+          "horarioJogo": "2021-06-13T19:00:00.000Z",
+          "id": 23
+        },
+        {
+          "timeMandante": {
+            "nome": "Atlético-MG",
+            "id": 30
+          },
+          "timeVisitante": {
+            "nome": "São Paulo",
+            "id": 57
+          },
+          "horarioJogo": "2021-06-13T19:00:00.000Z",
+          "id": 24
+        },
+        {
+          "timeMandante": {
+            "nome": "Grêmio",
+            "id": 45
+          },
+          "timeVisitante": {
+            "nome": "Athletico-PR",
+            "id": 185
+          },
+          "horarioJogo": "2021-06-13T19:00:00.000Z",
+          "id": 25
+        },
+        {
+          "timeMandante": {
+            "nome": "Bahia",
+            "id": 68
+          },
+          "timeVisitante": {
+            "nome": "Internacional",
+            "id": 44
+          },
+          "horarioJogo": "2021-06-13T23:30:00.000Z",
+          "id": 26
+        },
+        {
+          "timeMandante": {
+            "nome": "Fortaleza",
+            "id": 131
+          },
+          "timeVisitante": {
+            "nome": "Sport",
+            "id": 79
+          },
+          "horarioJogo": "2021-06-13T23:30:00.000Z",
+          "id": 27
+        },
+        {
+          "timeMandante": {
+            "nome": "Bragantino",
+            "id": 64
+          },
+          "timeVisitante": {
+            "nome": "Fluminense",
+            "id": 26
+          },
+          "horarioJogo": "2021-06-13T23:30:00.000Z",
+          "id": 28
+        },
+        {
+          "timeMandante": {
+            "nome": "Chapecoense",
+            "id": 5
+          },
+          "timeVisitante": {
+            "nome": "Ceará",
+            "id": 105
+          },
+          "horarioJogo": "2021-06-13T23:30:00.000Z",
+          "id": 29
+        },
+        {
+          "timeMandante": {
+            "nome": "Cuiabá",
+            "id": 204
+          },
+          "timeVisitante": {
+            "nome": "Atlético-GO",
+            "id": 98
+          },
+          "horarioJogo": "2021-07-21T22:00:00.000Z",
+          "id": 30
+        }
+      ],
+      "horarioLimite": "2021-06-12T22:00:00.000Z"
+    },
+    {
+      "numeroRodada": 4,
+      "jogos": [
+        {
+          "timeMandante": {
+            "nome": "São Paulo",
+            "id": 57
+          },
+          "timeVisitante": {
+            "nome": "Chapecoense",
+            "id": 5
+          },
+          "horarioJogo": "2021-06-16T22:00:00.000Z",
+          "id": 31
+        },
+        {
+          "timeMandante": {
+            "nome": "Internacional",
+            "id": 44
+          },
+          "timeVisitante": {
+            "nome": "Atlético-MG",
+            "id": 30
+          },
+          "horarioJogo": "2021-06-16T22:00:00.000Z",
+          "id": 32
+        },
+        {
+          "timeMandante": {
+            "nome": "Corinthians",
+            "id": 65
+          },
+          "timeVisitante": {
+            "nome": "Bragantino",
+            "id": 64
+          },
+          "horarioJogo": "2021-06-16T23:30:00.000Z",
+          "id": 33
+        },
+        {
+          "timeMandante": {
+            "nome": "Juventude",
+            "id": 43
+          },
+          "timeVisitante": {
+            "nome": "Palmeiras",
+            "id": 56
+          },
+          "horarioJogo": "2021-06-17T00:30:00.000Z",
+          "id": 34
+        },
+        {
+          "timeMandante": {
+            "nome": "Ceará",
+            "id": 105
+          },
+          "timeVisitante": {
+            "nome": "Bahia",
+            "id": 68
+          },
+          "horarioJogo": "2021-06-17T19:00:00.000Z",
+          "id": 35
+        },
+        {
+          "timeMandante": {
+            "nome": "América-MG",
+            "id": 33
+          },
+          "timeVisitante": {
+            "nome": "Cuiabá",
+            "id": 204
+          },
+          "horarioJogo": "2021-06-17T19:00:00.000Z",
+          "id": 36
+        },
+        {
+          "timeMandante": {
+            "nome": "Fluminense",
+            "id": 26
+          },
+          "timeVisitante": {
+            "nome": "Santos",
+            "id": 63
+          },
+          "horarioJogo": "2021-06-17T22:00:00.000Z",
+          "id": 37
+        },
+        {
+          "timeMandante": {
+            "nome": "Sport",
+            "id": 79
+          },
+          "timeVisitante": {
+            "nome": "Grêmio",
+            "id": 45
+          },
+          "horarioJogo": "2021-06-17T22:00:00.000Z",
+          "id": 38
+        },
+        {
+          "timeMandante": {
+            "nome": "Atlético-GO",
+            "id": 98
+          },
+          "timeVisitante": {
+            "nome": "Fortaleza",
+            "id": 131
+          },
+          "horarioJogo": "2021-06-17T22:00:00.000Z",
+          "id": 39
+        },
+        {
+          "timeMandante": {
+            "nome": "Athletico-PR",
+            "id": 185
+          },
+          "timeVisitante": {
+            "nome": "Flamengo",
+            "id": 18
+          },
+          "horarioJogo": "2021-11-02T19:00:00.000Z",
+          "id": 40
+        }
+      ],
+      "horarioLimite": "2021-06-16T22:00:00.000Z"
+    },
+    {
+      "numeroRodada": 5,
+      "jogos": [
+        {
+          "timeMandante": {
+            "nome": "Flamengo",
+            "id": 18
+          },
+          "timeVisitante": {
+            "nome": "Bragantino",
+            "id": 64
+          },
+          "horarioJogo": "2021-06-20T00:00:00.000Z",
+          "id": 41
+        },
+        {
+          "timeMandante": {
+            "nome": "Palmeiras",
+            "id": 56
+          },
+          "timeVisitante": {
+            "nome": "América-MG",
+            "id": 33
+          },
+          "horarioJogo": "2021-06-20T14:00:00.000Z",
+          "id": 42
+        },
+        {
+          "timeMandante": {
+            "nome": "Internacional",
+            "id": 44
+          },
+          "timeVisitante": {
+            "nome": "Ceará",
+            "id": 105
+          },
+          "horarioJogo": "2021-06-20T19:00:00.000Z",
+          "id": 43
+        },
+        {
+          "timeMandante": {
+            "nome": "Bahia",
+            "id": 68
+          },
+          "timeVisitante": {
+            "nome": "Corinthians",
+            "id": 65
+          },
+          "horarioJogo": "2021-06-20T19:00:00.000Z",
+          "id": 44
+        },
+        {
+          "timeMandante": {
+            "nome": "Santos",
+            "id": 63
+          },
+          "timeVisitante": {
+            "nome": "São Paulo",
+            "id": 57
+          },
+          "horarioJogo": "2021-06-20T21:15:00.000Z",
+          "id": 45
+        },
+        {
+          "timeMandante": {
+            "nome": "Fortaleza",
+            "id": 131
+          },
+          "timeVisitante": {
+            "nome": "Fluminense",
+            "id": 26
+          },
+          "horarioJogo": "2021-06-20T21:15:00.000Z",
+          "id": 46
+        },
+        {
+          "timeMandante": {
+            "nome": "Athletico-PR",
+            "id": 185
+          },
+          "timeVisitante": {
+            "nome": "Atlético-GO",
+            "id": 98
+          },
+          "horarioJogo": "2021-06-20T21:15:00.000Z",
+          "id": 47
+        },
+        {
+          "timeMandante": {
+            "nome": "Juventude",
+            "id": 43
+          },
+          "timeVisitante": {
+            "nome": "Sport",
+            "id": 79
+          },
+          "horarioJogo": "2021-06-20T23:30:00.000Z",
+          "id": 48
+        },
+        {
+          "timeMandante": {
+            "nome": "Atlético-MG",
+            "id": 30
+          },
+          "timeVisitante": {
+            "nome": "Chapecoense",
+            "id": 5
+          },
+          "horarioJogo": "2021-06-21T23:00:00.000Z",
+          "id": 49
+        },
+        {
+          "timeMandante": {
+            "nome": "Cuiabá",
+            "id": 204
+          },
+          "timeVisitante": {
+            "nome": "Grêmio",
+            "id": 45
+          },
+          "horarioJogo": "2021-08-18T22:00:00.000Z",
+          "id": 50
+        }
+      ],
+      "horarioLimite": "2021-06-20T00:00:00.000Z"
+    },
+    {
+      "numeroRodada": 6,
+      "jogos": [
+        {
+          "timeMandante": {
+            "nome": "Flamengo",
+            "id": 18
+          },
+          "timeVisitante": {
+            "nome": "Fortaleza",
+            "id": 131
+          },
+          "horarioJogo": "2021-06-23T22:00:00.000Z",
+          "id": 51
+        },
+        {
+          "timeMandante": {
+            "nome": "São Paulo",
+            "id": 57
+          },
+          "timeVisitante": {
+            "nome": "Cuiabá",
+            "id": 204
+          },
+          "horarioJogo": "2021-06-23T22:00:00.000Z",
+          "id": 52
+        },
+        {
+          "timeMandante": {
+            "nome": "Bragantino",
+            "id": 64
+          },
+          "timeVisitante": {
+            "nome": "Palmeiras",
+            "id": 56
+          },
+          "horarioJogo": "2021-06-23T22:00:00.000Z",
+          "id": 53
+        },
+        {
+          "timeMandante": {
+            "nome": "Atlético-GO",
+            "id": 98
+          },
+          "timeVisitante": {
+            "nome": "Fluminense",
+            "id": 26
+          },
+          "horarioJogo": "2021-06-23T22:00:00.000Z",
+          "id": 54
+        },
+        {
+          "timeMandante": {
+            "nome": "América-MG",
+            "id": 33
+          },
+          "timeVisitante": {
+            "nome": "Juventude",
+            "id": 43
+          },
+          "horarioJogo": "2021-06-24T19:00:00.000Z",
+          "id": 55
+        },
+        {
+          "timeMandante": {
+            "nome": "Corinthians",
+            "id": 65
+          },
+          "timeVisitante": {
+            "nome": "Sport",
+            "id": 79
+          },
+          "horarioJogo": "2021-06-24T22:00:00.000Z",
+          "id": 56
+        },
+        {
+          "timeMandante": {
+            "nome": "Ceará",
+            "id": 105
+          },
+          "timeVisitante": {
+            "nome": "Atlético-MG",
+            "id": 30
+          },
+          "horarioJogo": "2021-06-24T22:00:00.000Z",
+          "id": 57
+        },
+        {
+          "timeMandante": {
+            "nome": "Chapecoense",
+            "id": 5
+          },
+          "timeVisitante": {
+            "nome": "Internacional",
+            "id": 44
+          },
+          "horarioJogo": "2021-06-24T22:00:00.000Z",
+          "id": 58
+        },
+        {
+          "timeMandante": {
+            "nome": "Grêmio",
+            "id": 45
+          },
+          "timeVisitante": {
+            "nome": "Santos",
+            "id": 63
+          },
+          "horarioJogo": "2021-06-25T00:30:00.000Z",
+          "id": 59
+        },
+        {
+          "timeMandante": {
+            "nome": "Bahia",
+            "id": 68
+          },
+          "timeVisitante": {
+            "nome": "Athletico-PR",
+            "id": 185
+          },
+          "horarioJogo": "2021-06-25T00:30:00.000Z",
+          "id": 60
+        }
+      ],
+      "horarioLimite": "2021-06-23T22:00:00.000Z"
+    },
+    {
+      "numeroRodada": 7,
+      "jogos": [
+        {
+          "timeMandante": {
+            "nome": "Juventude",
+            "id": 43
+          },
+          "timeVisitante": {
+            "nome": "Flamengo",
+            "id": 18
+          },
+          "horarioJogo": "2021-06-27T14:00:00.000Z",
+          "id": 61
+        },
+        {
+          "timeMandante": {
+            "nome": "Fluminense",
+            "id": 26
+          },
+          "timeVisitante": {
+            "nome": "Corinthians",
+            "id": 65
+          },
+          "horarioJogo": "2021-06-27T19:00:00.000Z",
+          "id": 62
+        },
+        {
+          "timeMandante": {
+            "nome": "Palmeiras",
+            "id": 56
+          },
+          "timeVisitante": {
+            "nome": "Bahia",
+            "id": 68
+          },
+          "horarioJogo": "2021-06-27T23:00:00.000Z",
+          "id": 63
+        },
+        {
+          "timeMandante": {
+            "nome": "Grêmio",
+            "id": 45
+          },
+          "timeVisitante": {
+            "nome": "Fortaleza",
+            "id": 131
+          },
+          "horarioJogo": "2021-06-27T23:00:00.000Z",
+          "id": 64
+        },
+        {
+          "timeMandante": {
+            "nome": "Athletico-PR",
+            "id": 185
+          },
+          "timeVisitante": {
+            "nome": "Chapecoense",
+            "id": 5
+          },
+          "horarioJogo": "2021-06-27T23:00:00.000Z",
+          "id": 65
+        },
+        {
+          "timeMandante": {
+            "nome": "Santos",
+            "id": 63
+          },
+          "timeVisitante": {
+            "nome": "Atlético-MG",
+            "id": 30
+          },
+          "horarioJogo": "2021-06-27T23:30:00.000Z",
+          "id": 66
+        },
+        {
+          "timeMandante": {
+            "nome": "América-MG",
+            "id": 33
+          },
+          "timeVisitante": {
+            "nome": "Internacional",
+            "id": 44
+          },
+          "horarioJogo": "2021-06-27T23:30:00.000Z",
+          "id": 67
+        },
+        {
+          "timeMandante": {
+            "nome": "Ceará",
+            "id": 105
+          },
+          "timeVisitante": {
+            "nome": "São Paulo",
+            "id": 57
+          },
+          "horarioJogo": "2021-06-27T23:30:00.000Z",
+          "id": 68
+        },
+        {
+          "timeMandante": {
+            "nome": "Sport",
+            "id": 79
+          },
+          "timeVisitante": {
+            "nome": "Cuiabá",
+            "id": 204
+          },
+          "horarioJogo": "2021-06-27T23:30:00.000Z",
+          "id": 69
+        },
+        {
+          "timeMandante": {
+            "nome": "Atlético-GO",
+            "id": 98
+          },
+          "timeVisitante": {
+            "nome": "Bragantino",
+            "id": 64
+          },
+          "horarioJogo": "2021-06-28T23:00:00.000Z",
+          "id": 70
+        }
+      ],
+      "horarioLimite": "2021-06-27T14:00:00.000Z"
+    },
+    {
+      "numeroRodada": 8,
+      "jogos": [
+        {
+          "timeMandante": {
+            "nome": "Fluminense",
+            "id": 26
+          },
+          "timeVisitante": {
+            "nome": "Athletico-PR",
+            "id": 185
+          },
+          "horarioJogo": "2021-06-30T19:00:00.000Z",
+          "id": 71
+        },
+        {
+          "timeMandante": {
+            "nome": "Fortaleza",
+            "id": 131
+          },
+          "timeVisitante": {
+            "nome": "Chapecoense",
+            "id": 5
+          },
+          "horarioJogo": "2021-06-30T19:00:00.000Z",
+          "id": 72
+        },
+        {
+          "timeMandante": {
+            "nome": "Internacional",
+            "id": 44
+          },
+          "timeVisitante": {
+            "nome": "Palmeiras",
+            "id": 56
+          },
+          "horarioJogo": "2021-06-30T22:00:00.000Z",
+          "id": 73
+        },
+        {
+          "timeMandante": {
+            "nome": "Bahia",
+            "id": 68
+          },
+          "timeVisitante": {
+            "nome": "América-MG",
+            "id": 33
+          },
+          "horarioJogo": "2021-06-30T22:00:00.000Z",
+          "id": 74
+        },
+        {
+          "timeMandante": {
+            "nome": "Santos",
+            "id": 63
+          },
+          "timeVisitante": {
+            "nome": "Sport",
+            "id": 79
+          },
+          "horarioJogo": "2021-06-30T23:30:00.000Z",
+          "id": 75
+        },
+        {
+          "timeMandante": {
+            "nome": "Corinthians",
+            "id": 65
+          },
+          "timeVisitante": {
+            "nome": "São Paulo",
+            "id": 57
+          },
+          "horarioJogo": "2021-07-01T00:30:00.000Z",
+          "id": 76
+        },
+        {
+          "timeMandante": {
+            "nome": "Juventude",
+            "id": 43
+          },
+          "timeVisitante": {
+            "nome": "Grêmio",
+            "id": 45
+          },
+          "horarioJogo": "2021-07-01T00:30:00.000Z",
+          "id": 77
+        },
+        {
+          "timeMandante": {
+            "nome": "Bragantino",
+            "id": 64
+          },
+          "timeVisitante": {
+            "nome": "Ceará",
+            "id": 105
+          },
+          "horarioJogo": "2021-07-01T19:00:00.000Z",
+          "id": 78
+        },
+        {
+          "timeMandante": {
+            "nome": "Atlético-MG",
+            "id": 30
+          },
+          "timeVisitante": {
+            "nome": "Atlético-GO",
+            "id": 98
+          },
+          "horarioJogo": "2021-07-01T22:00:00.000Z",
+          "id": 79
+        },
+        {
+          "timeMandante": {
+            "nome": "Cuiabá",
+            "id": 204
+          },
+          "timeVisitante": {
+            "nome": "Flamengo",
+            "id": 18
+          },
+          "horarioJogo": "2021-07-01T23:00:00.000Z",
+          "id": 80
+        }
+      ],
+      "horarioLimite": "2021-06-30T19:00:00.000Z"
+    },
+    {
+      "numeroRodada": 9,
+      "jogos": [
+        {
+          "timeMandante": {
+            "nome": "América-MG",
+            "id": 33
+          },
+          "timeVisitante": {
+            "nome": "Santos",
+            "id": 63
+          },
+          "horarioJogo": "2021-07-03T22:00:00.000Z",
+          "id": 81
+        },
+        {
+          "timeMandante": {
+            "nome": "Athletico-PR",
+            "id": 185
+          },
+          "timeVisitante": {
+            "nome": "Fortaleza",
+            "id": 131
+          },
+          "horarioJogo": "2021-07-03T22:00:00.000Z",
+          "id": 82
+        },
+        {
+          "timeMandante": {
+            "nome": "Corinthians",
+            "id": 65
+          },
+          "timeVisitante": {
+            "nome": "Internacional",
+            "id": 44
+          },
+          "horarioJogo": "2021-07-04T00:00:00.000Z",
+          "id": 83
+        },
+        {
+          "timeMandante": {
+            "nome": "Chapecoense",
+            "id": 5
+          },
+          "timeVisitante": {
+            "nome": "Bahia",
+            "id": 68
+          },
+          "horarioJogo": "2021-07-04T14:00:00.000Z",
+          "id": 84
+        },
+        {
+          "timeMandante": {
+            "nome": "Flamengo",
+            "id": 18
+          },
+          "timeVisitante": {
+            "nome": "Fluminense",
+            "id": 26
+          },
+          "horarioJogo": "2021-07-04T19:00:00.000Z",
+          "id": 85
+        },
+        {
+          "timeMandante": {
+            "nome": "Sport",
+            "id": 79
+          },
+          "timeVisitante": {
+            "nome": "Palmeiras",
+            "id": 56
+          },
+          "horarioJogo": "2021-07-04T19:00:00.000Z",
+          "id": 86
+        },
+        {
+          "timeMandante": {
+            "nome": "São Paulo",
+            "id": 57
+          },
+          "timeVisitante": {
+            "nome": "Bragantino",
+            "id": 64
+          },
+          "horarioJogo": "2021-07-04T21:15:00.000Z",
+          "id": 87
+        },
+        {
+          "timeMandante": {
+            "nome": "Ceará",
+            "id": 105
+          },
+          "timeVisitante": {
+            "nome": "Juventude",
+            "id": 43
+          },
+          "horarioJogo": "2021-07-04T21:15:00.000Z",
+          "id": 88
+        },
+        {
+          "timeMandante": {
+            "nome": "Cuiabá",
+            "id": 204
+          },
+          "timeVisitante": {
+            "nome": "Atlético-MG",
+            "id": 30
+          },
+          "horarioJogo": "2021-07-04T21:15:00.000Z",
+          "id": 89
+        },
+        {
+          "timeMandante": {
+            "nome": "Grêmio",
+            "id": 45
+          },
+          "timeVisitante": {
+            "nome": "Atlético-GO",
+            "id": 98
+          },
+          "horarioJogo": "2021-07-04T23:30:00.000Z",
+          "id": 90
+        }
+      ],
+      "horarioLimite": "2021-07-03T22:00:00.000Z"
+    },
+    {
+      "numeroRodada": 10,
+      "jogos": [
+        {
+          "timeMandante": {
+            "nome": "Santos",
+            "id": 63
+          },
+          "timeVisitante": {
+            "nome": "Athletico-PR",
+            "id": 185
+          },
+          "horarioJogo": "2021-07-06T22:30:00.000Z",
+          "id": 91
+        },
+        {
+          "timeMandante": {
+            "nome": "Fortaleza",
+            "id": 131
+          },
+          "timeVisitante": {
+            "nome": "América-MG",
+            "id": 33
+          },
+          "horarioJogo": "2021-07-07T21:00:00.000Z",
+          "id": 92
+        },
+        {
+          "timeMandante": {
+            "nome": "Bahia",
+            "id": 68
+          },
+          "timeVisitante": {
+            "nome": "Juventude",
+            "id": 43
+          },
+          "horarioJogo": "2021-07-07T21:00:00.000Z",
+          "id": 93
+        },
+        {
+          "timeMandante": {
+            "nome": "Bragantino",
+            "id": 64
+          },
+          "timeVisitante": {
+            "nome": "Cuiabá",
+            "id": 204
+          },
+          "horarioJogo": "2021-07-07T21:00:00.000Z",
+          "id": 94
+        },
+        {
+          "timeMandante": {
+            "nome": "Palmeiras",
+            "id": 56
+          },
+          "timeVisitante": {
+            "nome": "Grêmio",
+            "id": 45
+          },
+          "horarioJogo": "2021-07-07T22:00:00.000Z",
+          "id": 95
+        },
+        {
+          "timeMandante": {
+            "nome": "Atlético-MG",
+            "id": 30
+          },
+          "timeVisitante": {
+            "nome": "Flamengo",
+            "id": 18
+          },
+          "horarioJogo": "2021-07-07T22:00:00.000Z",
+          "id": 96
+        },
+        {
+          "timeMandante": {
+            "nome": "Atlético-GO",
+            "id": 98
+          },
+          "timeVisitante": {
+            "nome": "Sport",
+            "id": 79
+          },
+          "horarioJogo": "2021-07-07T22:15:00.000Z",
+          "id": 97
+        },
+        {
+          "timeMandante": {
+            "nome": "Fluminense",
+            "id": 26
+          },
+          "timeVisitante": {
+            "nome": "Ceará",
+            "id": 105
+          },
+          "horarioJogo": "2021-07-08T00:30:00.000Z",
+          "id": 98
+        },
+        {
+          "timeMandante": {
+            "nome": "Internacional",
+            "id": 44
+          },
+          "timeVisitante": {
+            "nome": "São Paulo",
+            "id": 57
+          },
+          "horarioJogo": "2021-07-08T00:30:00.000Z",
+          "id": 99
+        },
+        {
+          "timeMandante": {
+            "nome": "Chapecoense",
+            "id": 5
+          },
+          "timeVisitante": {
+            "nome": "Corinthians",
+            "id": 65
+          },
+          "horarioJogo": "2021-07-09T00:00:00.000Z",
+          "id": 100
+        }
+      ],
+      "horarioLimite": "2021-07-06T22:30:00.000Z"
+    },
+    {
+      "numeroRodada": 11,
+      "jogos": [
+        {
+          "timeMandante": {
+            "nome": "Palmeiras",
+            "id": 56
+          },
+          "timeVisitante": {
+            "nome": "Santos",
+            "id": 63
+          },
+          "horarioJogo": "2021-07-10T19:30:00.000Z",
+          "id": 101
+        },
+        {
+          "timeMandante": {
+            "nome": "Grêmio",
+            "id": 45
+          },
+          "timeVisitante": {
+            "nome": "Internacional",
+            "id": 44
+          },
+          "horarioJogo": "2021-07-10T19:30:00.000Z",
+          "id": 102
+        },
+        {
+          "timeMandante": {
+            "nome": "Athletico-PR",
+            "id": 185
+          },
+          "timeVisitante": {
+            "nome": "Bragantino",
+            "id": 64
+          },
+          "horarioJogo": "2021-07-10T20:30:00.000Z",
+          "id": 103
+        },
+        {
+          "timeMandante": {
+            "nome": "São Paulo",
+            "id": 57
+          },
+          "timeVisitante": {
+            "nome": "Bahia",
+            "id": 68
+          },
+          "horarioJogo": "2021-07-10T22:00:00.000Z",
+          "id": 104
+        },
+        {
+          "timeMandante": {
+            "nome": "América-MG",
+            "id": 33
+          },
+          "timeVisitante": {
+            "nome": "Atlético-MG",
+            "id": 30
+          },
+          "horarioJogo": "2021-07-10T22:00:00.000Z",
+          "id": 105
+        },
+        {
+          "timeMandante": {
+            "nome": "Sport",
+            "id": 79
+          },
+          "timeVisitante": {
+            "nome": "Fluminense",
+            "id": 26
+          },
+          "horarioJogo": "2021-07-10T22:00:00.000Z",
+          "id": 106
+        },
+        {
+          "timeMandante": {
+            "nome": "Juventude",
+            "id": 43
+          },
+          "timeVisitante": {
+            "nome": "Atlético-GO",
+            "id": 98
+          },
+          "horarioJogo": "2021-07-11T14:00:00.000Z",
+          "id": 107
+        },
+        {
+          "timeMandante": {
+            "nome": "Flamengo",
+            "id": 18
+          },
+          "timeVisitante": {
+            "nome": "Chapecoense",
+            "id": 5
+          },
+          "horarioJogo": "2021-07-11T21:15:00.000Z",
+          "id": 108
+        },
+        {
+          "timeMandante": {
+            "nome": "Cuiabá",
+            "id": 204
+          },
+          "timeVisitante": {
+            "nome": "Ceará",
+            "id": 105
+          },
+          "horarioJogo": "2021-07-11T21:15:00.000Z",
+          "id": 109
+        },
+        {
+          "timeMandante": {
+            "nome": "Fortaleza",
+            "id": 131
+          },
+          "timeVisitante": {
+            "nome": "Corinthians",
+            "id": 65
+          },
+          "horarioJogo": "2021-07-11T23:30:00.000Z",
+          "id": 110
+        }
+      ],
+      "horarioLimite": "2021-07-10T19:30:00.000Z"
+    },
+    {
+      "numeroRodada": 12,
+      "jogos": [
+        {
+          "timeMandante": {
+            "nome": "São Paulo",
+            "id": 57
+          },
+          "timeVisitante": {
+            "nome": "Fortaleza",
+            "id": 131
+          },
+          "horarioJogo": "2021-07-17T20:00:00.000Z",
+          "id": 111
+        },
+        {
+          "timeMandante": {
+            "nome": "Ceará",
+            "id": 105
+          },
+          "timeVisitante": {
+            "nome": "Athletico-PR",
+            "id": 185
+          },
+          "horarioJogo": "2021-07-17T20:00:00.000Z",
+          "id": 112
+        },
+        {
+          "timeMandante": {
+            "nome": "Corinthians",
+            "id": 65
+          },
+          "timeVisitante": {
+            "nome": "Atlético-MG",
+            "id": 30
+          },
+          "horarioJogo": "2021-07-17T22:00:00.000Z",
+          "id": 113
+        },
+        {
+          "timeMandante": {
+            "nome": "Fluminense",
+            "id": 26
+          },
+          "timeVisitante": {
+            "nome": "Grêmio",
+            "id": 45
+          },
+          "horarioJogo": "2021-07-18T00:00:00.000Z",
+          "id": 114
+        },
+        {
+          "timeMandante": {
+            "nome": "Chapecoense",
+            "id": 5
+          },
+          "timeVisitante": {
+            "nome": "Cuiabá",
+            "id": 204
+          },
+          "horarioJogo": "2021-07-18T14:00:00.000Z",
+          "id": 115
+        },
+        {
+          "timeMandante": {
+            "nome": "Atlético-GO",
+            "id": 98
+          },
+          "timeVisitante": {
+            "nome": "Palmeiras",
+            "id": 56
+          },
+          "horarioJogo": "2021-07-18T19:00:00.000Z",
+          "id": 116
+        },
+        {
+          "timeMandante": {
+            "nome": "Bahia",
+            "id": 68
+          },
+          "timeVisitante": {
+            "nome": "Flamengo",
+            "id": 18
+          },
+          "horarioJogo": "2021-07-18T21:15:00.000Z",
+          "id": 117
+        },
+        {
+          "timeMandante": {
+            "nome": "Internacional",
+            "id": 44
+          },
+          "timeVisitante": {
+            "nome": "Juventude",
+            "id": 43
+          },
+          "horarioJogo": "2021-07-18T23:30:00.000Z",
+          "id": 118
+        },
+        {
+          "timeMandante": {
+            "nome": "Bragantino",
+            "id": 64
+          },
+          "timeVisitante": {
+            "nome": "Santos",
+            "id": 63
+          },
+          "horarioJogo": "2021-07-18T23:30:00.000Z",
+          "id": 119
+        },
+        {
+          "timeMandante": {
+            "nome": "América-MG",
+            "id": 33
+          },
+          "timeVisitante": {
+            "nome": "Sport",
+            "id": 79
+          },
+          "horarioJogo": "2021-07-19T23:00:00.000Z",
+          "id": 120
+        }
+      ],
+      "horarioLimite": "2021-07-17T20:00:00.000Z"
+    },
+    {
+      "numeroRodada": 13,
+      "jogos": [
+        {
+          "timeMandante": {
+            "nome": "Grêmio",
+            "id": 45
+          },
+          "timeVisitante": {
+            "nome": "América-MG",
+            "id": 33
+          },
+          "horarioJogo": "2021-07-24T20:00:00.000Z",
+          "id": 121
+        },
+        {
+          "timeMandante": {
+            "nome": "Palmeiras",
+            "id": 56
+          },
+          "timeVisitante": {
+            "nome": "Fluminense",
+            "id": 26
+          },
+          "horarioJogo": "2021-07-24T22:00:00.000Z",
+          "id": 122
+        },
+        {
+          "timeMandante": {
+            "nome": "Atlético-MG",
+            "id": 30
+          },
+          "timeVisitante": {
+            "nome": "Bahia",
+            "id": 68
+          },
+          "horarioJogo": "2021-07-25T14:00:00.000Z",
+          "id": 123
+        },
+        {
+          "timeMandante": {
+            "nome": "Fortaleza",
+            "id": 131
+          },
+          "timeVisitante": {
+            "nome": "Bragantino",
+            "id": 64
+          },
+          "horarioJogo": "2021-07-25T19:00:00.000Z",
+          "id": 124
+        },
+        {
+          "timeMandante": {
+            "nome": "Flamengo",
+            "id": 18
+          },
+          "timeVisitante": {
+            "nome": "São Paulo",
+            "id": 57
+          },
+          "horarioJogo": "2021-07-25T19:00:00.000Z",
+          "id": 125
+        },
+        {
+          "timeMandante": {
+            "nome": "Santos",
+            "id": 63
+          },
+          "timeVisitante": {
+            "nome": "Atlético-GO",
+            "id": 98
+          },
+          "horarioJogo": "2021-07-25T21:15:00.000Z",
+          "id": 126
+        },
+        {
+          "timeMandante": {
+            "nome": "Athletico-PR",
+            "id": 185
+          },
+          "timeVisitante": {
+            "nome": "Internacional",
+            "id": 44
+          },
+          "horarioJogo": "2021-07-25T21:15:00.000Z",
+          "id": 127
+        },
+        {
+          "timeMandante": {
+            "nome": "Sport",
+            "id": 79
+          },
+          "timeVisitante": {
+            "nome": "Ceará",
+            "id": 105
+          },
+          "horarioJogo": "2021-07-25T23:30:00.000Z",
+          "id": 128
+        },
+        {
+          "timeMandante": {
+            "nome": "Juventude",
+            "id": 43
+          },
+          "timeVisitante": {
+            "nome": "Chapecoense",
+            "id": 5
+          },
+          "horarioJogo": "2021-07-26T21:00:00.000Z",
+          "id": 129
+        },
+        {
+          "timeMandante": {
+            "nome": "Cuiabá",
+            "id": 204
+          },
+          "timeVisitante": {
+            "nome": "Corinthians",
+            "id": 65
+          },
+          "horarioJogo": "2021-07-26T23:00:00.000Z",
+          "id": 130
+        }
+      ],
+      "horarioLimite": "2021-07-24T20:00:00.000Z"
+    },
+    {
+      "numeroRodada": 14,
+      "jogos": [
+        {
+          "timeMandante": {
+            "nome": "São Paulo",
+            "id": 57
+          },
+          "timeVisitante": {
+            "nome": "Palmeiras",
+            "id": 56
+          },
+          "horarioJogo": "2021-07-31T22:00:00.000Z",
+          "id": 131
+        },
+        {
+          "timeMandante": {
+            "nome": "Internacional",
+            "id": 44
+          },
+          "timeVisitante": {
+            "nome": "Cuiabá",
+            "id": 204
+          },
+          "horarioJogo": "2021-07-31T23:00:00.000Z",
+          "id": 132
+        },
+        {
+          "timeMandante": {
+            "nome": "Bragantino",
+            "id": 64
+          },
+          "timeVisitante": {
+            "nome": "Grêmio",
+            "id": 45
+          },
+          "horarioJogo": "2021-08-01T00:00:00.000Z",
+          "id": 133
+        },
+        {
+          "timeMandante": {
+            "nome": "Corinthians",
+            "id": 65
+          },
+          "timeVisitante": {
+            "nome": "Flamengo",
+            "id": 18
+          },
+          "horarioJogo": "2021-08-01T19:00:00.000Z",
+          "id": 134
+        },
+        {
+          "timeMandante": {
+            "nome": "Atlético-MG",
+            "id": 30
+          },
+          "timeVisitante": {
+            "nome": "Athletico-PR",
+            "id": 185
+          },
+          "horarioJogo": "2021-08-01T19:00:00.000Z",
+          "id": 135
+        },
+        {
+          "timeMandante": {
+            "nome": "Bahia",
+            "id": 68
+          },
+          "timeVisitante": {
+            "nome": "Sport",
+            "id": 79
+          },
+          "horarioJogo": "2021-08-01T21:15:00.000Z",
+          "id": 136
+        },
+        {
+          "timeMandante": {
+            "nome": "Chapecoense",
+            "id": 5
+          },
+          "timeVisitante": {
+            "nome": "Santos",
+            "id": 63
+          },
+          "horarioJogo": "2021-08-01T21:15:00.000Z",
+          "id": 137
+        },
+        {
+          "timeMandante": {
+            "nome": "Ceará",
+            "id": 105
+          },
+          "timeVisitante": {
+            "nome": "Fortaleza",
+            "id": 131
+          },
+          "horarioJogo": "2021-08-01T23:30:00.000Z",
+          "id": 138
+        },
+        {
+          "timeMandante": {
+            "nome": "Atlético-GO",
+            "id": 98
+          },
+          "timeVisitante": {
+            "nome": "América-MG",
+            "id": 33
+          },
+          "horarioJogo": "2021-08-01T23:30:00.000Z",
+          "id": 139
+        },
+        {
+          "timeMandante": {
+            "nome": "Fluminense",
+            "id": 26
+          },
+          "timeVisitante": {
+            "nome": "Juventude",
+            "id": 43
+          },
+          "horarioJogo": "2021-09-02T22:00:00.000Z",
+          "id": 140
+        }
+      ],
+      "horarioLimite": "2021-07-31T22:00:00.000Z"
+    },
+    {
+      "numeroRodada": 15,
+      "jogos": [
+        {
+          "timeMandante": {
+            "nome": "Sport",
+            "id": 79
+          },
+          "timeVisitante": {
+            "nome": "Bragantino",
+            "id": 64
+          },
+          "horarioJogo": "2021-08-06T22:00:00.000Z",
+          "id": 141
+        },
+        {
+          "timeMandante": {
+            "nome": "Athletico-PR",
+            "id": 185
+          },
+          "timeVisitante": {
+            "nome": "São Paulo",
+            "id": 57
+          },
+          "horarioJogo": "2021-08-07T21:00:00.000Z",
+          "id": 142
+        },
+        {
+          "timeMandante": {
+            "nome": "Palmeiras",
+            "id": 56
+          },
+          "timeVisitante": {
+            "nome": "Fortaleza",
+            "id": 131
+          },
+          "horarioJogo": "2021-08-08T00:00:00.000Z",
+          "id": 143
+        },
+        {
+          "timeMandante": {
+            "nome": "Cuiabá",
+            "id": 204
+          },
+          "timeVisitante": {
+            "nome": "Bahia",
+            "id": 68
+          },
+          "horarioJogo": "2021-08-08T00:00:00.000Z",
+          "id": 144
+        },
+        {
+          "timeMandante": {
+            "nome": "Santos",
+            "id": 63
+          },
+          "timeVisitante": {
+            "nome": "Corinthians",
+            "id": 65
+          },
+          "horarioJogo": "2021-08-08T19:00:00.000Z",
+          "id": 145
+        },
+        {
+          "timeMandante": {
+            "nome": "América-MG",
+            "id": 33
+          },
+          "timeVisitante": {
+            "nome": "Fluminense",
+            "id": 26
+          },
+          "horarioJogo": "2021-08-08T19:00:00.000Z",
+          "id": 146
+        },
+        {
+          "timeMandante": {
+            "nome": "Juventude",
+            "id": 43
+          },
+          "timeVisitante": {
+            "nome": "Atlético-MG",
+            "id": 30
+          },
+          "horarioJogo": "2021-08-08T19:00:00.000Z",
+          "id": 147
+        },
+        {
+          "timeMandante": {
+            "nome": "Flamengo",
+            "id": 18
+          },
+          "timeVisitante": {
+            "nome": "Internacional",
+            "id": 44
+          },
+          "horarioJogo": "2021-08-08T21:15:00.000Z",
+          "id": 148
+        },
+        {
+          "timeMandante": {
+            "nome": "Ceará",
+            "id": 105
+          },
+          "timeVisitante": {
+            "nome": "Atlético-GO",
+            "id": 98
+          },
+          "horarioJogo": "2021-08-08T21:15:00.000Z",
+          "id": 149
+        },
+        {
+          "timeMandante": {
+            "nome": "Grêmio",
+            "id": 45
+          },
+          "timeVisitante": {
+            "nome": "Chapecoense",
+            "id": 5
+          },
+          "horarioJogo": "2021-08-09T23:00:00.000Z",
+          "id": 150
+        }
+      ],
+      "horarioLimite": "2021-08-06T22:00:00.000Z"
+    },
+    {
+      "numeroRodada": 16,
+      "jogos": [
+        {
+          "timeMandante": {
+            "nome": "Bragantino",
+            "id": 64
+          },
+          "timeVisitante": {
+            "nome": "Juventude",
+            "id": 43
+          },
+          "horarioJogo": "2021-08-14T20:00:00.000Z",
+          "id": 151
+        },
+        {
+          "timeMandante": {
+            "nome": "Atlético-MG",
+            "id": 30
+          },
+          "timeVisitante": {
+            "nome": "Palmeiras",
+            "id": 56
+          },
+          "horarioJogo": "2021-08-14T22:00:00.000Z",
+          "id": 152
+        },
+        {
+          "timeMandante": {
+            "nome": "São Paulo",
+            "id": 57
+          },
+          "timeVisitante": {
+            "nome": "Grêmio",
+            "id": 45
+          },
+          "horarioJogo": "2021-08-15T00:00:00.000Z",
+          "id": 153
+        },
+        {
+          "timeMandante": {
+            "nome": "Flamengo",
+            "id": 18
+          },
+          "timeVisitante": {
+            "nome": "Sport",
+            "id": 79
+          },
+          "horarioJogo": "2021-08-15T19:00:00.000Z",
+          "id": 154
+        },
+        {
+          "timeMandante": {
+            "nome": "Corinthians",
+            "id": 65
+          },
+          "timeVisitante": {
+            "nome": "Ceará",
+            "id": 105
+          },
+          "horarioJogo": "2021-08-15T19:00:00.000Z",
+          "id": 155
+        },
+        {
+          "timeMandante": {
+            "nome": "Fortaleza",
+            "id": 131
+          },
+          "timeVisitante": {
+            "nome": "Santos",
+            "id": 63
+          },
+          "horarioJogo": "2021-08-15T21:15:00.000Z",
+          "id": 156
+        },
+        {
+          "timeMandante": {
+            "nome": "Bahia",
+            "id": 68
+          },
+          "timeVisitante": {
+            "nome": "Atlético-GO",
+            "id": 98
+          },
+          "horarioJogo": "2021-08-15T21:15:00.000Z",
+          "id": 157
+        },
+        {
+          "timeMandante": {
+            "nome": "Cuiabá",
+            "id": 204
+          },
+          "timeVisitante": {
+            "nome": "Athletico-PR",
+            "id": 185
+          },
+          "horarioJogo": "2021-08-15T21:15:00.000Z",
+          "id": 158
+        },
+        {
+          "timeMandante": {
+            "nome": "Internacional",
+            "id": 44
+          },
+          "timeVisitante": {
+            "nome": "Fluminense",
+            "id": 26
+          },
+          "horarioJogo": "2021-08-15T23:30:00.000Z",
+          "id": 159
+        },
+        {
+          "timeMandante": {
+            "nome": "Chapecoense",
+            "id": 5
+          },
+          "timeVisitante": {
+            "nome": "América-MG",
+            "id": 33
+          },
+          "horarioJogo": "2021-08-16T23:00:00.000Z",
+          "id": 160
+        }
+      ],
+      "horarioLimite": "2021-08-14T20:00:00.000Z"
+    },
+    {
+      "numeroRodada": 17,
+      "jogos": [
+        {
+          "timeMandante": {
+            "nome": "Atlético-GO",
+            "id": 98
+          },
+          "timeVisitante": {
+            "nome": "Chapecoense",
+            "id": 5
+          },
+          "horarioJogo": "2021-08-21T20:00:00.000Z",
+          "id": 161
+        },
+        {
+          "timeMandante": {
+            "nome": "Grêmio",
+            "id": 45
+          },
+          "timeVisitante": {
+            "nome": "Bahia",
+            "id": 68
+          },
+          "horarioJogo": "2021-08-21T22:00:00.000Z",
+          "id": 162
+        },
+        {
+          "timeMandante": {
+            "nome": "Juventude",
+            "id": 43
+          },
+          "timeVisitante": {
+            "nome": "Fortaleza",
+            "id": 131
+          },
+          "horarioJogo": "2021-08-22T00:00:00.000Z",
+          "id": 163
+        },
+        {
+          "timeMandante": {
+            "nome": "Palmeiras",
+            "id": 56
+          },
+          "timeVisitante": {
+            "nome": "Cuiabá",
+            "id": 204
+          },
+          "horarioJogo": "2021-08-22T14:00:00.000Z",
+          "id": 164
+        },
+        {
+          "timeMandante": {
+            "nome": "Ceará",
+            "id": 105
+          },
+          "timeVisitante": {
+            "nome": "Flamengo",
+            "id": 18
+          },
+          "horarioJogo": "2021-08-22T19:00:00.000Z",
+          "id": 165
+        },
+        {
+          "timeMandante": {
+            "nome": "Athletico-PR",
+            "id": 185
+          },
+          "timeVisitante": {
+            "nome": "Corinthians",
+            "id": 65
+          },
+          "horarioJogo": "2021-08-22T19:00:00.000Z",
+          "id": 166
+        },
+        {
+          "timeMandante": {
+            "nome": "Santos",
+            "id": 63
+          },
+          "timeVisitante": {
+            "nome": "Internacional",
+            "id": 44
+          },
+          "horarioJogo": "2021-08-22T21:15:00.000Z",
+          "id": 167
+        },
+        {
+          "timeMandante": {
+            "nome": "Sport",
+            "id": 79
+          },
+          "timeVisitante": {
+            "nome": "São Paulo",
+            "id": 57
+          },
+          "horarioJogo": "2021-08-22T23:30:00.000Z",
+          "id": 168
+        },
+        {
+          "timeMandante": {
+            "nome": "Fluminense",
+            "id": 26
+          },
+          "timeVisitante": {
+            "nome": "Atlético-MG",
+            "id": 30
+          },
+          "horarioJogo": "2021-08-23T23:00:00.000Z",
+          "id": 169
+        },
+        {
+          "timeMandante": {
+            "nome": "América-MG",
+            "id": 33
+          },
+          "timeVisitante": {
+            "nome": "Bragantino",
+            "id": 64
+          },
+          "horarioJogo": "2021-08-23T23:00:00.000Z",
+          "id": 170
+        }
+      ],
+      "horarioLimite": "2021-08-21T20:00:00.000Z"
+    },
+    {
+      "numeroRodada": 18,
+      "jogos": [
+        {
+          "timeMandante": {
+            "nome": "Sport",
+            "id": 79
+          },
+          "timeVisitante": {
+            "nome": "Chapecoense",
+            "id": 5
+          },
+          "horarioJogo": "2021-08-28T20:00:00.000Z",
+          "id": 171
+        },
+        {
+          "timeMandante": {
+            "nome": "Santos",
+            "id": 63
+          },
+          "timeVisitante": {
+            "nome": "Flamengo",
+            "id": 18
+          },
+          "horarioJogo": "2021-08-28T22:00:00.000Z",
+          "id": 172
+        },
+        {
+          "timeMandante": {
+            "nome": "Palmeiras",
+            "id": 56
+          },
+          "timeVisitante": {
+            "nome": "Athletico-PR",
+            "id": 185
+          },
+          "horarioJogo": "2021-08-29T00:00:00.000Z",
+          "id": 173
+        },
+        {
+          "timeMandante": {
+            "nome": "Grêmio",
+            "id": 45
+          },
+          "timeVisitante": {
+            "nome": "Corinthians",
+            "id": 65
+          },
+          "horarioJogo": "2021-08-29T00:00:00.000Z",
+          "id": 174
+        },
+        {
+          "timeMandante": {
+            "nome": "América-MG",
+            "id": 33
+          },
+          "timeVisitante": {
+            "nome": "Ceará",
+            "id": 105
+          },
+          "horarioJogo": "2021-08-29T14:00:00.000Z",
+          "id": 175
+        },
+        {
+          "timeMandante": {
+            "nome": "Juventude",
+            "id": 43
+          },
+          "timeVisitante": {
+            "nome": "São Paulo",
+            "id": 57
+          },
+          "horarioJogo": "2021-08-29T19:00:00.000Z",
+          "id": 176
+        },
+        {
+          "timeMandante": {
+            "nome": "Atlético-GO",
+            "id": 98
+          },
+          "timeVisitante": {
+            "nome": "Internacional",
+            "id": 44
+          },
+          "horarioJogo": "2021-08-29T21:15:00.000Z",
+          "id": 177
+        },
+        {
+          "timeMandante": {
+            "nome": "Bragantino",
+            "id": 64
+          },
+          "timeVisitante": {
+            "nome": "Atlético-MG",
+            "id": 30
+          },
+          "horarioJogo": "2021-08-29T23:30:00.000Z",
+          "id": 178
+        },
+        {
+          "timeMandante": {
+            "nome": "Fluminense",
+            "id": 26
+          },
+          "timeVisitante": {
+            "nome": "Bahia",
+            "id": 68
+          },
+          "horarioJogo": "2021-08-30T22:00:00.000Z",
+          "id": 179
+        },
+        {
+          "timeMandante": {
+            "nome": "Fortaleza",
+            "id": 131
+          },
+          "timeVisitante": {
+            "nome": "Cuiabá",
+            "id": 204
+          },
+          "horarioJogo": "2021-08-31T00:30:00.000Z",
+          "id": 180
+        }
+      ],
+      "horarioLimite": "2021-08-28T20:00:00.000Z"
+    },
+    {
+      "numeroRodada": 19,
+      "jogos": [
+        {
+          "timeMandante": {
+            "nome": "Bahia",
+            "id": 68
+          },
+          "timeVisitante": {
+            "nome": "Fortaleza",
+            "id": 131
+          },
+          "horarioJogo": "2021-09-05T00:00:00.000Z",
+          "id": 181
+        },
+        {
+          "timeMandante": {
+            "nome": "Cuiabá",
+            "id": 204
+          },
+          "timeVisitante": {
+            "nome": "Santos",
+            "id": 63
+          },
+          "horarioJogo": "2021-09-05T00:00:00.000Z",
+          "id": 182
+        },
+        {
+          "timeMandante": {
+            "nome": "Athletico-PR",
+            "id": 185
+          },
+          "timeVisitante": {
+            "nome": "Sport",
+            "id": 79
+          },
+          "horarioJogo": "2021-09-05T21:15:00.000Z",
+          "id": 183
+        },
+        {
+          "timeMandante": {
+            "nome": "Corinthians",
+            "id": 65
+          },
+          "timeVisitante": {
+            "nome": "Juventude",
+            "id": 43
+          },
+          "horarioJogo": "2021-09-08T00:30:00.000Z",
+          "id": 184
+        },
+        {
+          "timeMandante": {
+            "nome": "Chapecoense",
+            "id": 5
+          },
+          "timeVisitante": {
+            "nome": "Fluminense",
+            "id": 26
+          },
+          "horarioJogo": "2021-09-08T00:30:00.000Z",
+          "id": 185
+        },
+        {
+          "timeMandante": {
+            "nome": "São Paulo",
+            "id": 57
+          },
+          "timeVisitante": {
+            "nome": "América-MG",
+            "id": 33
+          },
+          "horarioJogo": "2021-09-22T23:30:00.000Z",
+          "id": 186
+        },
+        {
+          "timeMandante": {
+            "nome": "Ceará",
+            "id": 105
+          },
+          "timeVisitante": {
+            "nome": "Palmeiras",
+            "id": 56
+          },
+          "horarioJogo": "2021-10-20T22:00:00.000Z",
+          "id": 187
+        },
+        {
+          "timeMandante": {
+            "nome": "Internacional",
+            "id": 44
+          },
+          "timeVisitante": {
+            "nome": "Bragantino",
+            "id": 64
+          },
+          "horarioJogo": "2021-10-21T23:00:00.000Z",
+          "id": 188
+        },
+        {
+          "timeMandante": {
+            "nome": "Atlético-MG",
+            "id": 30
+          },
+          "timeVisitante": {
+            "nome": "Grêmio",
+            "id": 45
+          },
+          "horarioJogo": "2021-11-04T00:00:00.000Z",
+          "id": 189
+        },
+        {
+          "timeMandante": {
+            "nome": "Flamengo",
+            "id": 18
+          },
+          "timeVisitante": {
+            "nome": "Atlético-GO",
+            "id": 98
+          },
+          "horarioJogo": "2021-11-06T00:30:00.000Z",
+          "id": 190
+        }
+      ],
+      "horarioLimite": "2021-09-05T00:00:00.000Z"
+    },
+    {
+      "numeroRodada": 20,
+      "jogos": [
+        {
+          "timeMandante": {
+            "nome": "América-MG",
+            "id": 33
+          },
+          "timeVisitante": {
+            "nome": "Athletico-PR",
+            "id": 185
+          },
+          "horarioJogo": "2021-09-11T19:00:00.000Z",
+          "id": 191
+        },
+        {
+          "timeMandante": {
+            "nome": "Juventude",
+            "id": 43
+          },
+          "timeVisitante": {
+            "nome": "Cuiabá",
+            "id": 204
+          },
+          "horarioJogo": "2021-09-11T20:00:00.000Z",
+          "id": 192
+        },
+        {
+          "timeMandante": {
+            "nome": "Bragantino",
+            "id": 64
+          },
+          "timeVisitante": {
+            "nome": "Chapecoense",
+            "id": 5
+          },
+          "horarioJogo": "2021-09-11T22:00:00.000Z",
+          "id": 193
+        },
+        {
+          "timeMandante": {
+            "nome": "Santos",
+            "id": 63
+          },
+          "timeVisitante": {
+            "nome": "Bahia",
+            "id": 68
+          },
+          "horarioJogo": "2021-09-12T00:00:00.000Z",
+          "id": 194
+        },
+        {
+          "timeMandante": {
+            "nome": "Grêmio",
+            "id": 45
+          },
+          "timeVisitante": {
+            "nome": "Ceará",
+            "id": 105
+          },
+          "horarioJogo": "2021-09-12T14:00:00.000Z",
+          "id": 195
+        },
+        {
+          "timeMandante": {
+            "nome": "Palmeiras",
+            "id": 56
+          },
+          "timeVisitante": {
+            "nome": "Flamengo",
+            "id": 18
+          },
+          "horarioJogo": "2021-09-12T19:00:00.000Z",
+          "id": 196
+        },
+        {
+          "timeMandante": {
+            "nome": "Fortaleza",
+            "id": 131
+          },
+          "timeVisitante": {
+            "nome": "Atlético-MG",
+            "id": 30
+          },
+          "horarioJogo": "2021-09-12T19:00:00.000Z",
+          "id": 197
+        },
+        {
+          "timeMandante": {
+            "nome": "Atlético-GO",
+            "id": 98
+          },
+          "timeVisitante": {
+            "nome": "Corinthians",
+            "id": 65
+          },
+          "horarioJogo": "2021-09-12T21:15:00.000Z",
+          "id": 198
+        },
+        {
+          "timeMandante": {
+            "nome": "Fluminense",
+            "id": 26
+          },
+          "timeVisitante": {
+            "nome": "São Paulo",
+            "id": 57
+          },
+          "horarioJogo": "2021-09-12T23:30:00.000Z",
+          "id": 199
+        },
+        {
+          "timeMandante": {
+            "nome": "Sport",
+            "id": 79
+          },
+          "timeVisitante": {
+            "nome": "Internacional",
+            "id": 44
+          },
+          "horarioJogo": "2021-09-13T23:00:00.000Z",
+          "id": 200
+        }
+      ],
+      "horarioLimite": "2021-09-11T19:00:00.000Z"
+    },
+    {
+      "numeroRodada": 21,
+      "jogos": [
+        {
+          "timeMandante": {
+            "nome": "Chapecoense",
+            "id": 5
+          },
+          "timeVisitante": {
+            "nome": "Palmeiras",
+            "id": 56
+          },
+          "horarioJogo": "2021-09-18T20:00:00.000Z",
+          "id": 201
+        },
+        {
+          "timeMandante": {
+            "nome": "Athletico-PR",
+            "id": 185
+          },
+          "timeVisitante": {
+            "nome": "Juventude",
+            "id": 43
+          },
+          "horarioJogo": "2021-09-18T21:45:00.000Z",
+          "id": 202
+        },
+        {
+          "timeMandante": {
+            "nome": "Atlético-MG",
+            "id": 30
+          },
+          "timeVisitante": {
+            "nome": "Sport",
+            "id": 79
+          },
+          "horarioJogo": "2021-09-18T22:00:00.000Z",
+          "id": 203
+        },
+        {
+          "timeMandante": {
+            "nome": "Ceará",
+            "id": 105
+          },
+          "timeVisitante": {
+            "nome": "Santos",
+            "id": 63
+          },
+          "horarioJogo": "2021-09-19T00:00:00.000Z",
+          "id": 204
+        },
+        {
+          "timeMandante": {
+            "nome": "Bahia",
+            "id": 68
+          },
+          "timeVisitante": {
+            "nome": "Bragantino",
+            "id": 64
+          },
+          "horarioJogo": "2021-09-19T00:00:00.000Z",
+          "id": 205
+        },
+        {
+          "timeMandante": {
+            "nome": "Internacional",
+            "id": 44
+          },
+          "timeVisitante": {
+            "nome": "Fortaleza",
+            "id": 131
+          },
+          "horarioJogo": "2021-09-19T14:00:00.000Z",
+          "id": 206
+        },
+        {
+          "timeMandante": {
+            "nome": "São Paulo",
+            "id": 57
+          },
+          "timeVisitante": {
+            "nome": "Atlético-GO",
+            "id": 98
+          },
+          "horarioJogo": "2021-09-19T19:00:00.000Z",
+          "id": 207
+        },
+        {
+          "timeMandante": {
+            "nome": "Corinthians",
+            "id": 65
+          },
+          "timeVisitante": {
+            "nome": "América-MG",
+            "id": 33
+          },
+          "horarioJogo": "2021-09-19T21:15:00.000Z",
+          "id": 208
+        },
+        {
+          "timeMandante": {
+            "nome": "Flamengo",
+            "id": 18
+          },
+          "timeVisitante": {
+            "nome": "Grêmio",
+            "id": 45
+          },
+          "horarioJogo": "2021-09-19T23:30:00.000Z",
+          "id": 209
+        },
+        {
+          "timeMandante": {
+            "nome": "Cuiabá",
+            "id": 204
+          },
+          "timeVisitante": {
+            "nome": "Fluminense",
+            "id": 26
+          },
+          "horarioJogo": "2021-09-20T23:00:00.000Z",
+          "id": 210
+        }
+      ],
+      "horarioLimite": "2021-09-18T20:00:00.000Z"
+    },
+    {
+      "numeroRodada": 22,
+      "jogos": [
+        {
+          "timeMandante": {
+            "nome": "Ceará",
+            "id": 105
+          },
+          "timeVisitante": {
+            "nome": "Chapecoense",
+            "id": 5
+          },
+          "horarioJogo": "2021-09-25T20:00:00.000Z",
+          "id": 211
+        },
+        {
+          "timeMandante": {
+            "nome": "Corinthians",
+            "id": 65
+          },
+          "timeVisitante": {
+            "nome": "Palmeiras",
+            "id": 56
+          },
+          "horarioJogo": "2021-09-25T22:00:00.000Z",
+          "id": 212
+        },
+        {
+          "timeMandante": {
+            "nome": "São Paulo",
+            "id": 57
+          },
+          "timeVisitante": {
+            "nome": "Atlético-MG",
+            "id": 30
+          },
+          "horarioJogo": "2021-09-26T00:00:00.000Z",
+          "id": 213
+        },
+        {
+          "timeMandante": {
+            "nome": "América-MG",
+            "id": 33
+          },
+          "timeVisitante": {
+            "nome": "Flamengo",
+            "id": 18
+          },
+          "horarioJogo": "2021-09-26T14:00:00.000Z",
+          "id": 214
+        },
+        {
+          "timeMandante": {
+            "nome": "Fluminense",
+            "id": 26
+          },
+          "timeVisitante": {
+            "nome": "Bragantino",
+            "id": 64
+          },
+          "horarioJogo": "2021-09-26T19:00:00.000Z",
+          "id": 215
+        },
+        {
+          "timeMandante": {
+            "nome": "Internacional",
+            "id": 44
+          },
+          "timeVisitante": {
+            "nome": "Bahia",
+            "id": 68
+          },
+          "horarioJogo": "2021-09-26T19:00:00.000Z",
+          "id": 216
+        },
+        {
+          "timeMandante": {
+            "nome": "Juventude",
+            "id": 43
+          },
+          "timeVisitante": {
+            "nome": "Santos",
+            "id": 63
+          },
+          "horarioJogo": "2021-09-26T19:00:00.000Z",
+          "id": 217
+        },
+        {
+          "timeMandante": {
+            "nome": "Sport",
+            "id": 79
+          },
+          "timeVisitante": {
+            "nome": "Fortaleza",
+            "id": 131
+          },
+          "horarioJogo": "2021-09-26T21:15:00.000Z",
+          "id": 218
+        },
+        {
+          "timeMandante": {
+            "nome": "Athletico-PR",
+            "id": 185
+          },
+          "timeVisitante": {
+            "nome": "Grêmio",
+            "id": 45
+          },
+          "horarioJogo": "2021-09-26T21:15:00.000Z",
+          "id": 219
+        },
+        {
+          "timeMandante": {
+            "nome": "Atlético-GO",
+            "id": 98
+          },
+          "timeVisitante": {
+            "nome": "Cuiabá",
+            "id": 204
+          },
+          "horarioJogo": "2021-09-26T23:30:00.000Z",
+          "id": 220
+        }
+      ],
+      "horarioLimite": "2021-09-25T20:00:00.000Z"
+    },
+    {
+      "numeroRodada": 23,
+      "jogos": [
+        {
+          "timeMandante": {
+            "nome": "Fortaleza",
+            "id": 131
+          },
+          "timeVisitante": {
+            "nome": "Atlético-GO",
+            "id": 98
+          },
+          "horarioJogo": "2021-10-02T20:00:00.000Z",
+          "id": 221
+        },
+        {
+          "timeMandante": {
+            "nome": "Cuiabá",
+            "id": 204
+          },
+          "timeVisitante": {
+            "nome": "América-MG",
+            "id": 33
+          },
+          "horarioJogo": "2021-10-02T20:00:00.000Z",
+          "id": 222
+        },
+        {
+          "timeMandante": {
+            "nome": "Bragantino",
+            "id": 64
+          },
+          "timeVisitante": {
+            "nome": "Corinthians",
+            "id": 65
+          },
+          "horarioJogo": "2021-10-02T22:00:00.000Z",
+          "id": 223
+        },
+        {
+          "timeMandante": {
+            "nome": "Atlético-MG",
+            "id": 30
+          },
+          "timeVisitante": {
+            "nome": "Internacional",
+            "id": 44
+          },
+          "horarioJogo": "2021-10-03T00:00:00.000Z",
+          "id": 224
+        },
+        {
+          "timeMandante": {
+            "nome": "Flamengo",
+            "id": 18
+          },
+          "timeVisitante": {
+            "nome": "Athletico-PR",
+            "id": 185
+          },
+          "horarioJogo": "2021-10-03T19:00:00.000Z",
+          "id": 225
+        },
+        {
+          "timeMandante": {
+            "nome": "Chapecoense",
+            "id": 5
+          },
+          "timeVisitante": {
+            "nome": "São Paulo",
+            "id": 57
+          },
+          "horarioJogo": "2021-10-03T19:00:00.000Z",
+          "id": 226
+        },
+        {
+          "timeMandante": {
+            "nome": "Palmeiras",
+            "id": 56
+          },
+          "timeVisitante": {
+            "nome": "Juventude",
+            "id": 43
+          },
+          "horarioJogo": "2021-10-03T21:15:00.000Z",
+          "id": 227
+        },
+        {
+          "timeMandante": {
+            "nome": "Grêmio",
+            "id": 45
+          },
+          "timeVisitante": {
+            "nome": "Sport",
+            "id": 79
+          },
+          "horarioJogo": "2021-10-03T23:30:00.000Z",
+          "id": 228
+        },
+        {
+          "timeMandante": {
+            "nome": "Santos",
+            "id": 63
+          },
+          "timeVisitante": {
+            "nome": "Fluminense",
+            "id": 26
+          },
+          "horarioJogo": "2021-10-27T22:00:00.000Z",
+          "id": 229
+        },
+        {
+          "timeMandante": {
+            "nome": "Bahia",
+            "id": 68
+          },
+          "timeVisitante": {
+            "nome": "Ceará",
+            "id": 105
+          },
+          "horarioJogo": "2021-10-27T22:00:00.000Z",
+          "id": 230
+        }
+      ],
+      "horarioLimite": "2021-10-02T20:00:00.000Z"
+    },
+    {
+      "numeroRodada": 24,
+      "jogos": [
+        {
+          "timeMandante": {
+            "nome": "Corinthians",
+            "id": 65
+          },
+          "timeVisitante": {
+            "nome": "Bahia",
+            "id": 68
+          },
+          "horarioJogo": "2021-10-06T00:30:00.000Z",
+          "id": 231
+        },
+        {
+          "timeMandante": {
+            "nome": "Ceará",
+            "id": 105
+          },
+          "timeVisitante": {
+            "nome": "Internacional",
+            "id": 44
+          },
+          "horarioJogo": "2021-10-06T22:00:00.000Z",
+          "id": 232
+        },
+        {
+          "timeMandante": {
+            "nome": "Sport",
+            "id": 79
+          },
+          "timeVisitante": {
+            "nome": "Juventude",
+            "id": 43
+          },
+          "horarioJogo": "2021-10-06T22:00:00.000Z",
+          "id": 233
+        },
+        {
+          "timeMandante": {
+            "nome": "Chapecoense",
+            "id": 5
+          },
+          "timeVisitante": {
+            "nome": "Atlético-MG",
+            "id": 30
+          },
+          "horarioJogo": "2021-10-06T22:00:00.000Z",
+          "id": 234
+        },
+        {
+          "timeMandante": {
+            "nome": "Atlético-GO",
+            "id": 98
+          },
+          "timeVisitante": {
+            "nome": "Athletico-PR",
+            "id": 185
+          },
+          "horarioJogo": "2021-10-06T22:00:00.000Z",
+          "id": 235
+        },
+        {
+          "timeMandante": {
+            "nome": "Bragantino",
+            "id": 64
+          },
+          "timeVisitante": {
+            "nome": "Flamengo",
+            "id": 18
+          },
+          "horarioJogo": "2021-10-06T23:30:00.000Z",
+          "id": 236
+        },
+        {
+          "timeMandante": {
+            "nome": "Fluminense",
+            "id": 26
+          },
+          "timeVisitante": {
+            "nome": "Fortaleza",
+            "id": 131
+          },
+          "horarioJogo": "2021-10-07T00:30:00.000Z",
+          "id": 237
+        },
+        {
+          "timeMandante": {
+            "nome": "América-MG",
+            "id": 33
+          },
+          "timeVisitante": {
+            "nome": "Palmeiras",
+            "id": 56
+          },
+          "horarioJogo": "2021-10-07T00:30:00.000Z",
+          "id": 238
+        },
+        {
+          "timeMandante": {
+            "nome": "Grêmio",
+            "id": 45
+          },
+          "timeVisitante": {
+            "nome": "Cuiabá",
+            "id": 204
+          },
+          "horarioJogo": "2021-10-07T00:30:00.000Z",
+          "id": 239
+        },
+        {
+          "timeMandante": {
+            "nome": "São Paulo",
+            "id": 57
+          },
+          "timeVisitante": {
+            "nome": "Santos",
+            "id": 63
+          },
+          "horarioJogo": "2021-10-07T21:30:00.000Z",
+          "id": 240
+        }
+      ],
+      "horarioLimite": "2021-10-06T00:30:00.000Z"
+    },
+    {
+      "numeroRodada": 25,
+      "jogos": [
+        {
+          "timeMandante": {
+            "nome": "Fluminense",
+            "id": 26
+          },
+          "timeVisitante": {
+            "nome": "Atlético-GO",
+            "id": 98
+          },
+          "horarioJogo": "2021-10-09T19:30:00.000Z",
+          "id": 241
+        },
+        {
+          "timeMandante": {
+            "nome": "Atlético-MG",
+            "id": 30
+          },
+          "timeVisitante": {
+            "nome": "Ceará",
+            "id": 105
+          },
+          "horarioJogo": "2021-10-09T19:30:00.000Z",
+          "id": 242
+        },
+        {
+          "timeMandante": {
+            "nome": "Sport",
+            "id": 79
+          },
+          "timeVisitante": {
+            "nome": "Corinthians",
+            "id": 65
+          },
+          "horarioJogo": "2021-10-09T19:30:00.000Z",
+          "id": 243
+        },
+        {
+          "timeMandante": {
+            "nome": "Fortaleza",
+            "id": 131
+          },
+          "timeVisitante": {
+            "nome": "Flamengo",
+            "id": 18
+          },
+          "horarioJogo": "2021-10-09T22:00:00.000Z",
+          "id": 244
+        },
+        {
+          "timeMandante": {
+            "nome": "Athletico-PR",
+            "id": 185
+          },
+          "timeVisitante": {
+            "nome": "Bahia",
+            "id": 68
+          },
+          "horarioJogo": "2021-10-09T22:00:00.000Z",
+          "id": 245
+        },
+        {
+          "timeMandante": {
+            "nome": "Palmeiras",
+            "id": 56
+          },
+          "timeVisitante": {
+            "nome": "Bragantino",
+            "id": 64
+          },
+          "horarioJogo": "2021-10-10T00:00:00.000Z",
+          "id": 246
+        },
+        {
+          "timeMandante": {
+            "nome": "Juventude",
+            "id": 43
+          },
+          "timeVisitante": {
+            "nome": "América-MG",
+            "id": 33
+          },
+          "horarioJogo": "2021-10-10T00:00:00.000Z",
+          "id": 247
+        },
+        {
+          "timeMandante": {
+            "nome": "Internacional",
+            "id": 44
+          },
+          "timeVisitante": {
+            "nome": "Chapecoense",
+            "id": 5
+          },
+          "horarioJogo": "2021-10-10T14:00:00.000Z",
+          "id": 248
+        },
+        {
+          "timeMandante": {
+            "nome": "Santos",
+            "id": 63
+          },
+          "timeVisitante": {
+            "nome": "Grêmio",
+            "id": 45
+          },
+          "horarioJogo": "2021-10-10T19:00:00.000Z",
+          "id": 249
+        },
+        {
+          "timeMandante": {
+            "nome": "Cuiabá",
+            "id": 204
+          },
+          "timeVisitante": {
+            "nome": "São Paulo",
+            "id": 57
+          },
+          "horarioJogo": "2021-10-11T23:00:00.000Z",
+          "id": 250
+        }
+      ],
+      "horarioLimite": "2021-10-09T19:30:00.000Z"
+    },
+    {
+      "numeroRodada": 26,
+      "jogos": [
+        {
+          "timeMandante": {
+            "nome": "Bragantino",
+            "id": 64
+          },
+          "timeVisitante": {
+            "nome": "Atlético-GO",
+            "id": 98
+          },
+          "horarioJogo": "2021-10-12T22:00:00.000Z",
+          "id": 251
+        },
+        {
+          "timeMandante": {
+            "nome": "Bahia",
+            "id": 68
+          },
+          "timeVisitante": {
+            "nome": "Palmeiras",
+            "id": 56
+          },
+          "horarioJogo": "2021-10-13T00:30:00.000Z",
+          "id": 252
+        },
+        {
+          "timeMandante": {
+            "nome": "Flamengo",
+            "id": 18
+          },
+          "timeVisitante": {
+            "nome": "Juventude",
+            "id": 43
+          },
+          "horarioJogo": "2021-10-13T22:00:00.000Z",
+          "id": 253
+        },
+        {
+          "timeMandante": {
+            "nome": "Atlético-MG",
+            "id": 30
+          },
+          "timeVisitante": {
+            "nome": "Santos",
+            "id": 63
+          },
+          "horarioJogo": "2021-10-13T22:00:00.000Z",
+          "id": 254
+        },
+        {
+          "timeMandante": {
+            "nome": "Chapecoense",
+            "id": 5
+          },
+          "timeVisitante": {
+            "nome": "Athletico-PR",
+            "id": 185
+          },
+          "horarioJogo": "2021-10-13T22:00:00.000Z",
+          "id": 255
+        },
+        {
+          "timeMandante": {
+            "nome": "Fortaleza",
+            "id": 131
+          },
+          "timeVisitante": {
+            "nome": "Grêmio",
+            "id": 45
+          },
+          "horarioJogo": "2021-10-13T23:30:00.000Z",
+          "id": 256
+        },
+        {
+          "timeMandante": {
+            "nome": "Corinthians",
+            "id": 65
+          },
+          "timeVisitante": {
+            "nome": "Fluminense",
+            "id": 26
+          },
+          "horarioJogo": "2021-10-14T00:00:00.000Z",
+          "id": 257
+        },
+        {
+          "timeMandante": {
+            "nome": "Internacional",
+            "id": 44
+          },
+          "timeVisitante": {
+            "nome": "América-MG",
+            "id": 33
+          },
+          "horarioJogo": "2021-10-14T00:30:00.000Z",
+          "id": 258
+        },
+        {
+          "timeMandante": {
+            "nome": "São Paulo",
+            "id": 57
+          },
+          "timeVisitante": {
+            "nome": "Ceará",
+            "id": 105
+          },
+          "horarioJogo": "2021-10-14T22:00:00.000Z",
+          "id": 259
+        },
+        {
+          "timeMandante": {
+            "nome": "Cuiabá",
+            "id": 204
+          },
+          "timeVisitante": {
+            "nome": "Sport",
+            "id": 79
+          },
+          "horarioJogo": "2021-10-14T22:00:00.000Z",
+          "id": 260
+        }
+      ],
+      "horarioLimite": "2021-10-12T22:00:00.000Z"
+    },
+    {
+      "numeroRodada": 27,
+      "jogos": [
+        {
+          "timeMandante": {
+            "nome": "Chapecoense",
+            "id": 5
+          },
+          "timeVisitante": {
+            "nome": "Fortaleza",
+            "id": 131
+          },
+          "horarioJogo": "2021-10-16T22:00:00.000Z",
+          "id": 261
+        },
+        {
+          "timeMandante": {
+            "nome": "América-MG",
+            "id": 33
+          },
+          "timeVisitante": {
+            "nome": "Bahia",
+            "id": 68
+          },
+          "horarioJogo": "2021-10-17T00:00:00.000Z",
+          "id": 262
+        },
+        {
+          "timeMandante": {
+            "nome": "Palmeiras",
+            "id": 56
+          },
+          "timeVisitante": {
+            "nome": "Internacional",
+            "id": 44
+          },
+          "horarioJogo": "2021-10-17T19:00:00.000Z",
+          "id": 263
+        },
+        {
+          "timeMandante": {
+            "nome": "Athletico-PR",
+            "id": 185
+          },
+          "timeVisitante": {
+            "nome": "Fluminense",
+            "id": 26
+          },
+          "horarioJogo": "2021-10-17T19:00:00.000Z",
+          "id": 264
+        },
+        {
+          "timeMandante": {
+            "nome": "Grêmio",
+            "id": 45
+          },
+          "timeVisitante": {
+            "nome": "Juventude",
+            "id": 43
+          },
+          "horarioJogo": "2021-10-17T21:15:00.000Z",
+          "id": 265
+        },
+        {
+          "timeMandante": {
+            "nome": "Ceará",
+            "id": 105
+          },
+          "timeVisitante": {
+            "nome": "Bragantino",
+            "id": 64
+          },
+          "horarioJogo": "2021-10-17T21:15:00.000Z",
+          "id": 266
+        },
+        {
+          "timeMandante": {
+            "nome": "Atlético-GO",
+            "id": 98
+          },
+          "timeVisitante": {
+            "nome": "Atlético-MG",
+            "id": 30
+          },
+          "horarioJogo": "2021-10-17T21:15:00.000Z",
+          "id": 267
+        },
+        {
+          "timeMandante": {
+            "nome": "Flamengo",
+            "id": 18
+          },
+          "timeVisitante": {
+            "nome": "Cuiabá",
+            "id": 204
+          },
+          "horarioJogo": "2021-10-17T23:30:00.000Z",
+          "id": 268
+        },
+        {
+          "timeMandante": {
+            "nome": "Sport",
+            "id": 79
+          },
+          "timeVisitante": {
+            "nome": "Santos",
+            "id": 63
+          },
+          "horarioJogo": "2021-10-17T23:30:00.000Z",
+          "id": 269
+        },
+        {
+          "timeMandante": {
+            "nome": "São Paulo",
+            "id": 57
+          },
+          "timeVisitante": {
+            "nome": "Corinthians",
+            "id": 65
+          },
+          "horarioJogo": "2021-10-18T23:00:00.000Z",
+          "id": 270
+        }
+      ],
+      "horarioLimite": "2021-10-16T22:00:00.000Z"
+    },
+    {
+      "numeroRodada": 28,
+      "jogos": [
+        {
+          "timeMandante": {
+            "nome": "Santos",
+            "id": 63
+          },
+          "timeVisitante": {
+            "nome": "América-MG",
+            "id": 33
+          },
+          "horarioJogo": "2021-10-23T20:00:00.000Z",
+          "id": 271
+        },
+        {
+          "timeMandante": {
+            "nome": "Juventude",
+            "id": 43
+          },
+          "timeVisitante": {
+            "nome": "Ceará",
+            "id": 105
+          },
+          "horarioJogo": "2021-10-23T20:00:00.000Z",
+          "id": 272
+        },
+        {
+          "timeMandante": {
+            "nome": "Fluminense",
+            "id": 26
+          },
+          "timeVisitante": {
+            "nome": "Flamengo",
+            "id": 18
+          },
+          "horarioJogo": "2021-10-23T22:00:00.000Z",
+          "id": 273
+        },
+        {
+          "timeMandante": {
+            "nome": "Fortaleza",
+            "id": 131
+          },
+          "timeVisitante": {
+            "nome": "Athletico-PR",
+            "id": 185
+          },
+          "horarioJogo": "2021-10-23T22:15:00.000Z",
+          "id": 274
+        },
+        {
+          "timeMandante": {
+            "nome": "Palmeiras",
+            "id": 56
+          },
+          "timeVisitante": {
+            "nome": "Sport",
+            "id": 79
+          },
+          "horarioJogo": "2021-10-24T00:00:00.000Z",
+          "id": 275
+        },
+        {
+          "timeMandante": {
+            "nome": "Atlético-MG",
+            "id": 30
+          },
+          "timeVisitante": {
+            "nome": "Cuiabá",
+            "id": 204
+          },
+          "horarioJogo": "2021-10-24T19:00:00.000Z",
+          "id": 276
+        },
+        {
+          "timeMandante": {
+            "nome": "Internacional",
+            "id": 44
+          },
+          "timeVisitante": {
+            "nome": "Corinthians",
+            "id": 65
+          },
+          "horarioJogo": "2021-10-24T19:00:00.000Z",
+          "id": 277
+        },
+        {
+          "timeMandante": {
+            "nome": "Bragantino",
+            "id": 64
+          },
+          "timeVisitante": {
+            "nome": "São Paulo",
+            "id": 57
+          },
+          "horarioJogo": "2021-10-24T21:15:00.000Z",
+          "id": 278
+        },
+        {
+          "timeMandante": {
+            "nome": "Bahia",
+            "id": 68
+          },
+          "timeVisitante": {
+            "nome": "Chapecoense",
+            "id": 5
+          },
+          "horarioJogo": "2021-10-24T23:30:00.000Z",
+          "id": 279
+        },
+        {
+          "timeMandante": {
+            "nome": "Atlético-GO",
+            "id": 98
+          },
+          "timeVisitante": {
+            "nome": "Grêmio",
+            "id": 45
+          },
+          "horarioJogo": "2021-10-25T23:00:00.000Z",
+          "id": 280
+        }
+      ],
+      "horarioLimite": "2021-10-23T20:00:00.000Z"
+    },
+    {
+      "numeroRodada": 29,
+      "jogos": [
+        {
+          "timeMandante": {
+            "nome": "Corinthians",
+            "id": 65
+          },
+          "timeVisitante": {
+            "nome": "Chapecoense",
+            "id": 5
+          },
+          "horarioJogo": "2021-10-30T20:00:00.000Z",
+          "id": 281
+        },
+        {
+          "timeMandante": {
+            "nome": "Athletico-PR",
+            "id": 185
+          },
+          "timeVisitante": {
+            "nome": "Santos",
+            "id": 63
+          },
+          "horarioJogo": "2021-10-30T20:00:00.000Z",
+          "id": 282
+        },
+        {
+          "timeMandante": {
+            "nome": "Flamengo",
+            "id": 18
+          },
+          "timeVisitante": {
+            "nome": "Atlético-MG",
+            "id": 30
+          },
+          "horarioJogo": "2021-10-30T22:00:00.000Z",
+          "id": 283
+        },
+        {
+          "timeMandante": {
+            "nome": "Juventude",
+            "id": 43
+          },
+          "timeVisitante": {
+            "nome": "Bahia",
+            "id": 68
+          },
+          "horarioJogo": "2021-10-30T22:15:00.000Z",
+          "id": 284
+        },
+        {
+          "timeMandante": {
+            "nome": "América-MG",
+            "id": 33
+          },
+          "timeVisitante": {
+            "nome": "Fortaleza",
+            "id": 131
+          },
+          "horarioJogo": "2021-10-31T00:00:00.000Z",
+          "id": 285
+        },
+        {
+          "timeMandante": {
+            "nome": "Grêmio",
+            "id": 45
+          },
+          "timeVisitante": {
+            "nome": "Palmeiras",
+            "id": 56
+          },
+          "horarioJogo": "2021-10-31T19:00:00.000Z",
+          "id": 286
+        },
+        {
+          "timeMandante": {
+            "nome": "Ceará",
+            "id": 105
+          },
+          "timeVisitante": {
+            "nome": "Fluminense",
+            "id": 26
+          },
+          "horarioJogo": "2021-10-31T19:00:00.000Z",
+          "id": 287
+        },
+        {
+          "timeMandante": {
+            "nome": "São Paulo",
+            "id": 57
+          },
+          "timeVisitante": {
+            "nome": "Internacional",
+            "id": 44
+          },
+          "horarioJogo": "2021-10-31T21:15:00.000Z",
+          "id": 288
+        },
+        {
+          "timeMandante": {
+            "nome": "Sport",
+            "id": 79
+          },
+          "timeVisitante": {
+            "nome": "Atlético-GO",
+            "id": 98
+          },
+          "horarioJogo": "2021-10-31T23:30:00.000Z",
+          "id": 289
+        },
+        {
+          "timeMandante": {
+            "nome": "Cuiabá",
+            "id": 204
+          },
+          "timeVisitante": {
+            "nome": "Bragantino",
+            "id": 64
+          },
+          "horarioJogo": "2021-11-01T23:00:00.000Z",
+          "id": 290
+        }
+      ],
+      "horarioLimite": "2021-10-30T20:00:00.000Z"
+    },
+    {
+      "numeroRodada": 30,
+      "jogos": [
+        {
+          "timeMandante": {
+            "nome": "Ceará",
+            "id": 105
+          },
+          "timeVisitante": {
+            "nome": "Cuiabá",
+            "id": 204
+          },
+          "horarioJogo": "2021-11-06T20:00:00.000Z",
+          "id": 291
+        },
+        {
+          "timeMandante": {
+            "nome": "Internacional",
+            "id": 44
+          },
+          "timeVisitante": {
+            "nome": "Grêmio",
+            "id": 45
+          },
+          "horarioJogo": "2021-11-06T22:00:00.000Z",
+          "id": 292
+        },
+        {
+          "timeMandante": {
+            "nome": "Corinthians",
+            "id": 65
+          },
+          "timeVisitante": {
+            "nome": "Fortaleza",
+            "id": 131
+          },
+          "horarioJogo": "2021-11-07T00:00:00.000Z",
+          "id": 293
+        },
+        {
+          "timeMandante": {
+            "nome": "Santos",
+            "id": 63
+          },
+          "timeVisitante": {
+            "nome": "Palmeiras",
+            "id": 56
+          },
+          "horarioJogo": "2021-11-07T19:00:00.000Z",
+          "id": 294
+        },
+        {
+          "timeMandante": {
+            "nome": "Atlético-MG",
+            "id": 30
+          },
+          "timeVisitante": {
+            "nome": "América-MG",
+            "id": 33
+          },
+          "horarioJogo": "2021-11-07T19:00:00.000Z",
+          "id": 295
+        },
+        {
+          "timeMandante": {
+            "nome": "Bragantino",
+            "id": 64
+          },
+          "timeVisitante": {
+            "nome": "Athletico-PR",
+            "id": 185
+          },
+          "horarioJogo": "2021-11-07T19:00:00.000Z",
+          "id": 296
+        },
+        {
+          "timeMandante": {
+            "nome": "Bahia",
+            "id": 68
+          },
+          "timeVisitante": {
+            "nome": "São Paulo",
+            "id": 57
+          },
+          "horarioJogo": "2021-11-07T21:15:00.000Z",
+          "id": 297
+        },
+        {
+          "timeMandante": {
+            "nome": "Fluminense",
+            "id": 26
+          },
+          "timeVisitante": {
+            "nome": "Sport",
+            "id": 79
+          },
+          "horarioJogo": "2021-11-07T23:30:00.000Z",
+          "id": 298
+        },
+        {
+          "timeMandante": {
+            "nome": "Atlético-GO",
+            "id": 98
+          },
+          "timeVisitante": {
+            "nome": "Juventude",
+            "id": 43
+          },
+          "horarioJogo": "2021-11-08T22:00:00.000Z",
+          "id": 299
+        },
+        {
+          "timeMandante": {
+            "nome": "Chapecoense",
+            "id": 5
+          },
+          "timeVisitante": {
+            "nome": "Flamengo",
+            "id": 18
+          },
+          "horarioJogo": "2021-11-08T23:00:00.000Z",
+          "id": 300
+        }
+      ],
+      "horarioLimite": "2021-11-06T20:00:00.000Z"
+    },
+    {
+      "numeroRodada": 31,
+      "jogos": [
+        {
+          "timeMandante": {
+            "nome": "Flamengo",
+            "id": 18
+          },
+          "timeVisitante": {
+            "nome": "Bahia",
+            "id": 68
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 301
+        },
+        {
+          "timeMandante": {
+            "nome": "Palmeiras",
+            "id": 56
+          },
+          "timeVisitante": {
+            "nome": "Atlético-GO",
+            "id": 98
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 302
+        },
+        {
+          "timeMandante": {
+            "nome": "Santos",
+            "id": 63
+          },
+          "timeVisitante": {
+            "nome": "Bragantino",
+            "id": 64
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 303
+        },
+        {
+          "timeMandante": {
+            "nome": "Atlético-MG",
+            "id": 30
+          },
+          "timeVisitante": {
+            "nome": "Corinthians",
+            "id": 65
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 304
+        },
+        {
+          "timeMandante": {
+            "nome": "Grêmio",
+            "id": 45
+          },
+          "timeVisitante": {
+            "nome": "Fluminense",
+            "id": 26
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 305
+        },
+        {
+          "timeMandante": {
+            "nome": "Fortaleza",
+            "id": 131
+          },
+          "timeVisitante": {
+            "nome": "São Paulo",
+            "id": 57
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 306
+        },
+        {
+          "timeMandante": {
+            "nome": "Sport",
+            "id": 79
+          },
+          "timeVisitante": {
+            "nome": "América-MG",
+            "id": 33
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 307
+        },
+        {
+          "timeMandante": {
+            "nome": "Athletico-PR",
+            "id": 185
+          },
+          "timeVisitante": {
+            "nome": "Ceará",
+            "id": 105
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 308
+        },
+        {
+          "timeMandante": {
+            "nome": "Juventude",
+            "id": 43
+          },
+          "timeVisitante": {
+            "nome": "Internacional",
+            "id": 44
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 309
+        },
+        {
+          "timeMandante": {
+            "nome": "Cuiabá",
+            "id": 204
+          },
+          "timeVisitante": {
+            "nome": "Chapecoense",
+            "id": 5
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 310
+        }
+      ],
+      "horarioLimite": "2022-01-31T03:00:00.000Z"
+    },
+    {
+      "numeroRodada": 32,
+      "jogos": [
+        {
+          "timeMandante": {
+            "nome": "Fluminense",
+            "id": 26
+          },
+          "timeVisitante": {
+            "nome": "Palmeiras",
+            "id": 56
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 311
+        },
+        {
+          "timeMandante": {
+            "nome": "Corinthians",
+            "id": 65
+          },
+          "timeVisitante": {
+            "nome": "Cuiabá",
+            "id": 204
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 312
+        },
+        {
+          "timeMandante": {
+            "nome": "São Paulo",
+            "id": 57
+          },
+          "timeVisitante": {
+            "nome": "Flamengo",
+            "id": 18
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 313
+        },
+        {
+          "timeMandante": {
+            "nome": "América-MG",
+            "id": 33
+          },
+          "timeVisitante": {
+            "nome": "Grêmio",
+            "id": 45
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 314
+        },
+        {
+          "timeMandante": {
+            "nome": "Internacional",
+            "id": 44
+          },
+          "timeVisitante": {
+            "nome": "Athletico-PR",
+            "id": 185
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 315
+        },
+        {
+          "timeMandante": {
+            "nome": "Ceará",
+            "id": 105
+          },
+          "timeVisitante": {
+            "nome": "Sport",
+            "id": 79
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 316
+        },
+        {
+          "timeMandante": {
+            "nome": "Bahia",
+            "id": 68
+          },
+          "timeVisitante": {
+            "nome": "Atlético-MG",
+            "id": 30
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 317
+        },
+        {
+          "timeMandante": {
+            "nome": "Bragantino",
+            "id": 64
+          },
+          "timeVisitante": {
+            "nome": "Fortaleza",
+            "id": 131
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 318
+        },
+        {
+          "timeMandante": {
+            "nome": "Chapecoense",
+            "id": 5
+          },
+          "timeVisitante": {
+            "nome": "Juventude",
+            "id": 43
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 319
+        },
+        {
+          "timeMandante": {
+            "nome": "Atlético-GO",
+            "id": 98
+          },
+          "timeVisitante": {
+            "nome": "Santos",
+            "id": 63
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 320
+        }
+      ],
+      "horarioLimite": "2022-01-31T03:00:00.000Z"
+    },
+    {
+      "numeroRodada": 33,
+      "jogos": [
+        {
+          "timeMandante": {
+            "nome": "Flamengo",
+            "id": 18
+          },
+          "timeVisitante": {
+            "nome": "Corinthians",
+            "id": 65
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 321
+        },
+        {
+          "timeMandante": {
+            "nome": "Palmeiras",
+            "id": 56
+          },
+          "timeVisitante": {
+            "nome": "São Paulo",
+            "id": 57
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 322
+        },
+        {
+          "timeMandante": {
+            "nome": "Santos",
+            "id": 63
+          },
+          "timeVisitante": {
+            "nome": "Chapecoense",
+            "id": 5
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 323
+        },
+        {
+          "timeMandante": {
+            "nome": "América-MG",
+            "id": 33
+          },
+          "timeVisitante": {
+            "nome": "Atlético-GO",
+            "id": 98
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 324
+        },
+        {
+          "timeMandante": {
+            "nome": "Grêmio",
+            "id": 45
+          },
+          "timeVisitante": {
+            "nome": "Bragantino",
+            "id": 64
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 325
+        },
+        {
+          "timeMandante": {
+            "nome": "Fortaleza",
+            "id": 131
+          },
+          "timeVisitante": {
+            "nome": "Ceará",
+            "id": 105
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 326
+        },
+        {
+          "timeMandante": {
+            "nome": "Sport",
+            "id": 79
+          },
+          "timeVisitante": {
+            "nome": "Bahia",
+            "id": 68
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 327
+        },
+        {
+          "timeMandante": {
+            "nome": "Athletico-PR",
+            "id": 185
+          },
+          "timeVisitante": {
+            "nome": "Atlético-MG",
+            "id": 30
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 328
+        },
+        {
+          "timeMandante": {
+            "nome": "Juventude",
+            "id": 43
+          },
+          "timeVisitante": {
+            "nome": "Fluminense",
+            "id": 26
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 329
+        },
+        {
+          "timeMandante": {
+            "nome": "Cuiabá",
+            "id": 204
+          },
+          "timeVisitante": {
+            "nome": "Internacional",
+            "id": 44
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 330
+        }
+      ],
+      "horarioLimite": "2022-01-31T03:00:00.000Z"
+    },
+    {
+      "numeroRodada": 34,
+      "jogos": [
+        {
+          "timeMandante": {
+            "nome": "Fluminense",
+            "id": 26
+          },
+          "timeVisitante": {
+            "nome": "América-MG",
+            "id": 33
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 331
+        },
+        {
+          "timeMandante": {
+            "nome": "Corinthians",
+            "id": 65
+          },
+          "timeVisitante": {
+            "nome": "Santos",
+            "id": 63
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 332
+        },
+        {
+          "timeMandante": {
+            "nome": "São Paulo",
+            "id": 57
+          },
+          "timeVisitante": {
+            "nome": "Athletico-PR",
+            "id": 185
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 333
+        },
+        {
+          "timeMandante": {
+            "nome": "Atlético-MG",
+            "id": 30
+          },
+          "timeVisitante": {
+            "nome": "Juventude",
+            "id": 43
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 334
+        },
+        {
+          "timeMandante": {
+            "nome": "Internacional",
+            "id": 44
+          },
+          "timeVisitante": {
+            "nome": "Flamengo",
+            "id": 18
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 335
+        },
+        {
+          "timeMandante": {
+            "nome": "Fortaleza",
+            "id": 131
+          },
+          "timeVisitante": {
+            "nome": "Palmeiras",
+            "id": 56
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 336
+        },
+        {
+          "timeMandante": {
+            "nome": "Bahia",
+            "id": 68
+          },
+          "timeVisitante": {
+            "nome": "Cuiabá",
+            "id": 204
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 337
+        },
+        {
+          "timeMandante": {
+            "nome": "Bragantino",
+            "id": 64
+          },
+          "timeVisitante": {
+            "nome": "Sport",
+            "id": 79
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 338
+        },
+        {
+          "timeMandante": {
+            "nome": "Chapecoense",
+            "id": 5
+          },
+          "timeVisitante": {
+            "nome": "Grêmio",
+            "id": 45
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 339
+        },
+        {
+          "timeMandante": {
+            "nome": "Atlético-GO",
+            "id": 98
+          },
+          "timeVisitante": {
+            "nome": "Ceará",
+            "id": 105
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 340
+        }
+      ],
+      "horarioLimite": "2022-01-31T03:00:00.000Z"
+    },
+    {
+      "numeroRodada": 35,
+      "jogos": [
+        {
+          "timeMandante": {
+            "nome": "Fluminense",
+            "id": 26
+          },
+          "timeVisitante": {
+            "nome": "Internacional",
+            "id": 44
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 341
+        },
+        {
+          "timeMandante": {
+            "nome": "Palmeiras",
+            "id": 56
+          },
+          "timeVisitante": {
+            "nome": "Atlético-MG",
+            "id": 30
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 342
+        },
+        {
+          "timeMandante": {
+            "nome": "Santos",
+            "id": 63
+          },
+          "timeVisitante": {
+            "nome": "Fortaleza",
+            "id": 131
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 343
+        },
+        {
+          "timeMandante": {
+            "nome": "América-MG",
+            "id": 33
+          },
+          "timeVisitante": {
+            "nome": "Chapecoense",
+            "id": 5
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 344
+        },
+        {
+          "timeMandante": {
+            "nome": "Grêmio",
+            "id": 45
+          },
+          "timeVisitante": {
+            "nome": "São Paulo",
+            "id": 57
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 345
+        },
+        {
+          "timeMandante": {
+            "nome": "Ceará",
+            "id": 105
+          },
+          "timeVisitante": {
+            "nome": "Corinthians",
+            "id": 65
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 346
+        },
+        {
+          "timeMandante": {
+            "nome": "Sport",
+            "id": 79
+          },
+          "timeVisitante": {
+            "nome": "Flamengo",
+            "id": 18
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 347
+        },
+        {
+          "timeMandante": {
+            "nome": "Athletico-PR",
+            "id": 185
+          },
+          "timeVisitante": {
+            "nome": "Cuiabá",
+            "id": 204
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 348
+        },
+        {
+          "timeMandante": {
+            "nome": "Juventude",
+            "id": 43
+          },
+          "timeVisitante": {
+            "nome": "Bragantino",
+            "id": 64
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 349
+        },
+        {
+          "timeMandante": {
+            "nome": "Atlético-GO",
+            "id": 98
+          },
+          "timeVisitante": {
+            "nome": "Bahia",
+            "id": 68
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 350
+        }
+      ],
+      "horarioLimite": "2022-01-31T03:00:00.000Z"
+    },
+    {
+      "numeroRodada": 36,
+      "jogos": [
+        {
+          "timeMandante": {
+            "nome": "Flamengo",
+            "id": 18
+          },
+          "timeVisitante": {
+            "nome": "Ceará",
+            "id": 105
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 351
+        },
+        {
+          "timeMandante": {
+            "nome": "Corinthians",
+            "id": 65
+          },
+          "timeVisitante": {
+            "nome": "Athletico-PR",
+            "id": 185
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 352
+        },
+        {
+          "timeMandante": {
+            "nome": "São Paulo",
+            "id": 57
+          },
+          "timeVisitante": {
+            "nome": "Sport",
+            "id": 79
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 353
+        },
+        {
+          "timeMandante": {
+            "nome": "Atlético-MG",
+            "id": 30
+          },
+          "timeVisitante": {
+            "nome": "Fluminense",
+            "id": 26
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 354
+        },
+        {
+          "timeMandante": {
+            "nome": "Internacional",
+            "id": 44
+          },
+          "timeVisitante": {
+            "nome": "Santos",
+            "id": 63
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 355
+        },
+        {
+          "timeMandante": {
+            "nome": "Fortaleza",
+            "id": 131
+          },
+          "timeVisitante": {
+            "nome": "Juventude",
+            "id": 43
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 356
+        },
+        {
+          "timeMandante": {
+            "nome": "Bahia",
+            "id": 68
+          },
+          "timeVisitante": {
+            "nome": "Grêmio",
+            "id": 45
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 357
+        },
+        {
+          "timeMandante": {
+            "nome": "Bragantino",
+            "id": 64
+          },
+          "timeVisitante": {
+            "nome": "América-MG",
+            "id": 33
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 358
+        },
+        {
+          "timeMandante": {
+            "nome": "Chapecoense",
+            "id": 5
+          },
+          "timeVisitante": {
+            "nome": "Atlético-GO",
+            "id": 98
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 359
+        },
+        {
+          "timeMandante": {
+            "nome": "Cuiabá",
+            "id": 204
+          },
+          "timeVisitante": {
+            "nome": "Palmeiras",
+            "id": 56
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 360
+        }
+      ],
+      "horarioLimite": "2022-01-31T03:00:00.000Z"
+    },
+    {
+      "numeroRodada": 37,
+      "jogos": [
+        {
+          "timeMandante": {
+            "nome": "Flamengo",
+            "id": 18
+          },
+          "timeVisitante": {
+            "nome": "Santos",
+            "id": 63
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 361
+        },
+        {
+          "timeMandante": {
+            "nome": "Corinthians",
+            "id": 65
+          },
+          "timeVisitante": {
+            "nome": "Grêmio",
+            "id": 45
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 362
+        },
+        {
+          "timeMandante": {
+            "nome": "São Paulo",
+            "id": 57
+          },
+          "timeVisitante": {
+            "nome": "Juventude",
+            "id": 43
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 363
+        },
+        {
+          "timeMandante": {
+            "nome": "Atlético-MG",
+            "id": 30
+          },
+          "timeVisitante": {
+            "nome": "Bragantino",
+            "id": 64
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 364
+        },
+        {
+          "timeMandante": {
+            "nome": "Internacional",
+            "id": 44
+          },
+          "timeVisitante": {
+            "nome": "Atlético-GO",
+            "id": 98
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 365
+        },
+        {
+          "timeMandante": {
+            "nome": "Ceará",
+            "id": 105
+          },
+          "timeVisitante": {
+            "nome": "América-MG",
+            "id": 33
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 366
+        },
+        {
+          "timeMandante": {
+            "nome": "Bahia",
+            "id": 68
+          },
+          "timeVisitante": {
+            "nome": "Fluminense",
+            "id": 26
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 367
+        },
+        {
+          "timeMandante": {
+            "nome": "Athletico-PR",
+            "id": 185
+          },
+          "timeVisitante": {
+            "nome": "Palmeiras",
+            "id": 56
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 368
+        },
+        {
+          "timeMandante": {
+            "nome": "Chapecoense",
+            "id": 5
+          },
+          "timeVisitante": {
+            "nome": "Sport",
+            "id": 79
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 369
+        },
+        {
+          "timeMandante": {
+            "nome": "Cuiabá",
+            "id": 204
+          },
+          "timeVisitante": {
+            "nome": "Fortaleza",
+            "id": 131
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 370
+        }
+      ],
+      "horarioLimite": "2022-01-31T03:00:00.000Z"
+    },
+    {
+      "numeroRodada": 38,
+      "jogos": [
+        {
+          "timeMandante": {
+            "nome": "Fluminense",
+            "id": 26
+          },
+          "timeVisitante": {
+            "nome": "Chapecoense",
+            "id": 5
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 371
+        },
+        {
+          "timeMandante": {
+            "nome": "Palmeiras",
+            "id": 56
+          },
+          "timeVisitante": {
+            "nome": "Ceará",
+            "id": 105
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 372
+        },
+        {
+          "timeMandante": {
+            "nome": "Santos",
+            "id": 63
+          },
+          "timeVisitante": {
+            "nome": "Cuiabá",
+            "id": 204
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 373
+        },
+        {
+          "timeMandante": {
+            "nome": "América-MG",
+            "id": 33
+          },
+          "timeVisitante": {
+            "nome": "São Paulo",
+            "id": 57
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 374
+        },
+        {
+          "timeMandante": {
+            "nome": "Grêmio",
+            "id": 45
+          },
+          "timeVisitante": {
+            "nome": "Atlético-MG",
+            "id": 30
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 375
+        },
+        {
+          "timeMandante": {
+            "nome": "Fortaleza",
+            "id": 131
+          },
+          "timeVisitante": {
+            "nome": "Bahia",
+            "id": 68
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 376
+        },
+        {
+          "timeMandante": {
+            "nome": "Sport",
+            "id": 79
+          },
+          "timeVisitante": {
+            "nome": "Athletico-PR",
+            "id": 185
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 377
+        },
+        {
+          "timeMandante": {
+            "nome": "Bragantino",
+            "id": 64
+          },
+          "timeVisitante": {
+            "nome": "Internacional",
+            "id": 44
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 378
+        },
+        {
+          "timeMandante": {
+            "nome": "Juventude",
+            "id": 43
+          },
+          "timeVisitante": {
+            "nome": "Corinthians",
+            "id": 65
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 379
+        },
+        {
+          "timeMandante": {
+            "nome": "Atlético-GO",
+            "id": 98
+          },
+          "timeVisitante": {
+            "nome": "Flamengo",
+            "id": 18
+          },
+          "horarioJogo": "1970-01-01T00:00:00.000Z",
+          "id": 380
+        }
+      ],
+      "horarioLimite": "2022-01-31T03:00:00.000Z"
+    }
+  ]

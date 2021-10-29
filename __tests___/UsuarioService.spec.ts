@@ -295,12 +295,13 @@ describe("Testes da classe service: UsuarioService", () => {
         beforeEach(() => {
             jest.clearAllMocks();
         })
-        it("Deve retornar corretamente o usuário logado", async () => {
+        it("Deve retornar corretamente o usuário logado", () => {
             jest.spyOn(HashHelper, "hash").mockReturnValue("algum_hash");
+            jest.spyOn(UsuarioService.prototype, "realizarLogin").mockResolvedValue();
             const usuario = new Usuario("Erik", "erik@email.com", "123456");
             const usuarioService = new UsuarioService();
             jest.spyOn(JSONUsuariosRepository.prototype, "findAll").mockResolvedValueOnce([usuario]);
-            await usuarioService.realizarLogin({email: "erik@email.com", senha: "123456"});
+            usuarioService.realizarLogin({email: "erik@email.com", senha: "123456"});
 
             expect(usuarioService.getUsuarioLogado()).toBe("erik@email.com");
         })
