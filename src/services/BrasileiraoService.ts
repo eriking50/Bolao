@@ -21,9 +21,8 @@ export default class BrasileiraoService {
     public async getTimes(): Promise<void> {
         try {     
             const tabelaResponse = await this.brasileiraoClient.getTabelaAPI();
-            const tabelaResponseOrdenada = tabelaResponse.sort((timeA, timeB) => timeA.time.nome_popular.localeCompare(timeB.time.nome_popular));
 
-            const times = tabelaResponseOrdenada.map(({time}) => {
+            const times = tabelaResponse.map(({time}) => {
                 return new Time(time.nome_popular, time.time_id);
             })
             await this.timesRepository.save(times);

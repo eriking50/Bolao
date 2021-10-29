@@ -56,6 +56,7 @@ export default class UsuarioService {
             const usuarioBD = usuarios.find(usuarioFind => {
                 return usuarioFind.getEmail() === login.email;
             })
+            
             if (usuarioBD) {
                 if (usuarioBD.getSenha() === HashHelper.hash(login.senha)) {
                     this.usuarioLogado = usuarioBD.getEmail();
