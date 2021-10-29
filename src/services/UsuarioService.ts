@@ -56,7 +56,7 @@ export default class UsuarioService {
             const usuarioBD = usuarios.find(usuarioFind => {
                 return usuarioFind.getEmail() === login.email;
             })
-            
+
             if (usuarioBD) {
                 if (usuarioBD.getSenha() === HashHelper.hash(login.senha)) {
                     this.usuarioLogado = usuarioBD.getEmail();
@@ -85,21 +85,21 @@ export default class UsuarioService {
             if (!dados.nome && !dados.senha) {
                 throw new Error("Não há dados para serem alterados");
             }
-            const usuarioBD = usuarios.find((usuario)=> {
+            const usuarioBD = usuarios.find((usuario) => {
                 return usuario.getEmail() === dados.email;
             })
             if (!usuarioBD.getStatus()) {
                 throw new Error("O usuário não está ativo, ative para poder alterar os dados.");
             }
-            if(dados.nome) usuarioBD.setNome(dados.nome);
-            if(dados.senha) usuarioBD.setNome(dados.senha);
-            
+            if (dados.nome) usuarioBD.setNome(dados.nome);
+            if (dados.senha) usuarioBD.setNome(dados.senha);
+
             return await this.usuariosRepository.update(usuarioBD);
         } catch (error) {
             throw new Error(`Não foi possível alterar os dados do usuario. motivo: ${error.message}`);
         }
     }
-    
+
     public async alterarStatusUsuario(dados: AlterarStatus): Promise<void> {
         try {
             const usuarios = await this.usuariosRepository.findAll();
@@ -109,11 +109,11 @@ export default class UsuarioService {
             if (this.usuarioLogado !== dados.email) {
                 throw new Error("Você não pode alterar uma conta que não seja a sua.");
             }
-            const usuarioBD = usuarios.find((usuario)=> {
+            const usuarioBD = usuarios.find((usuario) => {
                 return usuario.getEmail() === dados.email;
             })
             usuarioBD.setStatus(dados.status);
-            
+
             return await this.usuariosRepository.update(usuarioBD);
         } catch (error) {
             throw new Error(`Não foi possível alterar status do usuário. motivo: ${error.message}`);

@@ -73,8 +73,8 @@ describe("Testes da classe service: UsuarioService", () => {
             jest.spyOn(EmailHelper, "validarEmail").mockReturnValue(true);
             const usuarioService = new UsuarioService();
             jest.spyOn(JSONUsuariosRepository.prototype, "findAll").mockRejectedValue(new Error("Erro ao recuperar dados do banco"));
-            
-            expect(usuarioService.realizarLogin({email: "joao@email.com", senha: "321"})).rejects.toThrow(Error);
+
+            expect(usuarioService.realizarLogin({ email: "joao@email.com", senha: "321" })).rejects.toThrow(Error);
         })
         it("Deve retornar erro caso não seja possível fazer o login", () => {
             jest.spyOn(HashHelper, "hash").mockReturnValueOnce("algum_hash");
@@ -82,8 +82,8 @@ describe("Testes da classe service: UsuarioService", () => {
             jest.spyOn(EmailHelper, "validarEmail").mockReturnValue(true);
             const usuarioService = new UsuarioService();
             jest.spyOn(JSONUsuariosRepository.prototype, "findAll").mockResolvedValue([usuario]);
-            
-            expect(usuarioService.realizarLogin({email: "joao@email.com", senha: "321"})).rejects.toThrow(Error);
+
+            expect(usuarioService.realizarLogin({ email: "joao@email.com", senha: "321" })).rejects.toThrow(Error);
         })
         it("Deve retornar erro caso a senha esteja errada", () => {
             jest.spyOn(HashHelper, "hash").mockReturnValueOnce("algum_hash");
@@ -92,16 +92,16 @@ describe("Testes da classe service: UsuarioService", () => {
             const usuarioService = new UsuarioService();
             jest.spyOn(JSONUsuariosRepository.prototype, "findAll").mockResolvedValue([usuario]);
             jest.spyOn(HashHelper, "hash").mockReturnValueOnce("outro_hash");
-            
-            expect(usuarioService.realizarLogin({email: "erik@email.com", senha: "1"})).rejects.toThrow(Error);
+
+            expect(usuarioService.realizarLogin({ email: "erik@email.com", senha: "1" })).rejects.toThrow(Error);
         })
         it("Deve logar corretamente no sistema", () => {
             jest.spyOn(HashHelper, "hash").mockReturnValue("algum_hash");
             const usuario = new Usuario("Erik", "erik@email.com", "123456");
             const usuarioService = new UsuarioService();
             jest.spyOn(JSONUsuariosRepository.prototype, "findAll").mockResolvedValue([usuario]);
-            
-            expect(usuarioService.realizarLogin({email: "erik@email.com", senha: "123456"})).resolves.not.toBeDefined();
+
+            expect(usuarioService.realizarLogin({ email: "erik@email.com", senha: "123456" })).resolves.not.toBeDefined();
         })
     })
     describe("Testa a função que faz alteração dos dados do usuario no sistema", () => {
@@ -112,16 +112,16 @@ describe("Testes da classe service: UsuarioService", () => {
             jest.spyOn(HashHelper, "hash").mockReturnValueOnce("algum_hash");
             const usuarioService = new UsuarioService();
             jest.spyOn(JSONUsuariosRepository.prototype, "findAll").mockRejectedValue(new Error("Não foi possivel recuperar os dados do banco"));
-            
-            expect(usuarioService.alterarCadastro({email: "erik@email.com", nome: "Bergkamp"})).rejects.toThrow(Error);
+
+            expect(usuarioService.alterarCadastro({ email: "erik@email.com", nome: "Bergkamp" })).rejects.toThrow(Error);
         })
         it("Deve retornar erro caso o usuário não esteja logado", () => {
             jest.spyOn(HashHelper, "hash").mockReturnValueOnce("algum_hash");
             const usuario = new Usuario("Erik", "erik@email.com", "123456");
             const usuarioService = new UsuarioService();
             jest.spyOn(JSONUsuariosRepository.prototype, "findAll").mockResolvedValue([usuario]);
-            
-            expect(usuarioService.alterarCadastro({email: "erik@email.com", nome: "Bergkamp"})).rejects.toThrow(Error);
+
+            expect(usuarioService.alterarCadastro({ email: "erik@email.com", nome: "Bergkamp" })).rejects.toThrow(Error);
         })
         it("Deve retornar erro caso um usuário esteja tentado alterar o dado de outro usuario", () => {
             jest.spyOn(HashHelper, "hash").mockReturnValue("algum_hash");
@@ -130,9 +130,9 @@ describe("Testes da classe service: UsuarioService", () => {
             jest.spyOn(JSONUsuariosRepository.prototype, "findAll").mockResolvedValue([usuario, usuario2]);
             jest.spyOn(JSONUsuariosRepository.prototype, "update").mockResolvedValue();
             const usuarioService = new UsuarioService();
-            usuarioService.realizarLogin({email: "patrick@email.com", senha: "123456"});
-            
-            expect(usuarioService.alterarCadastro({email: "erik@email.com", nome: "Bergkamp"})).rejects.toThrow(Error);
+            usuarioService.realizarLogin({ email: "patrick@email.com", senha: "123456" });
+
+            expect(usuarioService.alterarCadastro({ email: "erik@email.com", nome: "Bergkamp" })).rejects.toThrow(Error);
         })
         it("Deve retornar erro caso o usuário não esteja com status ativo", () => {
             jest.spyOn(HashHelper, "hash").mockReturnValue("algum_hash");
@@ -141,9 +141,9 @@ describe("Testes da classe service: UsuarioService", () => {
             jest.spyOn(JSONUsuariosRepository.prototype, "findAll").mockResolvedValue([usuario]);
             jest.spyOn(JSONUsuariosRepository.prototype, "update").mockResolvedValue();
             const usuarioService = new UsuarioService();
-            usuarioService.realizarLogin({email: "erik@email.com", senha: "123456"});
-            
-            expect(usuarioService.alterarCadastro({email: "erik@email.com", nome: "Bergkamp"})).rejects.toThrow(Error);
+            usuarioService.realizarLogin({ email: "erik@email.com", senha: "123456" });
+
+            expect(usuarioService.alterarCadastro({ email: "erik@email.com", nome: "Bergkamp" })).rejects.toThrow(Error);
         })
         it("Deve retornar erro caso o usuário não esteja logado", () => {
             jest.spyOn(HashHelper, "hash").mockReturnValue("algum_hash");
@@ -151,8 +151,8 @@ describe("Testes da classe service: UsuarioService", () => {
             jest.spyOn(JSONUsuariosRepository.prototype, "findAll").mockResolvedValue([usuario]);
             jest.spyOn(JSONUsuariosRepository.prototype, "update").mockResolvedValue();
             const usuarioService = new UsuarioService();
-            
-            expect(usuarioService.alterarCadastro({email: "erik@email.com", nome: "Bergkamp"})).rejects.toThrow(Error);
+
+            expect(usuarioService.alterarCadastro({ email: "erik@email.com", nome: "Bergkamp" })).rejects.toThrow(Error);
         })
         it("Deve retornar erro caso o usuário não tenha mandados dados além do email", () => {
             jest.spyOn(HashHelper, "hash").mockReturnValue("algum_hash");
@@ -160,9 +160,9 @@ describe("Testes da classe service: UsuarioService", () => {
             jest.spyOn(JSONUsuariosRepository.prototype, "findAll").mockResolvedValue([usuario]);
             jest.spyOn(JSONUsuariosRepository.prototype, "update").mockResolvedValue();
             const usuarioService = new UsuarioService();
-            usuarioService.realizarLogin({email: "erik@email.com", senha: "123456"});
-            
-            expect(usuarioService.alterarCadastro({email: "erik@email.com"})).rejects.toThrow(Error);
+            usuarioService.realizarLogin({ email: "erik@email.com", senha: "123456" });
+
+            expect(usuarioService.alterarCadastro({ email: "erik@email.com" })).rejects.toThrow(Error);
         })
         it("Deve retornar erro caso não consiga salvar os dados alterados", () => {
             jest.spyOn(HashHelper, "hash").mockReturnValue("algum_hash");
@@ -170,9 +170,9 @@ describe("Testes da classe service: UsuarioService", () => {
             jest.spyOn(JSONUsuariosRepository.prototype, "findAll").mockResolvedValue([usuario]);
             jest.spyOn(JSONUsuariosRepository.prototype, "update").mockRejectedValue(new Error("Falha ao salvar dados no banco"));
             const usuarioService = new UsuarioService();
-            usuarioService.realizarLogin({email: "erik@email.com", senha: "123456"});
+            usuarioService.realizarLogin({ email: "erik@email.com", senha: "123456" });
 
-            expect(usuarioService.alterarCadastro({email: "erik@email.com", nome: "Bergkamp"})).rejects.toThrow(Error);
+            expect(usuarioService.alterarCadastro({ email: "erik@email.com", nome: "Bergkamp" })).rejects.toThrow(Error);
         })
         it("Deve alterar o cadastro corretamente no sistema", () => {
             jest.spyOn(HashHelper, "hash").mockReturnValue("algum_hash");
@@ -180,9 +180,9 @@ describe("Testes da classe service: UsuarioService", () => {
             jest.spyOn(JSONUsuariosRepository.prototype, "findAll").mockResolvedValue([usuario]);
             jest.spyOn(JSONUsuariosRepository.prototype, "update").mockResolvedValue();
             const usuarioService = new UsuarioService();
-            usuarioService.realizarLogin({email: "erik@email.com", senha: "123456"});
+            usuarioService.realizarLogin({ email: "erik@email.com", senha: "123456" });
 
-            expect(usuarioService.alterarCadastro({email: "erik@email.com", nome: "Bergkamp", senha: "321"})).resolves.not.toBeDefined();
+            expect(usuarioService.alterarCadastro({ email: "erik@email.com", nome: "Bergkamp", senha: "321" })).resolves.not.toBeDefined();
         })
         it("Deve alterar o cadastro corretamente no sistema", () => {
             jest.spyOn(HashHelper, "hash").mockReturnValue("algum_hash");
@@ -190,9 +190,9 @@ describe("Testes da classe service: UsuarioService", () => {
             jest.spyOn(JSONUsuariosRepository.prototype, "findAll").mockResolvedValue([usuario]);
             jest.spyOn(JSONUsuariosRepository.prototype, "update").mockResolvedValue();
             const usuarioService = new UsuarioService();
-            usuarioService.realizarLogin({email: "erik@email.com", senha: "123456"});
+            usuarioService.realizarLogin({ email: "erik@email.com", senha: "123456" });
 
-            expect(usuarioService.alterarCadastro({email: "erik@email.com", senha: "321"})).resolves.not.toBeDefined();
+            expect(usuarioService.alterarCadastro({ email: "erik@email.com", senha: "321" })).resolves.not.toBeDefined();
         })
     })
     describe("Testa a função que faz alteração do status de um usuário no sistema", () => {
@@ -204,40 +204,40 @@ describe("Testes da classe service: UsuarioService", () => {
             const usuario = new Usuario("Erik", "erik@email.com", "123456");
             const usuarioService = new UsuarioService();
             jest.spyOn(JSONUsuariosRepository.prototype, "findAll").mockResolvedValueOnce([usuario]);
-            usuarioService.realizarLogin({email: "erik@email.com", senha: "123456"});
+            usuarioService.realizarLogin({ email: "erik@email.com", senha: "123456" });
             jest.spyOn(JSONUsuariosRepository.prototype, "findAll").mockRejectedValueOnce(new Error("Erro ao ler usuários do banco de dados"));
-            
-            expect(usuarioService.alterarStatusUsuario({email: "erik@email.com", status: true})).rejects.toThrow();
+
+            expect(usuarioService.alterarStatusUsuario({ email: "erik@email.com", status: true })).rejects.toThrow();
         })
         it("Deve alterar corretamente o status de um usuário do sistema", async () => {
             jest.spyOn(HashHelper, "hash").mockReturnValue("algum_hash");
             const usuario = new Usuario("Erik", "erik@email.com", "123456");
             const usuarioService = new UsuarioService();
             jest.spyOn(JSONUsuariosRepository.prototype, "findAll").mockResolvedValue([usuario]);
-            await usuarioService.realizarLogin({email: "erik@email.com", senha: "123456"});
+            await usuarioService.realizarLogin({ email: "erik@email.com", senha: "123456" });
             jest.spyOn(JSONUsuariosRepository.prototype, "update").mockResolvedValue();
-            
-            expect(usuarioService.alterarStatusUsuario({email: "erik@email.com", status: false})).resolves.not.toBeDefined();
+
+            expect(usuarioService.alterarStatusUsuario({ email: "erik@email.com", status: false })).resolves.not.toBeDefined();
         })
         it("Deve retornar um erro caso não consiga salvar os dados no banco", async () => {
             jest.spyOn(HashHelper, "hash").mockReturnValue("algum_hash");
             const usuario = new Usuario("Erik", "erik@email.com", "123456");
             const usuarioService = new UsuarioService();
             jest.spyOn(JSONUsuariosRepository.prototype, "findAll").mockResolvedValue([usuario]);
-            await usuarioService.realizarLogin({email: "erik@email.com", senha: "123456"});
+            await usuarioService.realizarLogin({ email: "erik@email.com", senha: "123456" });
             jest.spyOn(JSONUsuariosRepository.prototype, "update").mockRejectedValue(new Error("Erro ao salvar no banco de dados"));
-            
-            expect(usuarioService.alterarStatusUsuario({email: "erik@email.com", status: false})).rejects.toThrow();
+
+            expect(usuarioService.alterarStatusUsuario({ email: "erik@email.com", status: false })).rejects.toThrow();
         })
         it("Deve retornar erro caso não consiga salvar as alterações no banco de dados", async () => {
             jest.spyOn(HashHelper, "hash").mockReturnValue("algum_hash");
             const usuario = new Usuario("Erik", "erik@email.com", "123456");
             const usuarioService = new UsuarioService();
             jest.spyOn(JSONUsuariosRepository.prototype, "findAll").mockResolvedValue([usuario]);
-            await usuarioService.realizarLogin({email: "erik@email.com", senha: "123456"});
+            await usuarioService.realizarLogin({ email: "erik@email.com", senha: "123456" });
             jest.spyOn(JSONUsuariosRepository.prototype, "save").mockRejectedValue(new Error("Erro ao salvar no banco de dados"));
-            
-            expect(usuarioService.alterarStatusUsuario({email: "erik@email.com", status: false})).rejects.toThrow(Error);
+
+            expect(usuarioService.alterarStatusUsuario({ email: "erik@email.com", status: false })).rejects.toThrow(Error);
         })
         it("Deve retornar erro caso um usuário esteja tentado alterar o dado de outro", async () => {
             jest.spyOn(HashHelper, "hash").mockReturnValue("algum_hash");
@@ -245,9 +245,9 @@ describe("Testes da classe service: UsuarioService", () => {
             const usuario2 = new Usuario("Patrick", "patrick@email.com", "123456");
             const usuarioService = new UsuarioService();
             jest.spyOn(JSONUsuariosRepository.prototype, "findAll").mockResolvedValue([usuario, usuario2]);
-            await usuarioService.realizarLogin({email: "patrick@email.com", senha: "123456"});
-            
-            expect(usuarioService.alterarStatusUsuario({email: "erik@email.com", status: false})).rejects.toThrow(Error);
+            await usuarioService.realizarLogin({ email: "patrick@email.com", senha: "123456" });
+
+            expect(usuarioService.alterarStatusUsuario({ email: "erik@email.com", status: false })).rejects.toThrow(Error);
         })
         it("Deve retornar erro caso um usuário esteja tentando alterar um dado mas não esteja logado", async () => {
             jest.spyOn(HashHelper, "hash").mockReturnValue("algum_hash");
@@ -255,7 +255,7 @@ describe("Testes da classe service: UsuarioService", () => {
             const usuarioService = new UsuarioService();
             jest.spyOn(JSONUsuariosRepository.prototype, "findAll").mockResolvedValue([usuario]);
 
-            expect(usuarioService.alterarStatusUsuario({email: "erik@email.com", status: false})).rejects.toThrow(Error);
+            expect(usuarioService.alterarStatusUsuario({ email: "erik@email.com", status: false })).rejects.toThrow(Error);
         })
     })
     describe("Testa a função que desloga usuários do sistema", () => {
@@ -267,9 +267,9 @@ describe("Testes da classe service: UsuarioService", () => {
             const usuario = new Usuario("Erik", "erik@email.com", "123456");
             const usuarioService = new UsuarioService();
             jest.spyOn(JSONUsuariosRepository.prototype, "findAll").mockResolvedValueOnce([usuario]);
-            await usuarioService.realizarLogin({email: "erik@email.com", senha: "123456"});
+            await usuarioService.realizarLogin({ email: "erik@email.com", senha: "123456" });
             usuarioService.deslogar();
-            
+
             expect(usuarioService.getUsuarioLogado()).toBeFalsy();
         })
     })
@@ -300,7 +300,7 @@ describe("Testes da classe service: UsuarioService", () => {
             const usuario = new Usuario("Erik", "erik@email.com", "123456");
             const usuarioService = new UsuarioService();
             jest.spyOn(JSONUsuariosRepository.prototype, "findAll").mockResolvedValueOnce([usuario]);
-            await usuarioService.realizarLogin({email: "erik@email.com", senha: "123456"});
+            await usuarioService.realizarLogin({ email: "erik@email.com", senha: "123456" });
 
             expect(usuarioService.getUsuarioLogado()).toBe("erik@email.com");
         })
