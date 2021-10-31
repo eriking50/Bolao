@@ -24,9 +24,7 @@ export default class JSONTimesRepository implements TimesRepository {
     try {
       const fileContent = await readFile(this.timesFilePath);
       const timesSemClasse = JSON.parse(fileContent.toString()) as TimeFile[];
-      return timesSemClasse.map(
-        ({ id, nome }) => new Time(nome, id)
-      );
+      return timesSemClasse.map(({ id, nome }) => new Time(nome, id));
     } catch (error) {
       if (error instanceof Error) {
         throw new Error(`Falha a carregar os times. Motivo: ${error.message}.`);
@@ -40,11 +38,7 @@ export default class JSONTimesRepository implements TimesRepository {
   public async findById(id: number): Promise<Time> {
     try {
       const times = await this.findAll();
-      const time = times.find(time => {
-        if (time.getId() === id) {
-          return true;
-        }
-      })
+      const time = times.find(time => time.getId() === id);
       
       if (time) {
         return time;
@@ -69,8 +63,7 @@ export default class JSONTimesRepository implements TimesRepository {
 
       if (timeIndice >= 0) {
         timesPromise.splice(timeIndice, 1, time)
-        await this.save(timesPromise);
-        return;
+        return await this.save(timesPromise);
       }
 
       throw new Error("Time não encontrado.");

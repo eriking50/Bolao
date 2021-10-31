@@ -26,8 +26,8 @@ export default class ApostaRodada {
     }
   }
 
-  public addApostaJogo(palpite: Palpite, jogo: Jogo, usuario: Usuario, pontos?: number): void {
-    this.apostasJogos.push(new ApostaJogo(palpite.golsMandante, palpite.golsVisitante, jogo, usuario, pontos));
+  public addApostaJogo(golsMandante: number, golsVisitante: number, jogo: Jogo, usuario: Usuario, pontos?: number): void {
+    this.apostasJogos.push(new ApostaJogo(golsMandante, golsVisitante, jogo, usuario, pontos));
   }
 
   public getUsuario(): Usuario {

@@ -2,15 +2,10 @@ import ApostaRodada from "../models/ApostaRodada";
 import ApostaRodadasRepository from "./ApostaRodadasRepository";
 import * as fs from "fs"; 
 import { UsuarioFile } from "./JSONUsuariosRepository";
-import { JogoFile, RodadaFile } from "./JSONRodadasRepository";
-import { Palpite } from "../models/ApostaJogo";
-import UsuarioRepository from "./UsuariosRepository";
-import JSONUsuariosRepository from "./JSONUsuariosRepository";
-import RodadasRepository from "./RodadasRepository";
-import JSONRodadasRepository from "./JSONRodadasRepository";
+import { JogoFile} from "./JSONRodadasRepository";
 import Usuario from "../models/Usuario";
-import Rodada from "../models/Rodada";
 import Jogo from "../models/Jogo";
+import Time from "../models/Time";
 const { readFile, writeFile } = fs.promises;
 
 const APOSTA_RODADAS_FILE_PATH = "./files/aposta-rodadas.json";
@@ -25,54 +20,28 @@ type ApostaJogoFile = {
 
 type ApostaRodadaFile = {
   numeroRodada: number,
-  usuario: UsuarioFile
+  usuario: UsuarioFile,
   apostasJogos: ApostaJogoFile[],
   pontuacaoRodada: number
 };
 
 export default class JSONApostaRodadasRepository implements ApostaRodadasRepository {
-  private usuariosRepository: UsuarioRepository;
-  private rodadasRepository: RodadasRepository;
-
-  constructor() {
-    this.usuariosRepository = new JSONUsuariosRepository();
-    this.rodadasRepository = new JSONRodadasRepository();
-  }
 
   // ---- Recupera todas as apostas rodadas
   public async findAll(): Promise<ApostaRodada[]> {
-    const [usuarios, rodadas, apostaRodadasContent] = await Promise.all([this.usuariosRepository.findAll(), this.rodadasRepository.findAll(), readFile(APOSTA_RODADAS_FILE_PATH)]);
+    const apostaRodadasContent = await readFile(APOSTA_RODADAS_FILE_PATH);
     const apostasRodadaFile = JSON.parse(apostaRodadasContent.toString()) as ApostaRodadaFile[];
-    return this.gerarApostasRodada(apostasRodadaFile, usuarios, rodadas);
-  }
-
-  private gerarApostasRodada(apostasRodadaFile: ApostaRodadaFile[], usuarios: Usuario[], rodadas: Rodada[] ) {
-    return apostasRodadaFile.map(apostaRodadaFile => {
-      const usuarioAposta = usuarios.find(usuario => usuario.getEmail() === apostaRodadaFile.usuario.email);
-      const jogos = rodadas[apostaRodadaFile.numeroRodada - 1].getJogos();
-      return this.gerarApostasJogosDaRodada(jogos, apostaRodadaFile.apostasJogos, usuarioAposta, apostaRodadaFile.pontuacaoRodada, apostaRodadaFile.numeroRodada);
+    return apostasRodadaFile.map(({apostasJogos, numeroRodada, usuario, pontuacaoRodada}) => {
+      const usuarioAposta = new Usuario(usuario.nome, usuario.email, usuario.senha);
+      const apostasRodada = new ApostaRodada(usuarioAposta, numeroRodada, pontuacaoRodada);
+      apostasJogos.forEach(({golsMandante, golsVisitante, jogo, pontos}) => {
+        const mandante = new Time(jogo.timeMandante.nome, jogo.timeMandante.id);
+        const visitante = new Time(jogo.timeVisitante.nome, jogo.timeVisitante.id);
+        const partida = new Jogo(mandante, visitante, jogo.horarioJogo, jogo.id, jogo.golsMandante, jogo.golsVisitante);
+        apostasRodada.addApostaJogo(golsMandante, golsVisitante, partida, usuarioAposta, pontos);
+      })
+      return apostasRodada;
     })
-  }
-
-  private gerarApostasJogosDaRodada(jogos: Jogo[], apostasJogos: ApostaJogoFile[], usuario: Usuario, pontuacaoRodada: number, numeroRodada: number): ApostaRodada {
-    const apostaRodada = new ApostaRodada(usuario, pontuacaoRodada, numeroRodada);
-    jogos.map((jogo) => {
-      apostasJogos.map((apostaJogo) => {
-        if (jogo.getId() === apostaJogo.jogo.id) {
-          const palpiteJogo: Palpite = {
-            jogoId: apostaJogo.jogo.id,
-            golsMandante: apostaJogo.golsMandante,
-            golsVisitante: apostaJogo.golsVisitante
-          }
-          if (apostaJogo.pontos) {
-            apostaRodada.addApostaJogo(palpiteJogo, jogo, usuario, apostaJogo.pontos);
-          } else {
-            apostaRodada.addApostaJogo(palpiteJogo, jogo, usuario);
-          }
-        }
-      });
-    });
-    return apostaRodada;
   }
 
   // ---- Recupera uma aposta rodada pelo seu numero e usuario

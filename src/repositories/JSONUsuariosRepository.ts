@@ -32,11 +32,13 @@ export default class JSONUsuariosRepository implements UsuariosRepository {
   public async findByEmail(email: string): Promise<Usuario> {
     try {
       const usuarios = await this.findAll();
-      for (const usuario of usuarios) {
-        if (usuario.getEmail() === email) {
-          return usuario;
-        }
+
+      const usuarioBD = usuarios.find(usuario => usuario.getEmail() === email);
+      
+      if (usuarioBD) {
+        return usuarioBD;
       }
+      
       throw new Error(`Email não encontrado na base de dados`);
     } catch (error) {
       throw new Error(`Falha ao encontrar usuário. Motivo: ${error.message}.`);
@@ -47,14 +49,13 @@ export default class JSONUsuariosRepository implements UsuariosRepository {
   public async remove(email: string): Promise<void> {
     try {
       const usuarios = await this.findAll();
-      for (let i = 0; i < usuarios.length; i++) {
-        if (usuarios[i].getEmail() === email) {
-          usuarios.splice(i, 1);
-          await this.save(usuarios);
-          console.log("Usuário removido com sucesso!");
-          return;
-        }
+      const usuarioIndex = usuarios.findIndex(usuarioFind => usuarioFind.getEmail() === email);
+
+      if (usuarioIndex >= 0) {
+        usuarios.splice(usuarioIndex, 1);
+        await this.save(usuarios);
       }
+
       throw new Error(`Email não encontrado na base de dados`);
     } catch (error) {
       throw new Error(`Falha ao remover usuário. Motivo: ${error.message}.`);
@@ -65,15 +66,13 @@ export default class JSONUsuariosRepository implements UsuariosRepository {
   public async update(usuario: Usuario): Promise<void> {
     try {
       const usuarios = await this.findAll();
-      for (let i = 0; i < usuarios.length; i++) {
-        if (usuarios[i].getEmail() === usuario.getEmail()) {
-          usuarios[i].setNome(usuario.getNome());
-          usuarios[i].setSenha(usuario.getSenha());
-          await this.save(usuarios);
-          console.log("Usuário alterado com sucesso!");
-          return;
-        }
+      const usuarioIndex = usuarios.findIndex(usuarioFind => usuarioFind.getEmail() === usuario.getEmail());
+
+      if (usuarioIndex >= 0) {
+        usuarios.splice(usuarioIndex, 1, usuario);
+        await this.save(usuarios);
       }
+
       throw new Error(`Email não encontrado na base de dados`);
     } catch (error) {
       throw new Error(`Falha ao alterar usuário. Motivo: ${error.message}.`);

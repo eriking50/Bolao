@@ -1,8 +1,6 @@
 import Rodada from "../models/Rodada";
 import { TimeFile } from "./JSONTimesRepository";
 import RodadasRepository from "./RodadasRepository";
-import TimesRepository from "./TimesRepository";
-import JSONTimesRepository from "./JSONTimesRepository";
 import Jogo from "../models/Jogo";
 import Time from "../models/Time";
 import * as fs from "fs"; 
@@ -26,17 +24,20 @@ export type RodadaFile = {
 };
 
 export default class JSONRodadasRepository implements RodadasRepository {
-  private timesRepository: TimesRepository;
-
-  constructor () {
-    this.timesRepository = new JSONTimesRepository();
-  }
 
   // ---- Recupera todas as rodadas
   public async findAll(): Promise<Rodada[]> {
-    const [times, rodadaFile] = await Promise.all([this.timesRepository.findAll(), readFile(RODADAS_FILE_PATH)]);
+    const rodadaFile = await readFile(RODADAS_FILE_PATH);
     const rodadasFile = JSON.parse(rodadaFile.toString()) as RodadaFile[];
-    return this.gerarRodada(rodadasFile, times);
+    return rodadasFile.map(rodadaFile => {
+      const rodada = new Rodada(rodadaFile.numeroRodada);
+      rodadaFile.jogos.forEach(({id, horarioJogo, timeMandante, timeVisitante, golsMandante, golsVisitante}) => {
+        const mandante = new Time(timeMandante.nome, timeMandante.id);
+        const visitante = new Time(timeVisitante.nome, timeVisitante.id);
+        rodada.addJogo(new Jogo(mandante, visitante, horarioJogo, id, golsMandante, golsVisitante));
+      })
+      return rodada;
+    });
   }
 
   // ---- Recupera uma rodada pelo seu numero
@@ -67,22 +68,6 @@ export default class JSONRodadasRepository implements RodadasRepository {
     } catch (erro) {
       throw new Error(`Falha ao salvar as Rodadas. Motivo: ${erro.message}.`);
     }
-  }
-
-  private gerarRodada(rodadasFile: RodadaFile[], times: Time[]): Rodada[] {
-    return rodadasFile.map(rodadaFile => {
-      const rodada = new Rodada(rodadaFile.numeroRodada);
-      rodadaFile.jogos.map(jogo => {
-        const mandante = times.find((time) => time.getId() === jogo.timeMandante.id);
-        const visitante = times.find((time) => time.getId() === jogo.timeVisitante.id);
-        if (jogo.golsMandante && jogo.golsVisitante) {
-          rodada.addJogo(new Jogo(mandante, visitante, jogo.horarioJogo, jogo.id, jogo.golsMandante, jogo.golsVisitante));
-        } else {
-          rodada.addJogo(new Jogo(mandante, visitante, jogo.horarioJogo, jogo.id));
-        }
-      })
-      return rodada;
-    })
   }
 
 }
