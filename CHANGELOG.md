@@ -25,6 +25,8 @@
     - Arquivo que contém os testes do service de Rodada
 
 ### Modificados
+- Alteração Geral
+    - Alterações em todos os repositories para usarem funções de arrays ao invés de for.
 - index.ts
     - Removido função que cria o hash de senha.
 - /src/models/Usuário.ts

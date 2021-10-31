@@ -44,11 +44,7 @@ export default class JSONRodadasRepository implements RodadasRepository {
   public async findByNumeroRodada(numeroRodada: number): Promise<Rodada> {
     try {
       const rodadas = await this.findAll();
-      const rodada = rodadas.find(rodada => {
-        if (rodada.getNumeroRodada() === numeroRodada) {
-          return true;
-        }
-      })
+      const rodada = rodadas.find(rodada => rodada.getNumeroRodada() === numeroRodada);
       
       if (rodada) {
         return rodada;

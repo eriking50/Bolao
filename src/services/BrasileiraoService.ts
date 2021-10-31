@@ -22,9 +22,7 @@ export default class BrasileiraoService {
         try {     
             const tabelaResponse = await this.brasileiraoClient.getTabelaAPI();
 
-            const times = tabelaResponse.map(({time}) => {
-                return new Time(time.nome_popular, time.time_id);
-            })
+            const times = tabelaResponse.map(({time}) => new Time(time.nome_popular, time.time_id));
             await this.timesRepository.save(times);
         } catch (error) {
             throw new Error(`Falha ao buscar/salvar times na API. Motivo: ${error.message}.`);
